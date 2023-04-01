@@ -1,15 +1,65 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, ElementRef,OnInit,ViewChild } from '@angular/core';
+import { NavBar } from './entities/navbar';
+import { DataService } from './services/data.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements AfterViewInit, OnInit {
+  
 
-  changeTheme():void
+  private localStorage:Storage = localStorage;
+  @ViewChild("container") container!:ElementRef;
+  @ViewChild("ulitems") ul!:ElementRef;
+  public navBar: NavBar;
+
+  constructor(private dataService:DataService) {}
+ 
+  ngOnInit(): void {
+    this.initializeCurrentIdiom();
+  }
+
+  ngAfterViewInit(): void {
+    this.initializeCurrentTheme();
+  }
+
+  private initializeCurrentIdiom() {
+    let currentIdiom = this.localStorage.getItem("idiom");
+    this.localStorage.setItem("idiom", "english");
+    if (currentIdiom != null) {
+      let isEnglish = currentIdiom == "english" ? true : false;
+      this.navBar = new NavBar();
+      if (!isEnglish) {
+        this.toggleIdiom();
+      }
+    }
+    else {
+      this.navBar = new NavBar();
+    }
+  }
+
+  initializeCurrentTheme()
   {
-    console.log("clicked");
+    const colorStorage = localStorage.getItem("theme");
+    if (colorStorage == "light")
+    {
+      this.container.nativeElement.classList.remove("dark-theme");
+      this.ul.nativeElement.classList.remove("dark-theme");
+    }
+  }
+
+  toggleTheme() 
+  {
+    this.dataService.getTheme(this.container, this.ul);
+  }
+
+  toggleIdiom()
+  {
+    let currentIdiom = this.localStorage.getItem("idiom");
+    let isEnglish = !(currentIdiom == "english" ? true : false); 
+    this.navBar =  this.dataService.getNavBar(isEnglish);
   }
   
 }

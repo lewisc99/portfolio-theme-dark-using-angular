@@ -1,15 +1,24 @@
 :host {
     --body-light: #D8DBDC;
-    --gray-light-lighter: #343434;
+    --body-dark: #19181E;
+    --gray-light-font-principal: #343434;
+    --gray-dark-font-principal: #FFFFFF;
     --blue-buttons: #3E68FF;
-  }
-  
+}
+
 div.container {
-  background-color: var(--body-light);
   width: 100%;
   display: flex;
   font-family: Inconsolata, Arial, Helvetica, sans-serif;
   flex-direction: column;
+}
+
+div.container {
+  background-color: var(--body-light);
+}
+
+div.container.dark-theme {
+  background-color: var(--body-dark);
 }
 
 div.row  {
@@ -17,37 +26,164 @@ div.row  {
   width: 100%;
 }
 
+div.column {
+  width:60%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ----------------- */
+/* NAV BAR  - START */
+/* ----------------- */
 div.row-nav {
   align-items: center;
   justify-content: center;
 }
 
-
-ul {
+nav {
   width: 70%;
   height: 80px;
+}
+
+ul {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  list-style-type:  none;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
 }
 
-ul.home-items li {
-  margin-right: 4%;
+li {
+  margin-right: 1%;
+  display: inline;
 }
 
-ul.home-items a {
+ul.ul-items a {
   font-size: calc(4px + 1vw);
-  color: var(--gray-light-lighter)
+  text-decoration: none;
+  cursor: pointer;
 }
 
-ul.home-items a:hover {
+ul a {
+  color: var( --gray-light-font-principal);
+}
+
+ul.dark-theme a {
+  color: var( --gray-dark-font-principal);
+}
+
+ul a:hover {
   color:var(--blue-buttons)
 }
 
+img.lamp {
+    width: calc(30px + 1vw);
+    height: calc(30px + 1vh);
+}
 
-ul.home-items a {
-  text-decoration: none;
+div.idiom-choose {
+  width: calc(100px + 3vw);
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 3px solid var( --gray-dark-font-principal);
+  border-radius: 10px;
+}
+
+/* ----------------- */
+/* NAV BAR - END */
+/* ----------------- */
+/* ------------------------------------------------------ */
+/* ----------------- */
+/* ABOUT ME - START */
+/* ----------------- */
+
+div.row-about-me {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  color: white;
+  justify-content: center;
 }
 
 
+
+div.title {
+  height: 20%;
+  margin-bottom: 3%;
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+div.title > h1 {
+  font-size: calc(28px + 1vw);
+}
+
+div.about-me {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-overflow: clip;
+ 
+}
+
+div.about-me  > p  {
+  font-size: calc(8px + 1vw);
+  display: flex;
+  width: 60%;
+}
+
+
+div.about-me img {
+  display: flex;
+  width: 40%;
+  height: 100%;
+}
+
+div.info-cv {
+  width: 65%;
+  height: 27%;
+  display: flex;
+  flex-direction: column;
+}
+
+div.info-cv-items {
+  width: 40%;
+  min-width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div.cv-item > h1 {
+  font-size: calc(12px + 1vw)
+}
+div.cv-item > p {
+  font-size: calc(1px + 1vw)
+}
+
+div.download-cv {
+  height: 50%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+div.download-cv  > a{
+   cursor: pointer;
+   background-color: var(--blue-buttons);
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50%;
+   height: 60%;
+   font-size: calc(2px + 0.6vw);
+}
+/* ----------------- */
+/* ABOUT ME - END */
+/* ----------------- */

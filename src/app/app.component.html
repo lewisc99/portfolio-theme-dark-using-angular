@@ -1,15 +1,50 @@
-<div class="container">
+<div class="container dark-theme"  #container>
     <div class="row row-nav">
         <nav>
-            <ul class="home-items">
-                <li class="home"> <a href="#" style="color:#3E68FF;">Home</a></li>
-                <li class="qualification"> <a href="#qualification">Qualification</a></li>
-                <li class="portfolio"> <a href="#portfolio">Portfolio</a></li>
-                <li class="skills"> <a href="#skills">Skills</a></li>
-                <li class="contact"> <a href="#contact">Contact</a></li>
-                <li class="contact"> <a href="#contact" (click)="changeTheme()">Lamp</a></li>
-                <li class="contact"> <a href="#contact">Idiom</a></li>
+            <ul class="ul-items dark-theme" #ulitems>
+                <li class="home"> <a href="#" style="color:#3E68FF;">{{navBar.Home}}</a></li>
+                <li class="qualification"> <a href="#qualification">{{navBar.Qualification}}</a></li>
+                <li class="portfolio"> <a href="#portfolio">{{navBar.Portfolio}}</a></li>
+                <li class="skills"> <a href="#skills">{{navBar.Skills}}</a></li>
+                <li class="contact"> <a href="#contact">{{navBar.Contact}}</a></li>
+                <li > <a href="#" (click)="toggleTheme()"> <img class="lamp" src="assets/lamp-light.svg"/></a></li>
+                <li > <a href="#"  (click)="toggleIdiom()" >{{navBar.Idiom}}</a></li>
+                <li><div class="idiom-choose">
+                    <a>BR</a>
+                    <a>USA</a>
+                </div></li>
               </ul>
         </nav>
+    </div>
+
+    <div class="row row-about-me">
+       <div class="column column-about-me">
+        <div class="title">
+            <h1>Hi, I’m Luiz Most know as Lewis</h1>
+        </div>
+        <div class="about-me">
+            <p>Hi, I’m a Backend Software Developer
+                I love coding and solving Problems,
+                I am always looking for exciting research opportunities in computer science and related subjects.
+                Do you want to take you company to the next level?
+            </p>
+                <img class="myself" src="../assets/lamp-dark.svg"/>
+        </div>
+        <div class="info-cv">
+                <div class="info-cv-items">
+                    <div class="cv-item">
+                        <h1>1+</h1>
+                        <p>Years of <br/> expirience</p>
+                    </div>
+                    <div class="cv-item">
+                        <h1>30+</h1> 
+                        <p>Completed <br/> Projects</p>
+                    </div>
+                </div>
+                <div class="download-cv">
+                    <a>Download CV</a>
+                </div>
+        </div>
+    </div>
     </div>
 </div>
