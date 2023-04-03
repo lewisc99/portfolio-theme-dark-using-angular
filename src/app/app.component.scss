@@ -1,9 +1,19 @@
-:host {
-    --body-light: #D8DBDC;
-    --body-dark: #19181E;
-    --gray-light-font-principal: #343434;
-    --gray-dark-font-principal: #FFFFFF;
-    --blue-buttons: #3E68FF;
+// ---------------------------------
+// default config to add dark-theme
+// ---------------------------------
+
+div.container{
+  --bkg-color:  #D8DBDC;
+  --main-font: #343434;
+  --second-font: #797979;
+  --blue-buttons: #3E68FF;
+}
+
+div.container.dark-theme {
+  --bkg-color: #19181E;
+  --main-font:#FFFFFF;
+  --second-font: #797979;
+  --blue-buttons: #3E68FF;
 }
 
 div.container {
@@ -13,12 +23,8 @@ div.container {
   flex-direction: column;
 }
 
-div.container {
-  background-color: var(--body-light);
-}
-
 div.container.dark-theme {
-  background-color: var(--body-dark);
+  background-color: var(--bkg-color);
 }
 
 div.row  {
@@ -32,9 +38,9 @@ div.column {
   flex-direction: column;
 }
 
-/* ----------------- */
+/* -------------------------------------------------------------------- */
 /* NAV BAR  - START */
-/* ----------------- */
+/* -------------------------------------------------------------------- */
 div.row-nav {
   align-items: center;
   justify-content: center;
@@ -64,12 +70,8 @@ ul.ul-items a {
   cursor: pointer;
 }
 
-ul a {
-  color: var( --gray-light-font-principal);
-}
-
 ul.dark-theme a {
-  color: var( --gray-dark-font-principal);
+  color: var( --main-font);
 }
 
 ul a:hover {
@@ -87,24 +89,24 @@ div.idiom-choose {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border: 3px solid var( --gray-dark-font-principal);
+  border: 3px solid var( --main-font);
   border-radius: 10px;
 }
 
-/* ----------------- */
+/* -------------------------------------------------------------------- */
 /* NAV BAR - END */
 /* ----------------- */
-/* ------------------------------------------------------ */
-/* ----------------- */
+/* --------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
 /* ABOUT ME - START */
-/* ----------------- */
+/* -------------------------------------------------------------------- */
 
-div.row-about-me {
+section.row-about-me {
   width: 100%;
   height: 600px;
   display: flex;
-  color: white;
   justify-content: center;
+  color: var(--main-font);
 }
 
 
@@ -115,6 +117,7 @@ div.title {
   width: 60%;
   display: flex;
   align-items: center;
+  color: var(--main-font);
   justify-content: flex-start;
 }
 div.title > h1 {
@@ -128,7 +131,6 @@ div.about-me {
   flex-direction: row;
   justify-content: center;
   text-overflow: clip;
- 
 }
 
 div.about-me  > p  {
@@ -160,10 +162,11 @@ div.info-cv-items {
 }
 
 div.cv-item > h1 {
-  font-size: calc(12px + 1vw)
+  font-size: calc(12px + 1vw);
 }
 div.cv-item > p {
-  font-size: calc(1px + 1vw)
+  font-size: calc(1px + 1vw);
+  color: var(--second-font);
 }
 
 div.download-cv {
@@ -173,9 +176,10 @@ div.download-cv {
   align-items: center;
 }
 
-div.download-cv  > a{
+div.download-cv  > a {
    cursor: pointer;
    background-color: var(--blue-buttons);
+   color:white;
    border-radius: 10px;
    display: flex;
    justify-content: center;
@@ -184,6 +188,24 @@ div.download-cv  > a{
    height: 60%;
    font-size: calc(2px + 0.6vw);
 }
-/* ----------------- */
+/* -------------------------------------------------------------------- */
 /* ABOUT ME - END */
-/* ----------------- */
+/* -------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
+/* QUALIFICATION - START */
+/* -------------------------------------------------------------------- */
+section.row-qualification {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  color: white;
+  justify-content: center;
+}
+
+div.column-qualification {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #343434;
+}

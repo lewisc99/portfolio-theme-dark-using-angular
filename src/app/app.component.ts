@@ -5,14 +5,12 @@ import { DataService } from './services/data.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit, OnInit {
   
 
   private localStorage:Storage = localStorage;
-  @ViewChild("container") container!:ElementRef;
-  @ViewChild("ulitems") ul!:ElementRef;
   public navBar: NavBar;
 
   constructor(private dataService:DataService) {}
@@ -45,14 +43,7 @@ export class AppComponent implements AfterViewInit, OnInit {
     const colorStorage = localStorage.getItem("theme");
     if (colorStorage == "light")
     {
-      this.container.nativeElement.classList.remove("dark-theme");
-      this.ul.nativeElement.classList.remove("dark-theme");
     }
-  }
-
-  toggleTheme() 
-  {
-    this.dataService.getTheme(this.container, this.ul);
   }
 
   toggleIdiom()
@@ -62,4 +53,9 @@ export class AppComponent implements AfterViewInit, OnInit {
     this.navBar =  this.dataService.getNavBar(isEnglish);
   }
   
+  toggleTheme()
+  {
+    document.getElementById("container")!.classList.toggle('dark-theme');
+  }
+ 
 }

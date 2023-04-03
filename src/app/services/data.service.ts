@@ -25,24 +25,4 @@ export class DataService {
       }
       return navBar;
   }
-
-  public getTheme(container:ElementRef, ul:ElementRef): void 
-  {
-    const color = localStorage.getItem("theme");
-    const darkTheme = "dark-theme";
-
-    if (color == "light")
-    {
-      container.nativeElement.classList.add(darkTheme);
-      ul.nativeElement.classList.add(darkTheme);
-      this.localStorage.setItem("theme","dark");
-      
-    } else
-    {
-      container.nativeElement.classList.remove(darkTheme);
-      ul.nativeElement.classList.remove(darkTheme);
-      this.localStorage.setItem("theme","light");
-    }
-  }
-  
 }
