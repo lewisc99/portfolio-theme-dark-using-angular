@@ -1,5 +1,5 @@
 // ---------------------------------
-// default config to add dark-theme
+// default config to add dark-theme to all elements in the container
 // ---------------------------------
 
 div.container{
@@ -7,6 +7,7 @@ div.container{
   --main-font: #343434;
   --second-font: #797979;
   --blue-buttons: #3E68FF;
+  transition: 0.7s;
 }
 
 div.container.dark-theme {
@@ -14,6 +15,7 @@ div.container.dark-theme {
   --main-font:#FFFFFF;
   --second-font: #797979;
   --blue-buttons: #3E68FF;
+  transition: 0.7s;
 }
 
 div.container {
@@ -21,9 +23,6 @@ div.container {
   display: flex;
   font-family: Inconsolata, Arial, Helvetica, sans-serif;
   flex-direction: column;
-}
-
-div.container.dark-theme {
   background-color: var(--bkg-color);
 }
 
@@ -68,9 +67,6 @@ ul.ul-items a {
   font-size: calc(4px + 1vw);
   text-decoration: none;
   cursor: pointer;
-}
-
-ul.dark-theme a {
   color: var( --main-font);
 }
 

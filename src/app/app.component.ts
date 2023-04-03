@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef,OnInit,ViewChild } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { NavBar } from './entities/navbar';
 import { DataService } from './services/data.service';
 
@@ -43,6 +43,7 @@ export class AppComponent implements AfterViewInit, OnInit {
     const colorStorage = localStorage.getItem("theme");
     if (colorStorage == "light")
     {
+      document.getElementById("container")!.classList.toggle('dark-theme');
     }
   }
 
@@ -55,7 +56,16 @@ export class AppComponent implements AfterViewInit, OnInit {
   
   toggleTheme()
   {
-    document.getElementById("container")!.classList.toggle('dark-theme');
+    const themeStorage = localStorage.getItem("theme");
+    if (themeStorage == "light")
+    {
+      document.getElementById("container")!.classList.toggle('dark-theme');
+      this.localStorage.setItem("theme", "dark");
+    } else
+    {
+      document.getElementById("container")!.classList.toggle('dark-theme');
+      this.localStorage.setItem("theme", "light");
+    }
   }
  
 }
