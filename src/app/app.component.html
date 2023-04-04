@@ -2,16 +2,16 @@
     <div class="row row-nav">
         <nav>
             <ul class="ul-items" #ulitems>
-                <li class="home"> <a href="#" style="color:#3E68FF;">{{navBar.Home}}</a></li>
-                <li class="qualification"> <a href="#qualification">{{navBar.Qualification}}</a></li>
-                <li class="portfolio"> <a href="#portfolio">{{navBar.Portfolio}}</a></li>
-                <li class="skills"> <a href="#skills">{{navBar.Skills}}</a></li>
-                <li class="contact"> <a href="#contact">{{navBar.Contact}}</a></li>
-                <li > <a href="#" (click)="toggleTheme()"> <img class="lamp" src="assets/lamp-light.svg"/></a></li>
-                <li > <a href="#"  (click)="toggleIdiom()" >{{navBar.Idiom}}</a></li>
+                <li class="home"> <a href="#" style="color:#3E68FF;">{{'navBar.Home' | translate}}</a></li>
+                <li class="qualification"> <a href="#qualification">{{'navBar.Qualification' | translate}}</a></li>
+                <li class="portfolio"> <a href="#portfolio">{{'navBar.Portfolio' | translate}}</a></li>
+                <li class="skills"> <a href="#skills">{{'navBar.Skills' | translate}}</a></li>
+                <li class="contact"> <a href="#contact">{{'navBar.Contact' | translate}}</a></li>
+                <li > <a href="#" (click)="toggleTheme()"> <img class="lamp" src="assets/images/lamp-light.svg"/></a></li>
+                <li > <a href="#"  (click)="toggleIdiom()" >{{'navBar.Idiom' | translate}}</a></li>
                 <li class="idiom-choose"><div class="idiom-choose">
-                    <a><img class="flag-image" src="assets/brazil.jpg"/></a>
-                    <a><img src="assets/usa.jpg"/></a>
+                    <a><img class="flag-image" src="assets/images/brazil.jpg"/></a>
+                    <a><img src="assets/images/usa.jpg"/></a>
                 </div></li>
               </ul>
         </nav>
@@ -20,25 +20,21 @@
     <section class="row row-about-me">
        <div class="column column-about-me">
         <div class="title">
-            <h1>Hi, I’m Luiz Most know as Lewis</h1>
+            <h1>{{'about-me.title' | translate}}</h1>
         </div>
         <div class="about-me">
-            <p>Hi, I’m a Backend Software Developer
-                I love coding and solving Problems,
-                I am always looking for exciting research opportunities in computer science and related subjects.
-                Do you want to take you company to the next level?
-            </p>
-                <img class="myself" src="../assets/lamp-dark.svg"/>
+            <p>{{'about-me.info' | translate}}</p>
+                <img class="myself" src="../assets/images/lamp-dark.svg"/>
         </div>
         <div class="info-cv">
                 <div class="info-cv-items">
                     <div class="cv-item">
                         <h1>1+</h1>
-                        <p>Years of <br/> expirience</p>
+                        <p>{{'about-me.cv-item.years' | translate}}<br/>{{'about-me.cv-item.experience' | translate}}</p>
                     </div>
                     <div class="cv-item">
                         <h1>30+</h1> 
-                        <p>Completed <br/> Projects</p>
+                        <p>{{'about-me.cv-item.completed' | translate}}<br/>{{'about-me.cv-item.projects' | translate}}</p>
                     </div>
                 </div>
                 <div class="download-cv">
@@ -51,10 +47,10 @@
         <div class="column column-qualification">
                 <div class="title">
                     <div class="title-info">
-                        <h1>Qualification</h1>
-                        <img src="../assets/lamp-dark.svg"/>
+                        <h1>{{'qualification.title' | translate}}</h1>
+                        <img src="../assets/images/lamp-dark.svg"/>
                     </div>
-                    <p>For more Details click on the corresponding company</p>
+                    <p>{{'qualification.subtitle' | translate}}</p>
                 </div>
 
                 <div class="experiences-container">

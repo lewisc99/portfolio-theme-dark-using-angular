@@ -1,0 +1,25 @@
+{
+    "hello":"Hello",
+    "navBar": {
+        "Home":"Home",
+        "Qualification":"Qualification",
+        "Portfolio":"Portfolio",
+        "Skills":"Skills",
+        "Contact":"Contact",
+        "Idiom":"Idiom"
+    },
+    "about-me": {
+        "title":"Hi, I’m Luiz Most know as Lewis",
+        "info":"Hi, I’m a Backend Software Developer I love coding and solving Problems, I am always looking for exciting research opportunities in computer science and related subjects.  Do you want to take you company to the next level?",
+        "cv-item": {
+            "years":"years of",
+            "experience":"experience",
+            "completed":"completed",
+            "projects":"projects"
+        }
+    },
+    "qualification": {
+        "title":"Qualification",
+        "subtitle":"For more Details click on the corresponding company"
+    }
+}

@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { NavBar } from './entities/navbar';
 import { DataService } from './services/data.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -8,34 +9,29 @@ import { DataService } from './services/data.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit, OnInit {
-  
 
   private localStorage:Storage = localStorage;
   public navBar: NavBar;
+  public lang:string;
+  public title = "ola";
 
-  constructor(private dataService:DataService) {}
+  constructor(private dataService:DataService, private translateService:TranslateService) {
+  }
  
   ngOnInit(): void {
-    this.initializeCurrentIdiom();
+     let currentIdiom = this.localStorage.getItem("idiom")!;
+     if(currentIdiom != null)
+     {
+        this.translateService.setDefaultLang(this.localStorage.getItem("idiom")!);
+     } else {
+      this.translateService.setDefaultLang("en");
+      this.localStorage.setItem("idiom","en");
+     }
+
   }
 
   ngAfterViewInit(): void {
     this.initializeCurrentTheme();
-  }
-
-  private initializeCurrentIdiom() {
-    let currentIdiom = this.localStorage.getItem("idiom");
-    this.localStorage.setItem("idiom", "english");
-    if (currentIdiom != null) {
-      let isEnglish = currentIdiom == "english" ? true : false;
-      this.navBar = new NavBar();
-      if (!isEnglish) {
-        this.toggleIdiom();
-      }
-    }
-    else {
-      this.navBar = new NavBar();
-    }
   }
 
   initializeCurrentTheme()
@@ -50,8 +46,16 @@ export class AppComponent implements AfterViewInit, OnInit {
   toggleIdiom()
   {
     let currentIdiom = this.localStorage.getItem("idiom");
-    let isEnglish = !(currentIdiom == "english" ? true : false); 
-    this.navBar =  this.dataService.getNavBar(isEnglish);
+    let isEnglish = currentIdiom == "en" ? true : false; 
+   if (isEnglish)
+   {
+      this.localStorage.setItem("idiom", "pt");
+      this.translateService.use("pt");
+   }
+   else {
+    this.localStorage.setItem("idiom", "en");
+    this.translateService.use("en");
+   }
   }
   
   toggleTheme()

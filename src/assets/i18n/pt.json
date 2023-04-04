@@ -1,0 +1,25 @@
+{
+    "hello":"ola mano",
+    "navBar": {
+        "Home":"Início",
+        "Qualification":"Qualificação",
+        "Portfolio":"Portfolio",
+        "Skills":"Habilidades",
+        "Contact":"Contato",
+        "Idiom":"Idioma"
+    },
+    "about-me": {
+        "title":"Olá, sou Luiz Mais conhecido como Lewis",
+        "info":"Olá, sou um desenvolvedor de software de back-end. Adoro codificar e resolver problemas. Estou sempre procurando oportunidades interessantes de pesquisa em ciência da computação e assuntos relacionados. Você quer levar sua empresa para o próximo nível?",
+        "cv-item": {
+            "years":"Anos de",
+            "experience":"expêriencia",
+            "completed":"Projetos",
+            "projects":"completados"
+        }
+    },
+    "qualification": {
+        "title":"Qualificação",
+        "subtitle":"Para mais detalhes clique na empresa correspondente"
+    }
+}
