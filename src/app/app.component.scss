@@ -83,14 +83,33 @@ img.lamp {
     height: calc(30px + 1vh);
 }
 
+
 div.idiom-choose {
-  width: calc(100px + 3vw);
-  height: 30px;
+  width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-around;
   border: 3px solid var( --main-font);
   border-radius: 10px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  img {
+    height: calc(10px + 1vh);
+    border-radius: 10px;
+    object-position: center;
+    width: 60%;
+  }
+
+  img.flag-image {
+    width: 90%;
+    border: 2px solid var(--main-font);
+  }
+}
+
 }
 
 h1 {
