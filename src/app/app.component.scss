@@ -7,6 +7,8 @@ div.container{
   --main-font: #343434;
   --second-font: #797979;
   --blue-buttons: #3E68FF;
+  --bkg-container:#BDB6B6;
+  --highlight-border-container:#0000002c;
   transition: 0.7s;
 }
 
@@ -15,6 +17,8 @@ div.container.dark-theme {
   --main-font:#FFFFFF;
   --second-font: #797979;
   --blue-buttons: #3E68FF;
+  --bkg-container:#312F3A;
+  --highlight-border-container:#0000003a;
   transition: 0.7s;
 }
 
@@ -89,6 +93,11 @@ div.idiom-choose {
   border-radius: 10px;
 }
 
+h1 {
+  font-size: calc(28px + 1vw);
+  color: var(--main-font);
+}
+
 /* -------------------------------------------------------------------- */
 /* NAV BAR - END */
 /* ----------------- */
@@ -105,19 +114,15 @@ section.row-about-me {
   color: var(--main-font);
 }
 
-
-
-div.title {
+div.column-about-me > div.title {
   height: 20%;
   margin-bottom: 3%;
-  width: 60%;
+  width: 100%;
   display: flex;
   align-items: center;
   color: var(--main-font);
   justify-content: flex-start;
-}
-div.title > h1 {
-  font-size: calc(28px + 1vw);
+  
 }
 
 div.about-me {
@@ -199,9 +204,68 @@ section.row-qualification {
   justify-content: center;
 }
 
+
 div.column-qualification {
+
+// TITLE PART //
+// ----------- //
+
+  display: flex;
+  height: 100%;
+  
+   div.title {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 25%;
+    word-wrap: normal;
+    flex-wrap: wrap;
+    
+    div.title-info {
+      display: flex;
+      height: 80%;
+      align-items: center;
+
+      img {
+        width: calc(100px + 2vw);
+        height: calc(50px + 2vh);
+      }  
+    }
+    p {
+      color:var(--second-font);
+       font-size: calc(10px + 0.5vw);
+    }
+  }
+
+// EXPERIENCE CONTAINER //
+// ------------------- //
+div.experiences-container {
   display: flex;
   width: 100%;
-  height: 100%;
-  background-color: #343434;
+  height: 70%;
+  align-items: center;
+  justify-content: center;
+
+  div.items-experience {
+      width: 20%;
+      margin-right: 2.4%;
+    }
+
+    div.detail-experience {
+      width: 65%;
+    }
+
+    div.detail-experience, div.items-experience {
+      display: flex;
+      height: 95%;
+      background-color: var(--bkg-container);
+      border-radius: 14px;
+      border-bottom: 5px solid  var(--highlight-border-container);
+    }
+
+  }
 }
+
+
+ 
