@@ -1,6 +1,4 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { NavBar } from './entities/navbar';
-import { DataService } from './services/data.service';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -8,39 +6,51 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit, OnInit {
+export class AppComponent implements OnInit {
 
   private localStorage:Storage = localStorage;
-  public navBar: NavBar;
-  public lang:string;
-  public title = "ola";
   public lampColor:string = "light";
 
-  constructor(private dataService:DataService, private translateService:TranslateService) {
-  }
+  constructor(private translateService:TranslateService) {}
  
   ngOnInit(): void {
-     let currentIdiom = this.localStorage.getItem("idiom")!;
-     if(currentIdiom != null)
-     {
-        this.translateService.setDefaultLang(this.localStorage.getItem("idiom")!);
-     } else {
-      this.translateService.setDefaultLang("en");
-      this.localStorage.setItem("idiom","en");
-     }
-
+    this.initializeCurrentIdiom();
+    this.initializeCurrentTheme();
   }
 
-  ngAfterViewInit(): void {
-    this.initializeCurrentTheme();
+  initializeCurrentIdiom():void 
+  {
+    let currentIdiom = this.localStorage.getItem("idiom");
+    if(currentIdiom != null)
+    {
+       this.translateService.setDefaultLang(this.localStorage.getItem("idiom")!);
+    } else {
+     this.translateService.setDefaultLang("en");
+     this.localStorage.setItem("idiom","en");
+    }
   }
 
   initializeCurrentTheme()
   {
-    const colorStorage = localStorage.getItem("theme");
-    if (colorStorage == "light")
+    const colorStorage = this.localStorage.getItem("theme");
+    if (colorStorage == null)
     {
       document.getElementById("container")!.classList.toggle('dark-theme');
+      this.localStorage.setItem("theme", "dark");
+      this.lampColor = "light";
+    } else
+    {
+      let isDark =colorStorage == "dark" ? true : false;
+      if (isDark)
+      {
+        document.getElementById("container")!.classList.toggle('dark-theme');
+        this.localStorage.setItem("theme", "dark");
+        this.lampColor = "light";
+      } else {
+        document.getElementById("container")!.classList.remove('dark-theme');
+        this.localStorage.setItem("theme", "light");
+        this.lampColor = "dark";
+      }
     }
   }
 
@@ -65,15 +75,15 @@ export class AppComponent implements AfterViewInit, OnInit {
   
   toggleTheme()
   {
-    const themeStorage = localStorage.getItem("theme");
+    let themeStorage = localStorage.getItem("theme");
     if (themeStorage == "light")
     {
-      this.lampColor = "dark";
+      this.lampColor = "light";
       document.getElementById("container")!.classList.toggle('dark-theme');
       this.localStorage.setItem("theme", "dark");
     } else
     {
-      this.lampColor = "light";
+      this.lampColor = "dark";
       document.getElementById("container")!.classList.toggle('dark-theme');
       this.localStorage.setItem("theme", "light");
     }
