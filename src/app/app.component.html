@@ -7,11 +7,10 @@
                 <li class="portfolio"> <a href="#portfolio">{{'navBar.Portfolio' | translate}}</a></li>
                 <li class="skills"> <a href="#skills">{{'navBar.Skills' | translate}}</a></li>
                 <li class="contact"> <a href="#contact">{{'navBar.Contact' | translate}}</a></li>
-                <li > <a href="#" (click)="toggleTheme()"> <img class="lamp" src="assets/images/lamp-light.svg"/></a></li>
-                <li > <a href="#"  (click)="toggleIdiom()" >{{'navBar.Idiom' | translate}}</a></li>
+                <li > <a href="#" (click)="toggleTheme()"> <img class="lamp" [src]="'assets/images/lamp-' + lampColor + '.svg'"/></a></li>
                 <li class="idiom-choose"><div class="idiom-choose">
-                    <a><img class="flag-image" src="assets/images/brazil.jpg"/></a>
-                    <a><img src="assets/images/usa.jpg"/></a>
+                    <a (click)="toggleIdiom()"><img id="image-brazil" src="assets/images/brazil.jpg"/></a>
+                    <a (click)="toggleIdiom()"><img id="image-usa" class="flag-image" src="assets/images/usa.jpg"/></a>
                 </div></li>
               </ul>
         </nav>

@@ -83,6 +83,10 @@ img.lamp {
     height: calc(30px + 1vh);
 }
 
+img.lamp:hover {
+  transform: translateY(-5px);
+  transition: 0.5s;
+}
 
 div.idiom-choose {
   width: 100%;
@@ -103,11 +107,18 @@ div.idiom-choose {
     object-position: center;
     width: 60%;
   }
+  img:hover
+  {
+    width: 68%;
+    transition: 0.3s;
+  }
 
   img.flag-image {
     width: 90%;
     border: 2px solid var(--main-font);
+    transition: 0.2s;
   }
+
 }
 
 }

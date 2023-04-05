@@ -14,6 +14,7 @@ export class AppComponent implements AfterViewInit, OnInit {
   public navBar: NavBar;
   public lang:string;
   public title = "ola";
+  public lampColor:string = "light";
 
   constructor(private dataService:DataService, private translateService:TranslateService) {
   }
@@ -50,10 +51,14 @@ export class AppComponent implements AfterViewInit, OnInit {
    if (isEnglish)
    {
       this.localStorage.setItem("idiom", "pt");
+      document.getElementById("image-brazil")!.classList.add('flag-image');
+      document.getElementById("image-usa")!.classList.remove('flag-image');
       this.translateService.use("pt");
    }
    else {
     this.localStorage.setItem("idiom", "en");
+    document.getElementById("image-usa")!.classList.add('flag-image');
+    document.getElementById("image-brazil")!.classList.remove('flag-image');
     this.translateService.use("en");
    }
   }
@@ -63,10 +68,12 @@ export class AppComponent implements AfterViewInit, OnInit {
     const themeStorage = localStorage.getItem("theme");
     if (themeStorage == "light")
     {
+      this.lampColor = "dark";
       document.getElementById("container")!.classList.toggle('dark-theme');
       this.localStorage.setItem("theme", "dark");
     } else
     {
+      this.lampColor = "light";
       document.getElementById("container")!.classList.toggle('dark-theme');
       this.localStorage.setItem("theme", "light");
     }
