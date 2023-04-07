@@ -1,0 +1,301 @@
+// ---------------------------------
+// default config to add dark-theme to all elements in the container
+// ---------------------------------
+
+div.container{
+  --bkg-color:  #D8DBDC;
+  --main-font: #343434;
+  --second-font: #797979;
+  --blue-buttons: #3E68FF;
+  --bkg-container:#BDB6B6;
+  --highlight-border-container:#0000002c;
+  transition: 0.7s;
+}
+
+div.container.dark-theme {
+  --bkg-color: #19181E;
+  --main-font:#FFFFFF;
+  --second-font: #797979;
+  --blue-buttons: #3E68FF;
+  --bkg-container:#312F3A;
+  --highlight-border-container:#0000003a;
+  transition: 0.7s;
+}
+
+div.container {
+  width: 100%;
+  display: flex;
+  font-family: Inconsolata, Arial, Helvetica, sans-serif;
+  flex-direction: column;
+  background-color: var(--bkg-color);
+}
+
+div.row  {
+  display: flex;
+  width: 100%;
+}
+
+div.column {
+  width:60%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------------------------------------------------------- */
+/* NAV BAR  - START */
+/* -------------------------------------------------------------------- */
+div.row-nav {
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  width: 70%;
+  height: 80px;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+li {
+  margin-right: 1%;
+  display: inline;
+}
+
+ul.ul-items a {
+  font-size: calc(4px + 1vw);
+  text-decoration: none;
+  cursor: pointer;
+  color: var( --main-font);
+}
+
+ul a:hover {
+  color:var(--blue-buttons)
+}
+
+img.lamp {
+    width: calc(30px + 1vw);
+    height: calc(30px + 1vh);
+}
+
+img.lamp:hover {
+  transform: translateY(-5px);
+  transition: 0.5s;
+}
+
+div.idiom-choose {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  border: 3px solid var( --main-font);
+  border-radius: 10px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  img {
+    height: calc(10px + 1vh);
+    border-radius: 10px;
+    object-position: center;
+    width: 60%;
+  }
+  img:hover
+  {
+    width: 68%;
+    transition: 0.3s;
+  }
+
+  img.flag-image {
+    width: 90%;
+    border: 2px solid var(--main-font);
+    transition: 0.2s;
+  }
+
+}
+
+}
+
+h1 {
+  font-size: calc(28px + 1vw);
+  color: var(--main-font);
+}
+
+/* -------------------------------------------------------------------- */
+/* NAV BAR - END */
+/* ----------------- */
+/* --------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
+/* ABOUT ME - START */
+/* -------------------------------------------------------------------- */
+
+section.row-about-me {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  color: var(--main-font);
+}
+
+div.column-about-me > div.title {
+  height: 20%;
+  margin-bottom: 3%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  color: var(--main-font);
+  justify-content: flex-start;
+  
+}
+
+div.about-me {
+  width: 100%;
+  height: 45%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-overflow: clip;
+}
+
+div.about-me  > p  {
+  font-size: calc(8px + 1vw);
+  display: flex;
+  width: 60%;
+}
+
+
+div.about-me img {
+  display: flex;
+  width: 40%;
+  height: 100%;
+}
+
+div.info-cv {
+  width: 65%;
+  height: 27%;
+  display: flex;
+  flex-direction: column;
+}
+
+div.info-cv-items {
+  width: 40%;
+  min-width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+div.cv-item > h1 {
+  font-size: calc(12px + 1vw);
+}
+div.cv-item > p {
+  font-size: calc(1px + 1vw);
+  color: var(--second-font);
+}
+
+div.download-cv {
+  height: 50%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+}
+
+div.download-cv  > a {
+   cursor: pointer;
+   background-color: var(--blue-buttons);
+   color:white;
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 50%;
+   height: 60%;
+   font-size: calc(2px + 0.6vw);
+}
+/* -------------------------------------------------------------------- */
+/* ABOUT ME - END */
+/* -------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
+/* QUALIFICATION - START */
+/* -------------------------------------------------------------------- */
+section.row-qualification {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  color: white;
+  justify-content: center;
+}
+
+
+div.column-qualification {
+
+// TITLE PART //
+// ----------- //
+
+  display: flex;
+  height: 100%;
+  
+   div.title {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 25%;
+    word-wrap: normal;
+    flex-wrap: wrap;
+    
+    div.title-info {
+      display: flex;
+      height: 80%;
+      align-items: center;
+
+      img {
+        width: calc(100px + 2vw);
+        height: calc(50px + 2vh);
+      }  
+    }
+    p {
+      color:var(--second-font);
+       font-size: calc(10px + 0.5vw);
+    }
+  }
+
+// EXPERIENCE CONTAINER //
+// ------------------- //
+div.experiences-container {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  align-items: center;
+  justify-content: center;
+
+  div.items-experience {
+      width: 20%;
+      margin-right: 2.4%;
+    }
+
+    div.detail-experience {
+      width: 65%;
+    }
+
+    div.detail-experience, div.items-experience {
+      display: flex;
+      height: 95%;
+      background-color: var(--bkg-container);
+      border-radius: 14px;
+      border-bottom: 5px solid  var(--highlight-border-container);
+    }
+
+  }
+}
+
+
+ 
