@@ -26,5 +26,11 @@
         "title": "Portfolio",
         "info-title":"Commerce Project",
         "info-subtitle":"Commerce Project"
+    },
+    "technologies": {
+        "title": "technologies"
+    },
+    "contact": {
+        "title": "Contact me"
     }
 }

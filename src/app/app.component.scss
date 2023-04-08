@@ -8,6 +8,7 @@ div.container{
   --second-font: #797979;
   --blue-buttons: #3E68FF;
   --bkg-container:#BDB6B6;
+  --border-color:#BDB6B6;
   --highlight-border-container:#0000002c;
   transition: 0.7s;
 }
@@ -18,6 +19,7 @@ div.container.dark-theme {
   --second-font: #797979;
   --blue-buttons: #3E68FF;
   --bkg-container:#312F3A;
+  --border-color:#161616;
   --highlight-border-container:#0000003a;
   transition: 0.7s;
 }
@@ -305,20 +307,32 @@ div.experiences-container {
 /* -------------------------------------------------------------------- */
 /* PORTFOLIO - START */
 /* -------------------------------------------------------------------- */
+section.row-portfolio 
+{
+  height: 500px;
+}
 
-div.column-portfolio > div.title {
-  text-align: center;
+div.column-portfolio > div {
   display: flex;
+}
+
+// TITLE //
+// ------------------- //
+
+div > div.title {
+  text-align: center;
   height:20%;
   justify-content: center;
 }
 
+// PORTFOLIO CONTAINER //
+// ------------------- //
+
 div.portfolio-container {
-  height: 50%;
+  height: 64%;
   align-items: center;
   justify-content: center;
   width: 100%;
-  display: flex;
   flex-direction:row;
 }
 
@@ -330,11 +344,40 @@ div.portfolio-items {
   width: 60%;
   margin: 1%;
   height: 90%;
-  border-bottom: 2px solid #161616;
-  border-left: 2px solid #161616;
-  border-right: 1px solid #161616;
+  border-bottom: 2px solid var(--border-color);
+  border-left: 2px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
 }
+
+// PORTFOLIO ARROWS //
+// ------------------- //
 
 div.portfolio-items-arrow {
   width: 15%;
 }
+
+div.selected-portfolio-items {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+}
+div.selected-portfolio-items > ul {
+  display: flex;
+  width: 50%;
+}
+div.selected-portfolio-items > ul > li {
+  width: 4%;
+  margin-right: 2%;
+  height: 40%;
+  background-color: var(--border-color);
+  border-radius: 20px;
+}
+
+/* -------------------------------------------------------------------- */
+/* PORTFOLIO - END */
+/* -------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
+/* TECHNOLOGIES - START */
+/* -------------------------------------------------------------------- */

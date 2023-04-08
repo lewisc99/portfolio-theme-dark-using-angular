@@ -26,5 +26,11 @@
         "title": "Portfólio",
         "info-title":"E-Commerce Projeto",
         "info-subtitle":"E-Commerce Projeto"
+    },
+    "technologies": {
+        "title": "Tecnologias"
+    },
+    "contact": {
+        "title": "Contato"
     }
 }
