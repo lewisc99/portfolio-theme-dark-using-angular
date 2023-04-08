@@ -41,6 +41,15 @@ div.column {
   flex-direction: column;
 }
 
+
+section {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  color: var(--main-font);
+}
+
 /* -------------------------------------------------------------------- */
 /* NAV BAR  - START */
 /* -------------------------------------------------------------------- */
@@ -135,14 +144,6 @@ h1 {
 /* -------------------------------------------------------------------- */
 /* ABOUT ME - START */
 /* -------------------------------------------------------------------- */
-
-section.row-about-me {
-  width: 100%;
-  height: 600px;
-  display: flex;
-  justify-content: center;
-  color: var(--main-font);
-}
 
 div.column-about-me > div.title {
   height: 20%;
@@ -297,5 +298,43 @@ div.experiences-container {
   }
 }
 
+/* -------------------------------------------------------------------- */
+/* QUALIFICATION - END */
+/* -------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
+/* PORTFOLIO - START */
+/* -------------------------------------------------------------------- */
 
- 
+div.column-portfolio > div.title {
+  text-align: center;
+  display: flex;
+  height:20%;
+  justify-content: center;
+}
+
+div.portfolio-container {
+  height: 50%;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  display: flex;
+  flex-direction:row;
+}
+
+div.portfolio-container > div {
+  display: flex;
+}
+
+div.portfolio-items {
+  width: 60%;
+  margin: 1%;
+  height: 90%;
+  border-bottom: 2px solid #161616;
+  border-left: 2px solid #161616;
+  border-right: 1px solid #161616;
+}
+
+div.portfolio-items-arrow {
+  width: 15%;
+}

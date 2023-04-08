@@ -21,5 +21,10 @@
     "qualification": {
         "title":"Qualificação",
         "subtitle":"Para mais detalhes clique na empresa correspondente"
+    },
+    "portfolio": {
+        "title": "Portfólio",
+        "info-title":"E-Commerce Projeto",
+        "info-subtitle":"E-Commerce Projeto"
     }
 }

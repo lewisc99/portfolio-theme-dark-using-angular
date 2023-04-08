@@ -21,5 +21,10 @@
     "qualification": {
         "title":"Qualification",
         "subtitle":"For more Details click on the corresponding company"
+    },
+    "portfolio": {
+        "title": "Portfolio",
+        "info-title":"Commerce Project",
+        "info-subtitle":"Commerce Project"
     }
 }
