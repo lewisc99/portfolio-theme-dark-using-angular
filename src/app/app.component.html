@@ -122,45 +122,47 @@
         </div>
         <div class="contact-container">
             <div class="social-medias">
-                <div>
+                <div class="social-media-box">
                     <div class="social-media-title">
-                        <h1>Social Media</h1>
+                        <h1>{{'contact.social-media.title' | translate}}</h1>
                     </div>
-                    <div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                    <div class="social-media-links">
+                        <div><img src="../assets/images/contact/icon-linkedin.svg" alt="linkedIn Icon" /></div>
+                        <div><img src="../assets/images/contact/icon-github.svg" alt="Github Icon"/></div>
+                        <div><img src="../assets/images/contact/icon-whatsapp.svg" alt="Whatsapp Icon" /></div>
                     </div>
                 </div>
-                <div>
+
+                <div class="social-media-box contact-item">
                     <div class="social-media-title">
-                        <h1>E-Mail</h1>
+                        <h1>{{'contact.social-media.e-mail' | translate}}</h1>
                     </div>
-                    <div>
-                        <div>
-                            <img />
-                        </div>
+                    <div class="contact-item-info">
+                        <div class="contact-info-image"><img src="../assets/images/contact/arroba.png" alt="Icon Arroba"/></div>
+                        <p>lewiscontato99@gmail.com</p>
                     </div>
                 </div>
-                <div>
+
+                <div class="social-media-box contact-item">
                     <div class="social-media-title">
-                        <h1>Cel Phone</h1>
+                        <h1>{{'contact.social-media.cel-phone' | translate}}</h1>
                     </div>
-                    <div>
-                        <img />
+                    <div class="contact-item-info">
+                        <div  class="contact-info-image"><img  src="../assets/images/contact/icon-whatsapp.svg" alt="Icon Whatsapp" /></div>
+                        <p>+55 31 99114-3417</p> 
                     </div>
                 </div>
             </div>
 
-            <div class="send-message">
+            <div class="form-group-send-message">
                 <div class="send-message-name">
-
+                    <input type="text"  placeholder="Name"/>
                 </div>
                 <div class="send-message-text">
-
+                    <textarea   placeholder="Message"></textarea>
                 </div>
                 <div class="send-message-button">
-
+                    <button><img src="../assets/images/contact/icon-whatsapp.svg"  alt="Icon whatsapp"/> {{"contact.form-send-message.send" | translate}}</button>
                 </div>
             </div>
 
@@ -168,4 +170,14 @@
         </div>
     </section>
 </main>
+<footer>
+    <div>
+        <ul>
+            <li><a>Home</a></li>
+            <li><a>Portfolio</a></li>
+        </ul>
+    </div>
+    <div><button></button></div>
+    <div><p>© Lewis Solution. All right reserved.</p></div>
+</footer>
 <router-outlet></router-outlet>

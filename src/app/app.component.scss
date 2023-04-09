@@ -7,6 +7,7 @@ main {
   --main-font: #343434;
   --second-font: #797979;
   --blue-buttons: #3E68FF;
+  --blue-buttons-hover: #753eff;
   --bkg-container:#BDB6B6;
   --border-color:#BDB6B6;
   --highlight-border-container:#0000002c;
@@ -18,6 +19,7 @@ main.dark-theme {
   --main-font:#FFFFFF;
   --second-font: #797979;
   --blue-buttons: #3E68FF;
+  --blue-buttons-hover:  #753eff;
   --bkg-container:#312F3A;
   --border-color:#161616;
   --highlight-border-container:#0000003a;
@@ -129,7 +131,6 @@ div.idiom-choose {
     border: 2px solid var(--main-font);
     transition: 0.2s;
   }
-
 }
 
 }
@@ -222,6 +223,11 @@ div.download-cv  > a {
    height: 60%;
    font-size: calc(2px + 0.6vw);
 }
+div.download-cv > a:hover {
+  background-color: var(--blue-buttons-hover);
+  transform: translateY(3px);
+  transition: 0.3s;
+}
 /* -------------------------------------------------------------------- */
 /* ABOUT ME - END */
 /* -------------------------------------------------------------------- */
@@ -278,6 +284,7 @@ div.experiences-container {
   height: 70%;
   align-items: center;
   justify-content: center;
+  
 
   div.items-experience {
       width: 20%;
@@ -294,6 +301,7 @@ div.experiences-container {
       background-color: var(--bkg-container);
       border-radius: 14px;
       border-bottom: 5px solid  var(--highlight-border-container);
+      box-shadow:  0 6px 11px 0 rgba(0, 0, 0, 0.3); //shadow behind the scrollbar
     }
 
   }
@@ -343,9 +351,8 @@ div.portfolio-items {
   width: 60%;
   margin: 1%;
   height: 90%;
-  border-bottom: 2px solid var(--border-color);
-  border-left: 2px solid var(--border-color);
-  border-right: 1px solid var(--border-color);
+  box-shadow:  0 6px 11px 0 rgba(0, 0, 0, 0.3); //shadow behind the scrollbar
+
 
  div.image{
      display: flex;
@@ -387,8 +394,13 @@ div.portfolio-items {
       padding: 4%;
       background-color: var(--blue-buttons);
       border-radius: 10px;
-      color: var(--bkg-color);
+      color: rgb(247, 247, 247);
       text-decoration: none;
+    } 
+    a:hover {
+      transform: translateY(-4px);
+      transition: 0.3s;
+      background-color: var(--blue-buttons-hover);
     }
   }
 
@@ -427,6 +439,7 @@ div.selected-portfolio-items > ul > li {
   height: 40%;
   background-color: var(--border-color);
   border-radius: 20px;
+  box-shadow:  0 3px 7px 0 rgba(0, 0, 0, 0.3); //shadow behind the scrollbar
 }
 
 /* -------------------------------------------------------------------- */
@@ -434,7 +447,7 @@ div.selected-portfolio-items > ul > li {
 /* -------------------------------------------------------------------- */
 /* --------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------- */
-/* TECHNOLOGIES - START */
+/* CONTACT - START */
 /* -------------------------------------------------------------------- */
 
 section.row-contact { 
@@ -443,16 +456,20 @@ section.row-contact {
 
 div.contact-container {
   display: flex;
-  height: 80%;
+  height: 70%;
   flex-direction: row;
   justify-content: center;
+
+
+// SOCIAL MEDIA //
+// ------------------- //
 
   div.social-medias {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 
-    div {
+    div.social-media-box {
       display: flex;
       width: 100%;
       height: 30%;
@@ -461,44 +478,183 @@ div.contact-container {
       border-radius: 15px;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
+      box-shadow:  0 6px 11px 0 rgba(0, 0, 0, 0.3); //shadow behind the scrollbar
 
       h1 {
-        font-size: calc(10px + 1vw);
+        font-size: calc(8px + 1vw);
         color:var(--main-font);
+        font-weight: bold;
       }
     }
 
     .social-media-title {
       width: 100%;
       display: flex;
-      height: 30%;
+      height: 40%;
       align-items: center;
       justify-content: center;
+    }
+
+    .social-media-links {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+
+      div {
+        width: 8%;
+        margin-right: 5%;
+        height: 65%;
+        display: flex;
+        border: 4px solid var(--blue-buttons);
+        padding: 5px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        
+        img {
+          width: 85%;
+          height: 80%;
+        }
+      }
+
+      div:hover {
+        background-color: var(--blue-buttons);
+        transition: 0.4s;
+        }
+    }
+
+    // CONTACT ITEM - INFO //
+// ------------------- //
+    div.contact-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+       div.contact-item-info {
+        width: 90%;
+        height: 50%;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items:center;
+        display: flex;
+
+        div {
+          display: flex;
+          width: 10%;
+          height: 70%;
+          align-items: center;
+          justify-content: center;
+          padding: 5px;
+          border: 4px solid var(--blue-buttons);
+          cursor: pointer;
+          flex-wrap: wrap;
+          border-radius: 10px;
+
+          img {
+            width: 60%;
+          }
+        }
+        
+        p {
+          margin-left: 4%;
+          width: 80%;
+          font-size: calc(4px + 1vw);
+          word-wrap: break-word;
+          }
+
+        div:hover {
+          background-color: var(--blue-buttons);
+          transition: 0.4s;
+          } 
+       }  
     }
   }
 
 }
-div.contact-container { 
-   
-  .send-message {
-    display: flex;
-    flex-direction: column;
+
+// FORM SEND - MESSAGE //
+// ------------------- //
+.form-group-send-message {
+  display: flex;
+  flex-direction: column;
+
+  input {
+    height: 50%;
   }
-  .send-message > div {
-    display: flex;
+  input:focus, textarea:focus {
+    outline: none;
+  }
+  input::placeholder, textarea::placeholder {
+    color: var(--second-font);
+  }
+  input, textarea {
+    border-radius: 10px;
+    padding: 10px;
     width: 100%;
-    margin-bottom: 3%;
-    background-color: var(--bkg-container);
+    background-color:var(--bkg-container);
+    border: none;
+    resize: none;
+    font-size: calc(3px + 1vw);
+    color: var(--main-font);
+    box-shadow:  0 6px 11px 0 rgba(0, 0, 0, 0.3); //shadow behind the scrollbar
   }
 
-  .send-message-text {
-    height: 40%;
-  }
+    textarea::-webkit-scrollbar {
+      width: 1em; //width of the scrollbar
+    }
 
-  .send-message-name, .send-message-button{
-    height: 20%;
-  }
+    textarea::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); //shadow behind the scrollbar
+    }
+
+    textarea::-webkit-scrollbar-thumb {
+    background-color: var(--second-font); //scrollbar item to roll up and down
+    outline: 1px solid rgb(212, 227, 242);
+    }
+
 }
+
+.form-group-send-message > div {
+  display: flex;
+  width: 100%;
+  margin-bottom: 3%;
+}
+
+.send-message-text {
+  height: 40%;
+}
+
+.send-message-name, .send-message-button{
+  height: 20%;
+
+  button {
+    width: 27%;
+    height: 60%;
+    border: 0px;
+    color: #FFFFFF;
+    background-color: #32BC59;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: calc(3px + 1vw);
+    text-align: center;
+    font-weight: bold;
+    box-shadow:  0 6px 11px 0 rgba(0, 0, 0, 0.3); //shadow behind the scrollbar
+
+    img {
+      width: 15%;
+    }
+   }
+   button:hover {
+    background-color: #396961;
+    transition: 0.4s;
+   }
+}
+
 div.contact-container > div {
   display: flex;
   width: 45%;
@@ -507,3 +663,14 @@ div.contact-container > div {
   
 }
 
+/* -------------------------------------------------------------------- */
+/* CONTACT-ME - END */
+/* -------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
+/* FOOTER - START */
+/* -------------------------------------------------------------------- */
+footer {
+  height: 240px;
+  background-color: #15171E;
+}

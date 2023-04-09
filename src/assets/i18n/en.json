@@ -31,6 +31,16 @@
         "title": "technologies"
     },
     "contact": {
-        "title": "Contact me"
+        "title": "Contact me",
+        "social-media": {
+            "title":"Social Medias",
+            "e-mail":"E-Mail",
+            "cel-phone":"Cel-Phone"
+        },
+        "form-send-message":{
+            "name":"Name",
+            "message":"Message",
+            "send":"Send"
+        }
     }
 }

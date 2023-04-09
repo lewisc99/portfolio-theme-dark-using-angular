@@ -31,6 +31,16 @@
         "title": "Tecnologias"
     },
     "contact": {
-        "title": "Contato"
+        "title": "Contato",
+        "social-media": {
+            "title":"Midia Sociais",
+            "e-mail":"E-Mail",
+            "cel-phone":"Celular"
+        },
+        "form-send-message":{
+            "name":"Nome",
+            "message":"Mensagem",
+            "send":"Enviar"
+        }
     }
 }
