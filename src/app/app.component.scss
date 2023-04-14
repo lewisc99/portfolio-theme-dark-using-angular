@@ -685,6 +685,11 @@ div.footer-nav {
 
   a {
     font-size: calc(7px + 1vw);
+    text-decoration: none;
+    color: white;
+  }
+  a:hover {
+    color:  #3E68FF;
   }
   li {
     margin-right: 2%;
@@ -709,9 +714,22 @@ div.arrow-roll-up {
     border-radius: 10px;
   }
   a {
-    color: white;
     cursor: pointer;
+    text-align: center;
+
+    img {
+      width: 40%;
+      height: 40%;
+    }
   }
+
+  div:hover {
+    background-color:#753eff;
+    transition: 0.4s;
+    transform: translateY(-10px);
+  }
+
+
 }
 
 
