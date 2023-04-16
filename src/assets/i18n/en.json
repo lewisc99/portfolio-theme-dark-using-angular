@@ -25,7 +25,23 @@
     "portfolio": {
         "title": "Portfolio",
         "info-title":"Commerce Project",
-        "info-subtitle":"Commerce Project"
+        "info-subtitle":"Commerce Project",
+        "items": [
+            {
+                "id":"#portfolio-1",
+                "title":"Commerce Project",
+                "subtitle":"Commerce Project",
+                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "href":"#"
+            },
+            {
+                "id":"#portfolio-2",
+                "title":"Gym Project",
+                "subtitle":"Gym Project",
+                "src":"../assets/images/portfolio/gym.jpg",
+                "href":"#"
+            }
+        ]
     },
     "technologies": {
         "title": "technologies"

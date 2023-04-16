@@ -25,7 +25,23 @@
     "portfolio": {
         "title": "Portfólio",
         "info-title":"E-Commerce Projeto",
-        "info-subtitle":"E-Commerce Projeto"
+        "info-subtitle":"E-Commerce Projeto",
+        "items": [
+            {
+                "id":"#portfolio-1",
+                "title":"Projeto E-Commerce",
+                "subtitle":"Commerce Project",
+                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "href":"#"
+            },
+            {
+                "id":"#portfolio-2",
+                "title":"Academia Projeto",
+                "subtitle":"Gym Project",
+                "src":"../assets/images/portfolio/gym.jpg",
+                "href":"#"
+            }
+        ]
     },
     "technologies": {
         "title": "Tecnologias"

@@ -10,12 +10,14 @@ export class AppComponent implements OnInit {
 
   private localStorage:Storage = localStorage;
   public lampColor:string = "light";
+  public portfolios:Portfolio[] = [];
 
   constructor(private translateService:TranslateService) {}
  
   ngOnInit(): void {
     this.initializeCurrentIdiom();
     this.initializeCurrentTheme();
+    this.initializePortfolio();
   }
 
   initializeCurrentIdiom():void 
@@ -71,6 +73,7 @@ export class AppComponent implements OnInit {
     document.getElementById("image-brazil")!.classList.remove('flag-image');
     this.translateService.use("en");
    }
+ 
   }
   
   toggleTheme()
@@ -88,5 +91,22 @@ export class AppComponent implements OnInit {
       this.localStorage.setItem("theme", "light");
     }
   }
+
+  initializePortfolio()
+  {
+    this.translateService.get("portfolio.items").subscribe(
+      items => {
+        this.portfolios = items
+      }
+    )
+  }
  
+}
+interface Portfolio 
+{
+  id:string,
+  title:string,
+  subtitle:string,
+  src:string,
+  href:string
 }

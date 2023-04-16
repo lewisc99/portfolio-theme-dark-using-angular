@@ -78,19 +78,19 @@
                     <i class="arrow left"></i>
                 </div>
                 </div>
-                <div class="portfolio-items">
+                <div class="portfolio-items" *ngFor="let portfolio of portfolios">
                     <div class="portfolio-item image">
-                        <img  src="../assets/images/portfolio/initialPage.jpg"/>
+                        <img  [src]="portfolio.src"/>
                     </div>
-                    <div class="portfolio-item info">
+                    <div class="portfolio-item info" >
                         <div class="portfolio-title">
-                            <h1>Ecommerce Tech</h1>
+                            <h1>{{portfolio.title}}</h1>
                         </div>
                         <div class="portfolio-subtitle">
-                            <p>Commerce Project</p>
+                            <p>{{portfolio.subtitle}}</p>
                         </div>
                         <div class="portfolio-more-information">
-                            <a href="">+ Information</a>
+                            <a [href]="portfolio.href">+ Information</a>
                         </div>
                     </div>
                 </div>
@@ -164,10 +164,10 @@
 
             <div class="form-group-send-message">
                 <div class="send-message-name">
-                    <input type="text"  placeholder="Name"/>
+                    <input type="text"  placeholder="{{'contact.form-send-message.name'| translate}}"/>
                 </div>
                 <div class="send-message-text">
-                    <textarea   placeholder="Message"></textarea>
+                    <textarea    placeholder="{{'contact.form-send-message.message'| translate}}"></textarea>
                 </div>
                 <div class="send-message-button">
                     <button><img src="../assets/images/contact/icon-whatsapp.svg"  alt="Icon whatsapp"/> {{"contact.form-send-message.send" | translate}}</button>
