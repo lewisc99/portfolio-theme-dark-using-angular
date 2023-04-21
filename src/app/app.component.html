@@ -1,8 +1,8 @@
 <main class="container" id="container" #container>
-    <div class="row row-nav">
+    <div class="row row-nav" id="nav">
         <nav>
             <ul class="ul-items" #ulitems>
-                <li class="home"> <a href="#" style="color:#3E68FF;">{{'navBar.Home' | translate}}</a></li>
+                <li class="home"> <a href="#about" style="color:#3E68FF;">{{'navBar.Home' | translate}}</a></li>
                 <li class="qualification"> <a href="#qualification">{{'navBar.Qualification' | translate}}</a></li>
                 <li class="portfolio"> <a href="#portfolio">{{'navBar.Portfolio' | translate}}</a></li>
                 <li class="skills"> <a href="#skills">{{'navBar.Skills' | translate}}</a></li>
@@ -16,7 +16,7 @@
         </nav>
     </div>
 
-    <section class="row row-about-me">
+    <section class="row row-about-me" id="about">
        <div class="column column-about-me">
         <div class="title">
             <h1>{{'about-me.title' | translate}}</h1>
@@ -43,7 +43,7 @@
       </div>
     </section>
 
-    <section class="row row-qualification">
+    <section class="row row-qualification" id="qualification">
         <div class="column column-qualification">
                 <div class="title">
                     <div class="title-info">
@@ -64,7 +64,7 @@
         </div>
     </section>
     
-    <section class="row row-portfolio">
+    <section class="row row-portfolio" id="portfolio">
         <div class="column column-portfolio">
             <div class="title">
                 <div class="title-info">
@@ -73,9 +73,9 @@
             </div>
 
             <div class="portfolio-container">
-                <div class="portfolio-items-arrow left">
+                <div class="portfolio-items-arrow left" (click)="slidePortfolio('left')">
                     <div>
-                    <i class="arrow left" (click)="slidePortfolio('left')"></i>
+                    <i class="arrow left"></i>
                 </div>
                 </div>
                 <div class="portfolio-items" *ngFor="let portfolio of portfolios" [id]="portfolio.id" [ngClass]="{'hide-portfolio': portfolio.show == false}">
@@ -94,9 +94,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-items-arrow right">
+                <div class="portfolio-items-arrow right" (click)="slidePortfolio('right')">
                     <div>
-                    <i class="arrow right" (click)="slidePortfolio('right')"></i>
+                    <i class="arrow right" ></i>
                   </div>
                 </div>
             </div>
@@ -110,7 +110,7 @@
      </div>
     </section>
 
-    <section  class="row row-technologies">
+    <section  class="row row-technologies" id="skills">
       <div class="column column-technologies">
         <div class="title">
             <div class="title-info">
@@ -122,16 +122,38 @@
                 <option value="backend">Back End</option>
                 <option value="frontend">Front End</option>
                 <option value="java">Java</option>
-                <option value="audi">Audi</option>
               </select>
-        </div>
-        <div>
-
-        </div>
+            </div>
+            <div class="skills-items">
+                <div class="skill-item">
+                    <img src="../assets/images/lamp-light.svg"/>
+                    <p>Logo Name</p>
+                </div>
+                <div class="skill-item">
+                    <img src="../assets/images/lamp-light.svg"/>
+                    <p>Logo Name</p>
+                </div>
+                <div class="skill-item">
+                    <img src="../assets/images/lamp-light.svg"/>
+                    <p>Logo Name</p>
+                </div>
+                <div class="skill-item">
+                    <img src="../assets/images/lamp-light.svg"/>
+                    <p>Logo Name</p>
+                </div>
+                <div class="skill-item">
+                    <img src="../assets/images/lamp-light.svg"/>
+                    <p>Logo Name</p>
+                </div>
+                <div class="skill-item">
+                    <img src="../assets/images/lamp-light.svg"/>
+                    <p>Logo Name</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section class="row row-contact">
+    <section class="row row-contact" id="contact">
       <div class="column column-contact">
         <div class="title">
             <div class="title-info">
@@ -195,7 +217,7 @@
             <li><a href="#">Portfolio</a></li>
         </ul>
     </div>
-    <div class="arrow-roll-up"><div><a><img src="../assets/images/arrow-up.svg" alt="arrow up"/></a></div></div>
+    <div class="arrow-roll-up"><div><a href="#nav"><img src="../assets/images/arrow-up.svg" alt="arrow up"/></a></div></div>
     <div class="footer-info"><p>© Lewis Solution. All right reserved.</p></div>
 </footer>
 <router-outlet></router-outlet>

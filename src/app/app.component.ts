@@ -136,7 +136,6 @@ export class AppComponent implements OnInit {
 
     this.portfolios[IndexCurrentPortfolio].show = false;
     this.portfolios[IndexSelectedPortfolio].show = true;
-
   }
 } 
 
