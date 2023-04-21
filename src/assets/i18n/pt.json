@@ -24,22 +24,39 @@
     },
     "portfolio": {
         "title": "Portfólio",
-        "info-title":"E-Commerce Projeto",
-        "info-subtitle":"E-Commerce Projeto",
+        "information":"Informações",
         "items": [
             {
-                "id":"#portfolio-1",
+                "id":"portfolio-1",
                 "title":"Projeto E-Commerce",
                 "subtitle":"Commerce Project",
                 "src":"../assets/images/portfolio/ecommerce.jpg",
-                "href":"#"
+                "href":"#",
+                "show":true
             },
             {
-                "id":"#portfolio-2",
+                "id":"portfolio-2",
                 "title":"Academia Projeto",
                 "subtitle":"Gym Project",
                 "src":"../assets/images/portfolio/gym.jpg",
-                "href":"#"
+                "href":"#",
+                "show":false
+            },
+            {
+                "id":"portfolio-3",
+                "title":"Painel de Candidato",
+                "subtitle":"Crud Aplicação",
+                "src":"../assets/images/portfolio/gym.jpg",
+                "href":"#",
+                "show":false
+            },
+            {
+                "id":"portfolio-4",
+                "title":"Aplicativo Chat",
+                "subtitle":"Em tempo Real Chat",
+                "src":"../assets/images/portfolio/gym.jpg",
+                "href":"#",
+                "show":false
             }
         ]
     },

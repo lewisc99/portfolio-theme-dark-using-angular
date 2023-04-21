@@ -352,13 +352,27 @@ div.portfolio-items {
   margin: 1%;
   height: 90%;
   box-shadow:  0 6px 11px 0 rgba(0, 0, 0, 0.3); //shadow behind the scrollbar
+  animation-name: fade;
+  animation-duration: 1.5s;
 
+  //move a little the portfolio box
+  @keyframes fade {
+    from {
+      opacity: .4;
+      transform: translateX(4px);
+    } 
+    to {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+  }
 
  div.image{
      display: flex;
      width: 50%;
      align-items: center;
      justify-content: center;
+     color: transparent; 
 
      img {
       width: 75%;
@@ -414,6 +428,10 @@ div.portfolio-items {
  }
 }
 
+.hide-portfolio {
+  display:none !important;
+}
+
 
 
 // PORTFOLIO ARROWS //
@@ -424,6 +442,7 @@ div.portfolio-items-arrow {
   height: 40%;
   align-items: center;
   display: flex;
+  cursor: pointer;
 
   div {
     width: 100%;
@@ -438,6 +457,7 @@ div.portfolio-items-arrow {
       display: inline-block;
       padding: 10px;
       cursor: pointer;
+      color: transparent; 
     }
     .arrow:hover {
       border: solid var(--blue-buttons-hover);
@@ -466,23 +486,41 @@ div.selected-portfolio-items {
 div.selected-portfolio-items > ul {
   display: flex;
   width: 50%;
+  flex-direction: row;
 }
 div.selected-portfolio-items > ul > li {
   width: 4%;
+  color: transparent;
+  cursor: pointer;
   margin-right: 2%;
   height: 40%;
   background-color: var(--border-color);
   border-radius: 20px;
   box-shadow:  0 3px 7px 0 rgba(0, 0, 0, 0.3); //shadow behind the scrollbar
+  transition:  background-color 0.5s;
 }
+div.selected-portfolio-items > ul > li:hover {
+  background-color: var(--blue-buttons-hover);
+}
+
 
 /* -------------------------------------------------------------------- */
 /* PORTFOLIO - END */
 /* -------------------------------------------------------------------- */
 /* --------------------------------------------------------------------------------------------- */
 /* -------------------------------------------------------------------- */
+/* TECHNOLOGIES - START */
+/* -------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------- */
+/* TECHNOLOGIES - END */
+/* -------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
 /* CONTACT - START */
 /* -------------------------------------------------------------------- */
+
 
 section.row-contact { 
   height: 600px;

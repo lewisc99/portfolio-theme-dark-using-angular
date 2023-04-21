@@ -75,10 +75,10 @@
             <div class="portfolio-container">
                 <div class="portfolio-items-arrow left">
                     <div>
-                    <i class="arrow left"></i>
+                    <i class="arrow left" (click)="slidePortfolio('left')"></i>
                 </div>
                 </div>
-                <div class="portfolio-items" *ngFor="let portfolio of portfolios">
+                <div class="portfolio-items" *ngFor="let portfolio of portfolios" [id]="portfolio.id" [ngClass]="{'hide-portfolio': portfolio.show == false}">
                     <div class="portfolio-item image">
                         <img  [src]="portfolio.src"/>
                     </div>
@@ -90,22 +90,21 @@
                             <p>{{portfolio.subtitle}}</p>
                         </div>
                         <div class="portfolio-more-information">
-                            <a [href]="portfolio.href">+ Information</a>
+                            <a [href]="portfolio.href">+ {{'portfolio.information' | translate}}</a>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-items-arrow right">
                     <div>
-                    <i class="arrow right"></i>
+                    <i class="arrow right" (click)="slidePortfolio('right')"></i>
                   </div>
                 </div>
             </div>
             
-        <div class="selected-portfolio-items">
-            <ul class="selected-portfolio">
-                <li></li>
-                <li></li>
-                <li></li>
+        <div class="selected-portfolio-items" >
+            <ul class="selected-portfolio" >
+                <li *ngFor="let portfolio of portfolios" (click)="dotSelectedPortfolio(portfolio.id)"
+                 [ngStyle]="{'background-color': portfolio.show ? 'var(--blue-buttons)': ''}"></li>
             </ul>
          </div> 
      </div>
@@ -118,11 +117,22 @@
                 <h1>{{'technologies.title' | translate}}</h1>
             </div>
         </div>
+        <div class="select-box">
+            <select name="cars" id="cars">
+                <option value="backend">Back End</option>
+                <option value="frontend">Front End</option>
+                <option value="java">Java</option>
+                <option value="audi">Audi</option>
+              </select>
+        </div>
+        <div>
+
+        </div>
         </div>
     </section>
 
     <section class="row row-contact">
-      <div class="column column-contactt">
+      <div class="column column-contact">
         <div class="title">
             <div class="title-info">
                 <h1>{{'contact.title' | translate}}</h1>

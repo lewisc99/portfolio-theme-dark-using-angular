@@ -24,22 +24,41 @@
     },
     "portfolio": {
         "title": "Portfolio",
-        "info-title":"Commerce Project",
-        "info-subtitle":"Commerce Project",
+        "information":"Informations",
         "items": [
             {
-                "id":"#portfolio-1",
+                "id":"portfolio-1",
                 "title":"Commerce Project",
                 "subtitle":"Commerce Project",
                 "src":"../assets/images/portfolio/ecommerce.jpg",
-                "href":"#"
+                "href":"#",
+                "show":true
             },
             {
-                "id":"#portfolio-2",
+                "id":"portfolio-2",
                 "title":"Gym Project",
                 "subtitle":"Gym Project",
                 "src":"../assets/images/portfolio/gym.jpg",
-                "href":"#"
+                "href":"#",
+                "show":false
+            },
+            {
+                "id":"portfolio-3",
+                "title":"Candidate Dashboard",
+                "subtitle":"Crud Application",
+                "src":"../assets/images/portfolio/gym.jpg",
+                "href":"#",
+                "show":false
+
+            },
+            {
+                "id":"portfolio-4",
+                "title":"Chat App",
+                "subtitle":"Real Time Chat",
+                "src":"../assets/images/portfolio/gym.jpg",
+                "href":"#",
+                "show":false
+
             }
         ]
     },

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  initializeCurrentTheme()
+  initializeCurrentTheme():void
   {
     const colorStorage = this.localStorage.getItem("theme");
     if (colorStorage == null)
@@ -56,7 +56,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  toggleIdiom()
+  toggleIdiom():void
   {
     let currentIdiom = this.localStorage.getItem("idiom");
     let isEnglish = currentIdiom == "en" ? true : false; 
@@ -73,12 +73,13 @@ export class AppComponent implements OnInit {
     document.getElementById("image-brazil")!.classList.remove('flag-image');
     this.translateService.use("en");
    }
- 
+   this.initializePortfolio();
   }
   
-  toggleTheme()
+  toggleTheme():void
   {
-    let themeStorage = localStorage.getItem("theme");
+    let themeStorage = localStorage.getItem("theme"); 
+    
     if (themeStorage == "light")
     {
       this.lampColor = "light";
@@ -92,7 +93,7 @@ export class AppComponent implements OnInit {
     }
   }
 
-  initializePortfolio()
+  initializePortfolio():void
   {
     this.translateService.get("portfolio.items").subscribe(
       items => {
@@ -100,13 +101,51 @@ export class AppComponent implements OnInit {
       }
     )
   }
- 
-}
+
+  slidePortfolio(direction:string)
+  {
+     let currentPortfolio = this.portfolios.filter(portfolio => portfolio.show);
+     let IndexCurrentPortfolio = this.portfolios.findIndex(portfolioIndex => portfolioIndex.id == currentPortfolio[0].id);
+     let firstPortfolioIndex = 0;
+     this.portfolios[IndexCurrentPortfolio].show = false;
+
+
+     if (direction == "right")
+     {
+      if (IndexCurrentPortfolio == this.portfolios.length -1) {
+        this.portfolios[0].show = true;
+        return;
+      }
+       this.portfolios[IndexCurrentPortfolio + 1].show = true;
+       return;
+     }
+
+      if (IndexCurrentPortfolio == firstPortfolioIndex) 
+      {
+        this.portfolios[this.portfolios.length - 1].show = true;
+        return;
+      }
+      this.portfolios[IndexCurrentPortfolio - 1].show = true;
+  }
+
+  dotSelectedPortfolio(portfolioId:string)
+  {
+    let currentPortfolio = this.portfolios.filter(portfolio => portfolio.show);
+    let IndexCurrentPortfolio = this.portfolios.findIndex(portfolioIndex => portfolioIndex.id == currentPortfolio[0].id);
+    let IndexSelectedPortfolio = this.portfolios.findIndex(portfolioIndex => portfolioIndex.id == portfolioId);
+
+    this.portfolios[IndexCurrentPortfolio].show = false;
+    this.portfolios[IndexSelectedPortfolio].show = true;
+
+  }
+} 
+
 interface Portfolio 
 {
   id:string,
   title:string,
   subtitle:string,
   src:string,
-  href:string
+  href:string,
+  show: boolean
 }
