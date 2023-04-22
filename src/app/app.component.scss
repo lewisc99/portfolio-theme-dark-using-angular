@@ -119,6 +119,7 @@ div.idiom-choose {
     border-radius: 10px;
     object-position: center;
     width: 60%;
+    opacity: 0.5;
   }
   img:hover
   {
@@ -130,6 +131,7 @@ div.idiom-choose {
     width: 90%;
     border: 2px solid var(--main-font);
     transition: 0.2s;
+    opacity: 1.0;
   }
 }
 
@@ -565,6 +567,7 @@ div.skills-items {
   align-items: center;
   justify-content: center;
 
+
   .skill-item {
     display: flex;
     width: 34%;
@@ -576,6 +579,21 @@ div.skills-items {
     align-items: center;
     background-color: var(--bkg-container);
     border-radius: 10px;
+
+    animation-name: fade;
+    animation-duration: 1.5s;
+  
+    //move a little the portfolio box
+    @keyframes fade {
+      from {
+        opacity: .4;
+        transform: translateY(-4px);
+      } 
+      to {
+        opacity: 1;
+        transform: translateY(0px);
+      } 
+    }
    
     img {
       width: 20%;

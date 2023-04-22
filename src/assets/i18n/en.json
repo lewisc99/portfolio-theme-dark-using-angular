@@ -28,37 +28,67 @@
         "items": [
             {
                 "id":"portfolio-1",
-                "title":"Commerce Project",
-                "subtitle":"Commerce Project",
-                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "title":"Gym Project",
+                "subtitle":"Freelance Gym Dashboard",
+                "src":"../assets/images/portfolio/gym.jpg",
                 "href":"#",
                 "show":true
             },
             {
                 "id":"portfolio-2",
-                "title":"Gym Project",
-                "subtitle":"Gym Project",
-                "src":"../assets/images/portfolio/gym.jpg",
+                "title":"Commerce Project",
+                "subtitle":"Commerce Project",
+                "src":"../assets/images/portfolio/ecommerce.jpg",
                 "href":"#",
                 "show":false
             },
             {
                 "id":"portfolio-3",
-                "title":"Candidate Dashboard",
-                "subtitle":"Crud Application",
-                "src":"../assets/images/portfolio/gym.jpg",
+                "title":"Chat App",
+                "subtitle":"Real Time Message App",
+                "src":"../assets/images/portfolio/ecommerce.jpg",
                 "href":"#",
                 "show":false
-
             },
             {
                 "id":"portfolio-4",
-                "title":"Chat App",
-                "subtitle":"Real Time Chat",
-                "src":"../assets/images/portfolio/gym.jpg",
+                "title":"Candidate Dashboard",
+                "subtitle":"CRUD app to interview test",
+                "src":"../assets/images/portfolio/ecommerce.jpg",
                 "href":"#",
                 "show":false
-
+            },
+            {
+                "id":"portfolio-5",
+                "title":"Person Microservice API",
+                "subtitle":"API using RabbitMQ and Mongo",
+                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "href":"#",
+                "show":false
+            },
+            {
+                "id":"portfolio-6",
+                "title":"Curriculum Dashboard",
+                "subtitle":"ASPNET MVC Curriculum app",
+                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "href":"#",
+                "show":false
+            },
+            {
+                "id":"portfolio-7",
+                "title":"Landing Page Laundry Website",
+                "subtitle":"Freelance Laundry Machine",
+                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "href":"#",
+                "show":false
+            },
+            {
+                "id":"portfolio-8",
+                "title":"Microservice Discount API",
+                "subtitle":"Project to Bidea Factory Company",
+                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "href":"#",
+                "show":false
             }
         ]
     },

@@ -27,6 +27,14 @@ export class AppComponent implements OnInit {
     if(currentIdiom != null)
     {
        this.translateService.setDefaultLang(this.localStorage.getItem("idiom")!);
+       if (currentIdiom == "pt")
+       {
+        document.getElementById("image-brazil")!.classList.add('flag-image');
+        document.getElementById("image-usa")!.classList.remove('flag-image');
+       } else {
+        document.getElementById("image-usa")!.classList.add('flag-image');
+        document.getElementById("image-brazil")!.classList.remove('flag-image');
+       }
     } else {
      this.translateService.setDefaultLang("en");
      this.localStorage.setItem("idiom","en");
