@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
   private localStorage:Storage = localStorage;
   public lampColor:string = "light";
   public portfolios:Portfolio[] = [];
+  public skills:Skills[] = [];
 
   constructor(private translateService:TranslateService) {}
  
@@ -137,6 +138,16 @@ export class AppComponent implements OnInit {
     this.portfolios[IndexCurrentPortfolio].show = false;
     this.portfolios[IndexSelectedPortfolio].show = true;
   }
+  
+  selectedSkill(skillSelect:any)
+  {
+    this.translateService.get("skills.items").subscribe(
+      items => {
+        let skillsItems = items;
+        this.skills = skillsItems[skillSelect.value];
+      }
+    )
+  }
 } 
 
 interface Portfolio 
@@ -147,4 +158,10 @@ interface Portfolio
   src:string,
   href:string,
   show: boolean
+}
+
+interface Skills 
+{
+  title: string;
+  src:string;
 }

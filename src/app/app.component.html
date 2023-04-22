@@ -114,40 +114,24 @@
       <div class="column column-technologies">
         <div class="title">
             <div class="title-info">
-                <h1>{{'technologies.title' | translate}}</h1>
+                <h1>{{'skills.title' | translate}}</h1>
             </div>
         </div>
         <div class="select-box">
-            <select name="cars" id="cars">
-                <option value="backend">Back End</option>
-                <option value="frontend">Front End</option>
-                <option value="java">Java</option>
+            <select name="cars" id="cars" (change)="selectedSkill($event.target)">
+                <option [disabled]="true">{{'skills.select-items.select' | translate}}</option>
+                <option value="0">{{'skills.select-items.backend' | translate}}</option>
+                <option value="1">{{'skills.select-items.frontend' | translate}}</option>
+                <option value="2">{{'skills.select-items.java' | translate}}</option>
+                <option value="3">{{'skills.select-items.csharp' | translate}}</option>
+                <option value="4">{{'skills.select-items.others' | translate}}</option>
+                <option value="5">{{'skills.select-items.database' | translate}}</option>
               </select>
             </div>
-            <div class="skills-items">
-                <div class="skill-item">
+            <div class="skills-items" >
+                <div class="skill-item" *ngFor="let skill of skills">
                     <img src="../assets/images/lamp-light.svg"/>
-                    <p>Logo Name</p>
-                </div>
-                <div class="skill-item">
-                    <img src="../assets/images/lamp-light.svg"/>
-                    <p>Logo Name</p>
-                </div>
-                <div class="skill-item">
-                    <img src="../assets/images/lamp-light.svg"/>
-                    <p>Logo Name</p>
-                </div>
-                <div class="skill-item">
-                    <img src="../assets/images/lamp-light.svg"/>
-                    <p>Logo Name</p>
-                </div>
-                <div class="skill-item">
-                    <img src="../assets/images/lamp-light.svg"/>
-                    <p>Logo Name</p>
-                </div>
-                <div class="skill-item">
-                    <img src="../assets/images/lamp-light.svg"/>
-                    <p>Logo Name</p>
+                    <p>{{skill.title}}</p>
                 </div>
             </div>
         </div>

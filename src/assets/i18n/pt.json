@@ -60,8 +60,74 @@
             }
         ]
     },
-    "technologies": {
-        "title": "Tecnologias"
+    "skills": {
+        "title": "Tecnologias",
+        "select-items": {
+            "select":"Habilidades",
+            "backend":"Back End",
+            "frontend":"Front End",
+            "java":"Java",
+            "csharp":"C#",
+            "others":"Outros",
+            "database":"Banco de Dados"
+        },
+        "items": [
+            [
+                {"title":"Java", "src":""},
+                {"title":"Csharp", "src":""},
+                {"title":"Windows", "src":""},
+                {"title":"Linux", "src":""}
+            ],
+            [
+                {"title":"HTML", "src":""},
+                {"title":"CSS", "src":""},
+                {"title":"Javascript", "src":""},
+                {"title":"Angular 2", "src":""},
+                {"title":"TypeScript", "src":""},
+                {"title":"Bootstrap", "src":""},
+                {"title":"Figma", "src":""},
+                {"title":"jQuery", "src":""}
+            ],
+            [
+                {"title":"Spring Framework", "src":""},
+                {"title":"Spring Cloud", "src":""},
+                {"title":"Kafka", "src":""},
+                {"title":"RabbitMQ", "src":""},
+                {"title":"Spring Boot", "src":""},
+                {"title":"Spring MVC", "src":""},
+                {"title":"Hibernate", "src":""},
+                {"title":"JUnit", "src":""},
+                {"title":"Mockito", "src":""},
+                {"title":"MockMvc", "src":""}
+            ],
+            [
+                {"title":"ASP.NET", "src":""},
+                {"title":"Entity Framework", "src":""},
+                {"title":"Microsserviços", "src":""},
+                {"title":"RabbitMQ", "src":""},
+                {"title":"Ocelot", "src":""},
+                {"title":"Mass Transit", "src":""},
+                {"title":"Unit Testing", "src":""},
+                {"title":"Integration Test", "src":""},
+                {"title":"Identity", "src":""}
+            ],
+            [
+                {"title":"Git", "src":""},
+                {"title":"GitHub", "src":""},
+                {"title":"CI/CD", "src":""},
+                {"title":"GitLab", "src":""},
+                {"title":"Docker", "src":""},
+                {"title":"Docker Compose", "src":""}
+            ],
+            [
+                {"title":"SQL Server", "src":""},
+                {"title":"MySQL", "src":""},
+                {"title":"SQLite", "src":""},
+                {"title":"PostgreSQL", "src":""},
+                {"title":"Mongo DB", "src":""},
+                {"title":"Oracle", "src":""}
+            ]
+        ]
     },
     "contact": {
         "title": "Contato",
