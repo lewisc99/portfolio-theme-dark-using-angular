@@ -295,6 +295,8 @@ div.experiences-container {
 
     div.detail-experience {
       width: 65%;
+      height: 100%;
+      flex-direction: column;
     }
 
     div.detail-experience, div.items-experience {
@@ -309,6 +311,38 @@ div.experiences-container {
   }
 }
 
+div.detail-item {
+  padding: 24px;
+  display: flex;
+}
+div.detail-experience-title
+{
+  height: 15%;
+  flex-direction: column;
+
+  h1 {
+    font-size: calc(30px + 1vw);
+    color: var(--main-font);
+  }
+  h3 {
+    font-size: calc(4px + 1vw);
+    color: var(--second-font);
+  }
+}
+
+div.detail-experience-text {
+  height: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  p {
+    font-size: calc(2px + 1vw);
+    color: var(--main-font);
+  }
+}
+
+div.detail-experience-skills {
+  height: 30%;
+}
 /* -------------------------------------------------------------------- */
 /* QUALIFICATION - END */
 /* -------------------------------------------------------------------- */
