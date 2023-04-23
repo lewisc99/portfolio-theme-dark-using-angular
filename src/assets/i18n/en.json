@@ -21,27 +21,64 @@
     "qualification": {
         "title":"Qualification",
         "subtitle":"For more Details click on the corresponding company",
-        "items-experience": [
+        "items": [
             {
                 "id": 0,
                 "title":"Fullstack Dev Byteon Technologia",
                 "dateStart": "02/06/2023",
                 "dateFinish": "Present",
-                "src":"../assets/images/qualification-icon.svg"
+                "src":"../assets/images/qualification-icon.svg",
+                "detail": {
+                    "title": "Fullstack Byteon Technologia",
+                    "subTitle":"Full-Time Remote PJ Job",
+                    "selected":true,
+                    "text":"I am currently a full stack web developer. I entered as a Junior and in a little less than a year I managed to reach the plenary position. My objective is to understand what my client needs and to deliver quickly and functionally. Work in backend, frontend, requirements gathering, table creation, data bank manipulation. Always using agile methodology.",
+                    "skills": [
+                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
+                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
+                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
+                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"}
+                    ]
+                }
+              
             },
             {
                 "id": 1,
                 "title":"Developer Freelance PJ",
                 "dateStart": "02/02/2022",
                 "dateFinish": "02/06/2023",
-                "src":"../assets/images/qualification-icon.svg"
+                "src":"../assets/images/qualification-icon.svg",
+                "detail": {
+                    "title": "Developer Freelance PJ",
+                    "subTitle":"Lewis Studios · Freelance",
+                    "selected":true,
+                    "text":"Development of web pages, Portfolios, Landing Page, for small companies, using Java Spring boot with Angular 2 and C#, I provided more than 5 services during 2022. Now i'm working with backend C# (.NET) and Java (Spring Boot), and in the Frontend (Angular and JavaScript/TypeScript).",
+                    "skills": [
+                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
+                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
+                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
+                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"}
+                    ]
+                }
             },
             {
                 "id": 2,
                 "title":"Customer Service | ADM Localiza Hertz",
                 "dateStart": "06/01/2019",
                 "dateFinish": "12/15/2021",
-                "src":"../assets/images/qualification-icon.svg"
+                "src":"../assets/images/qualification-icon.svg",
+                "detail": {
+                    "title": "Localiza Hertz",
+                    "subTitle":"Administrative Assistant",
+                    "selected":true,
+                    "text":"I worked in the service sector of Localiza for an Uber partner,in the support of directing emails and customers  to the respective departments where it is located, Localiza has more than 10 million customers, then with experience I was appointed to the administrative support sector, and soon after I went to the Emergency vehicular sector of Localiza,where I could contribute to a quick and analytical service.",
+                    "skills": [
+                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
+                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
+                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
+                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"}
+                    ]
+                }
             }
         ]
     },

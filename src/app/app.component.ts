@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -6,21 +6,23 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit{
 
   private localStorage:Storage = localStorage;
   public lampColor:string = "light";
   public portfolios:Portfolio[] = [];
   public skills:Skills[] = [];
-  public qualificationItems:QualificationItem[] = [];
+  public qualificationDetail:any = {};
+  public qualifications:Qualification[] = [];
 
   constructor(private translateService:TranslateService) {}
- 
+
+
   ngOnInit(): void {
     this.initializeCurrentIdiom();
     this.initializeCurrentTheme();
     this.initializePortfolio();
-    this.initializeQualificationItens();
+    this.initializeQualification();
   }
 
   initializeCurrentIdiom():void 
@@ -104,11 +106,12 @@ export class AppComponent implements OnInit {
     }
   }
 
-  initializeQualificationItens():void 
+  initializeQualification():void 
   {
-    this.translateService.get("qualification.items-experience").subscribe(
+    this.translateService.get("qualification.items").subscribe(
       items => {
-         let qualifications:QualificationItem[] = items;
+         console.log(items);
+         let qualifications:Qualification[] = items;
 
          qualifications.map(item => {
               let dateStart = new Date(item.dateStart);
@@ -117,7 +120,6 @@ export class AppComponent implements OnInit {
               var diffDays:any;
               var diffTime:any;
               var totalTime:any;
-              
 
               if (dateFinish.toString() != "Invalid Date")
               {
@@ -142,13 +144,25 @@ export class AppComponent implements OnInit {
                 totalTime = totalMonth + " months";
                }
                item.totalTime = totalTime;
-              
+               this.qualifications = qualifications;
+               this.selectQualification(0);
          });
-         this.qualificationItems = qualifications;
       }
     )
   }
 
+  selectQualification(id:number):void
+  {
+     this.qualificationDetail = this.qualifications.filter(qualification => qualification.id == id)[0].detail;
+     this.qualifications.map(qualification => { 
+      if (qualification.id == id || qualification.detail.selected)
+      {
+        document.getElementById("item-experience-" + id)!.classList.add('active');
+      } else {
+        document.getElementById("item-experience-" + qualification.id)!.classList.remove('active');
+      }
+     });
+  }
 
   initializePortfolio():void
   {
@@ -204,17 +218,30 @@ export class AppComponent implements OnInit {
       }
     )
   }
-
 } 
 
-interface QualificationItem {
+interface Qualification {
   id:number,
   title:string,
   dateStart:string,
   dateFinish:string,
   totalTime:string
   src:string
+  detail: QualificationDetail
 }
+
+interface QualificationDetail {
+  title: string,
+  subTitle:string,
+  selected:boolean,
+  text:string,
+  skills: QualificationSkills[]
+}
+interface QualificationSkills {
+  title:string,
+  src:string
+}
+
 interface Portfolio 
 {
   id:string,

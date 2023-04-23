@@ -55,7 +55,7 @@
 
                 <div class="experiences-container">
                     <div class="items-experience">
-                       <div class="item-experience" *ngFor="let qualification of qualificationItems">
+                       <div class="item-experience" *ngFor="let qualification of qualifications" (click)="selectQualification(qualification.id)" [id]="'item-experience-' + qualification.id">
                          <img [alt]="qualification.title" [src]="qualification.src" />
                          <div class="item-experience-title">
                             <h1>{{qualification.title}}</h1>
@@ -65,46 +65,16 @@
                     </div>
                     <div class="detail-experience">
                         <div class="detail-item detail-experience-title">
-                            <h1>Localiza Hertz</h1>
-                            <h3>Administrative Assistant</h3>
+                            <h1>{{qualificationDetail.title}}</h1>
+                            <h3>{{qualificationDetail.subTitle}}</h3>
                         </div>
                         <div class="detail-item detail-experience-text">
-                            <p>
-                                I worked in the service sector of Localiza for an Uber partner,in the support of
-                                directing emails and customers to the respective departments where it is located,
-                                Localiza has more than 10 million customers, then with experience I was appointed to
-                                the administrative support sector, and soon after I went to the Emergency
-                                vehicular sector of Localiza,where I could contribute to a quick and analytical service.
-                            </p>
+                            <p>{{qualificationDetail.text}}</p>
                         </div>
                         <div class="detail-item detail-experience-skills">
-                            <div>
-                                <img alt="" src="../assets/images/lamp-light.svg"/>
-                                <p>Office 365</p>
-                            </div>
-                            <div>
-                                <img alt="" src="../assets/images/lamp-light.svg"/>
-                                <p>Office 365</p>
-                            </div>
-                            <div>
-                                <img alt="" src="../assets/images/lamp-light.svg"/>
-                                <p>Office 365</p>
-                            </div>
-                            <div>
-                                <img alt="" src="../assets/images/lamp-light.svg"/>
-                                <p>Office 365</p>
-                            </div>
-                            <div>
-                                <img alt="" src="../assets/images/lamp-light.svg"/>
-                                <p>Office 365</p>
-                            </div>
-                            <div>
-                                <img alt="" src="../assets/images/lamp-light.svg"/>
-                                <p>Office 365</p>
-                            </div>
-                            <div>
-                                <img alt="" src="../assets/images/lamp-light.svg"/>
-                                <p>Office 365</p>
+                            <div *ngFor="let skill of qualificationDetail.skills">
+                                <img [alt]="skill.title"  [src]="skill.src" />
+                                <p>{{skill.title}}</p>
                             </div>
                         </div>
                     </div>

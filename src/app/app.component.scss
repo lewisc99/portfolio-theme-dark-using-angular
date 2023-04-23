@@ -298,6 +298,7 @@ div.experiences-container {
       width: 65%;
       height: 100%;
       flex-direction: column;
+      
     }
 
     div.detail-experience, div.items-experience {
@@ -346,8 +347,14 @@ div.item-experience {
   }
 }
 
-div.item-experience:hover {
+div.item-experience.active {
+  cursor: pointer;
   border-bottom: 4px dotted var(--blue-buttons);
+  
+}
+
+div.item-experience:hover {
+  border-bottom: 4px dotted var(--blue-buttons-hover);
 }
 
 //DETAIL EXPERIENCE 
@@ -356,6 +363,7 @@ div.item-experience:hover {
 div.detail-item {
   padding: 0px 24px 24px 24px;
   display: flex;
+  
 }
 div.detail-experience-title
 {
@@ -364,7 +372,7 @@ div.detail-experience-title
   flex-direction: column;
 
   h1 {
-    font-size: calc(30px + 1vw);
+    font-size: calc(20px + 1vw);
     color: var(--main-font);
   }
   h3 {
