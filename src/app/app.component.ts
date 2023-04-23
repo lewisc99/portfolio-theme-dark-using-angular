@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   public lampColor:string = "light";
   public portfolios:Portfolio[] = [];
   public skills:Skills[] = [];
+  public qualificationItems:QualificationItem[] = [];
 
   constructor(private translateService:TranslateService) {}
  
@@ -19,6 +20,7 @@ export class AppComponent implements OnInit {
     this.initializeCurrentIdiom();
     this.initializeCurrentTheme();
     this.initializePortfolio();
+    this.initializeQualificationItens();
   }
 
   initializeCurrentIdiom():void 
@@ -102,6 +104,52 @@ export class AppComponent implements OnInit {
     }
   }
 
+  initializeQualificationItens():void 
+  {
+    this.translateService.get("qualification.items-experience").subscribe(
+      items => {
+         let qualifications:QualificationItem[] = items;
+
+         qualifications.map(item => {
+              let dateStart = new Date(item.dateStart);
+              let dateFinish = new Date(item.dateFinish);
+              let currentDate = new Date();
+              var diffDays:any;
+              var diffTime:any;
+              var totalTime:any;
+              
+
+              if (dateFinish.toString() != "Invalid Date")
+              {
+                 diffTime = Math.abs(dateFinish.getTime() - dateStart.getTime());
+              } else {
+                 diffTime = Math.abs(currentDate.getTime() - dateStart.getTime());
+              }
+               diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+               if (diffDays > 365)
+               {
+                  let totalYears = (diffDays / 365).toFixed(0);
+                  let totalMonth = Math.floor(((diffDays % 365) / 30 ));
+
+                  if (totalMonth != 0)
+                  {
+                    totalTime = totalYears + " yr " + totalMonth + " months";
+                  } else {
+                    totalTime = totalYears + " yr";
+                  }
+               } else {
+                let totalMonth = (diffDays / 30 ).toFixed(1);
+                totalTime = totalMonth + " months";
+               }
+               item.totalTime = totalTime;
+              
+         });
+         this.qualificationItems = qualifications;
+      }
+    )
+  }
+
+
   initializePortfolio():void
   {
     this.translateService.get("portfolio.items").subscribe(
@@ -156,8 +204,17 @@ export class AppComponent implements OnInit {
       }
     )
   }
+
 } 
 
+interface QualificationItem {
+  id:number,
+  title:string,
+  dateStart:string,
+  dateFinish:string,
+  totalTime:string
+  src:string
+}
 interface Portfolio 
 {
   id:string,

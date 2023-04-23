@@ -20,7 +20,30 @@
     },
     "qualification": {
         "title":"Qualification",
-        "subtitle":"For more Details click on the corresponding company"
+        "subtitle":"For more Details click on the corresponding company",
+        "items-experience": [
+            {
+                "id": 0,
+                "title":"Fullstack Dev Byteon Technologia",
+                "dateStart": "02/06/2023",
+                "dateFinish": "Present",
+                "src":"../assets/images/qualification-icon.svg"
+            },
+            {
+                "id": 1,
+                "title":"Developer Freelance PJ",
+                "dateStart": "02/02/2022",
+                "dateFinish": "02/06/2023",
+                "src":"../assets/images/qualification-icon.svg"
+            },
+            {
+                "id": 2,
+                "title":"Customer Service | ADM Localiza Hertz",
+                "dateStart": "06/01/2019",
+                "dateFinish": "12/15/2021",
+                "src":"../assets/images/qualification-icon.svg"
+            }
+        ]
     },
     "portfolio": {
         "title": "Portfolio",

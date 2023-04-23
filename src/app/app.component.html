@@ -55,7 +55,13 @@
 
                 <div class="experiences-container">
                     <div class="items-experience">
-
+                       <div class="item-experience" *ngFor="let qualification of qualificationItems">
+                         <img [alt]="qualification.title" [src]="qualification.src" />
+                         <div class="item-experience-title">
+                            <h1>{{qualification.title}}</h1>
+                            <p>{{qualification.dateStart | date}} - {{qualification.dateFinish == "Present" ? "Present" : qualification.dateFinish | date }} | {{qualification.totalTime}}</p>
+                         </div>
+                       </div>
                     </div>
                     <div class="detail-experience">
                         <div class="detail-item detail-experience-title">
@@ -72,7 +78,34 @@
                             </p>
                         </div>
                         <div class="detail-item detail-experience-skills">
-
+                            <div>
+                                <img alt="" src="../assets/images/lamp-light.svg"/>
+                                <p>Office 365</p>
+                            </div>
+                            <div>
+                                <img alt="" src="../assets/images/lamp-light.svg"/>
+                                <p>Office 365</p>
+                            </div>
+                            <div>
+                                <img alt="" src="../assets/images/lamp-light.svg"/>
+                                <p>Office 365</p>
+                            </div>
+                            <div>
+                                <img alt="" src="../assets/images/lamp-light.svg"/>
+                                <p>Office 365</p>
+                            </div>
+                            <div>
+                                <img alt="" src="../assets/images/lamp-light.svg"/>
+                                <p>Office 365</p>
+                            </div>
+                            <div>
+                                <img alt="" src="../assets/images/lamp-light.svg"/>
+                                <p>Office 365</p>
+                            </div>
+                            <div>
+                                <img alt="" src="../assets/images/lamp-light.svg"/>
+                                <p>Office 365</p>
+                            </div>
                         </div>
                     </div>
                 </div>
