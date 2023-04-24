@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.component';
+import { MainComponent } from './main-component/main-component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    PortfolioDetailComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
