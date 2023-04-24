@@ -27,7 +27,7 @@
                 "title":"Fullstack Dev Byteon Technologia",
                 "dateStart": "02/06/2023",
                 "dateFinish": "Present",
-                "src":"../assets/images/qualification-icon.svg",
+                "src":"../assets/images/qualification/items/byteon.svg",
                 "detail": {
                     "title": "Fullstack Byteon Technologia",
                     "subTitle":"Full-Time Remote PJ Job",
@@ -47,7 +47,7 @@
                 "title":"Developer Freelance PJ",
                 "dateStart": "02/02/2022",
                 "dateFinish": "02/06/2023",
-                "src":"../assets/images/qualification-icon.svg",
+                "src":"../assets/images/qualification/items/freelance.svg",
                 "detail": {
                     "title": "Developer Freelance PJ",
                     "subTitle":"Lewis Studios · Freelance",
@@ -66,7 +66,7 @@
                 "title":"Customer Service | ADM Localiza Hertz",
                 "dateStart": "06/01/2019",
                 "dateFinish": "12/15/2021",
-                "src":"../assets/images/qualification-icon.svg",
+                "src":"../assets/images/qualification/items/localiza.svg",
                 "detail": {
                     "title": "Localiza Hertz",
                     "subTitle":"Administrative Assistant",

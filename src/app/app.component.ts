@@ -17,8 +17,8 @@ export class AppComponent implements OnInit{
 
   constructor(private translateService:TranslateService) {}
 
-
   ngOnInit(): void {
+ 
     this.initializeCurrentIdiom();
     this.initializeCurrentTheme();
     this.initializePortfolio();
@@ -144,9 +144,9 @@ export class AppComponent implements OnInit{
                 totalTime = totalMonth + " months";
                }
                item.totalTime = totalTime;
-               this.qualifications = qualifications;
-               this.selectQualification(0);
          });
+         this.qualifications = qualifications;
+         this.selectQualification(0);
       }
     )
   }
@@ -155,7 +155,7 @@ export class AppComponent implements OnInit{
   {
      this.qualificationDetail = this.qualifications.filter(qualification => qualification.id == id)[0].detail;
      this.qualifications.map(qualification => { 
-      if (qualification.id == id || qualification.detail.selected)
+      if (qualification.id == id )
       {
         document.getElementById("item-experience-" + id)!.classList.add('active');
       } else {
