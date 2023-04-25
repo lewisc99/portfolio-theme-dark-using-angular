@@ -130,7 +130,7 @@ export class MainComponent implements OnInit {
                diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
                if (diffDays > 365)
                {
-                  let totalYears = (diffDays / 365).toFixed(0);
+                  let totalYears = Math.floor((diffDays / 365));
                   let totalMonth = Math.floor(((diffDays % 365) / 30 ));
 
                   if (totalMonth != 0)

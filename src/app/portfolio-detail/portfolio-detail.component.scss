@@ -1,31 +1,36 @@
 // ---------------------------------
 // default config to add dark-theme to all elements in the container
 // ---------------------------------
+// ---------------------------------
+// default config to add dark-theme to all elements in the container
+// ---------------------------------
 
 main {
-    --bkg-color:  #D8DBDC;
-    --main-font: #343434;
-    --second-font: #797979;
-    --blue-buttons: #3E68FF;
-    --blue-buttons-hover: #753eff;
-    --bkg-container:#BDB6B6;
-    --border-color:#BDB6B6;
-    --highlight-border-container:#0000002c;
-    transition: 0.7s;
-  }
-  
-  main.dark-theme {
-    --bkg-color: #19181E;
-    --main-font: #f0f6fc;
-    --second-font: #797979;
-    --blue-buttons: #3E68FF;
-    --blue-buttons-hover:  #753eff;
-    --bkg-container:#312F3A;
-    --border-color:#161616;
-    --highlight-border-container:#0000003a;
-    transition: 0.7s;
-  }
-  
+  --bkg-color:  #D8DBDC;
+  --main-font: #343434;
+  --second-font: #797979;
+  --blue-buttons: #3E68FF;
+  --blue-buttons-hover: #753eff;
+  --bkg-container:#BDB6B6;
+  --border-color:#BDB6B6;
+  --highlight-border-container:#0000002c;
+  --box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.3);
+  transition: 0.7s;
+}
+
+main.dark-theme {
+  --bkg-color: #010409;
+  --main-font: #E4ECF3;
+  --second-font: #4a505f;
+  --blue-buttons: #3E68FF;
+  --blue-buttons-hover:  #753eff;
+  --bkg-container:#0D1117;
+  --border-color:#161616;
+  --highlight-border-container:#0000003a;
+  --box-shadow:  0 6px 11px 0 rgb(0 0 0 / 54%);
+  transition: 0.7s;
+}
+
   main {
     width: 100%;
     display: flex;
@@ -255,12 +260,21 @@ div.portfolio-skills {
          height: 70%;
          flex-direction: column;
          border-radius: 13px;
-         border-bottom: 4px solid rgba(178, 196, 186, 0.589);
+         border-bottom: 5px solid  var(--highlight-border-container);
          flex-wrap: wrap;
          text-align: center;
-
+         box-shadow: var(--box-shadow);
       
          div.item {
+            margin-top: 10px;
+            margin-left:5%;
+            border: 2px solid var(--blue-buttons);
+            width: 70%;
+            align-items: center;
+            height: 30px;
+            border-radius: 10px;
+            background-color: #ffffff2a;
+            box-shadow: var(--box-shadow);
 
             i {
                 width: 4px;
@@ -268,17 +282,8 @@ div.portfolio-skills {
                 border-radius: 10px;
                 padding: 1px;
                 border: 3px solid var(--blue-buttons);
+                margin-right: 10px;
             }
-
-            margin-top: 10px;
-            margin-left:5%;
-            border: 2px solid var(--blue-buttons);
-            width: 70%;
-            align-items: center;
-            justify-content: space-evenly;
-            height: 30px;
-            border-radius: 10px;
-            background-color: #ffffff2a;
          }
     }
 }
