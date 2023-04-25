@@ -21,5 +21,157 @@
     "qualification": {
         "title":"Qualificação",
         "subtitle":"Para mais detalhes clique na empresa correspondente"
+    },
+    "portfolio": {
+        "title": "Portfólio",
+        "information":"Informações",
+        "items": [
+            {
+                "id":"portfolio-1",
+                "title":"Academia Projeto",
+                "subtitle":"Freelance Projeto para uma Academia",
+                "src":"../assets/images/portfolio/gym.jpg",
+                "href":"#",
+                "show":true
+            },
+            {
+                "id":"portfolio-2",
+                "title":"E-Commerce Projeto",
+                "subtitle":"Usando Java e Angular 2",
+                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "href":"#",
+                "show":false
+            },
+            {
+                "id":"portfolio-3",
+                "title":"Aplicativo de Chat",
+                "subtitle":"Em tempo real Aplicativo de Bate-Papo",
+                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "href":"#",
+                "show":false
+            },
+            {
+                "id":"portfolio-4",
+                "title":"Candidato Dashboard",
+                "subtitle":"CRUD Aplicativo para uma entrevista",
+                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "href":"#",
+                "show":false
+            },
+            {
+                "id":"portfolio-5",
+                "title":"Pessoa Microserviço API",
+                "subtitle":"API usando RabbitMQ e Mongo",
+                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "href":"#",
+                "show":false
+            },
+            {
+                "id":"portfolio-6",
+                "title":"Currículo Dashboard",
+                "subtitle":"ASPNET MVC Currículo app",
+                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "href":"#",
+                "show":false
+            },
+            {
+                "id":"portfolio-7",
+                "title":"Landing Page Máquina de Lavar",
+                "subtitle":"Freelance Máquina de Lavar",
+                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "href":"#",
+                "show":false
+            },
+            {
+                "id":"portfolio-8",
+                "title":"Microservice Desconto API",
+                "subtitle":"Projeto para empresa Bidea Factory",
+                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "href":"#",
+                "show":false
+            }
+        ]
+    },
+    "skills": {
+        "title": "Tecnologias",
+        "select-items": {
+            "select":"Habilidades",
+            "backend":"Back End",
+            "frontend":"Front End",
+            "java":"Java",
+            "csharp":"C#",
+            "others":"Outros",
+            "database":"Banco de Dados"
+        },
+        "items": [
+            [
+                {"title":"Java", "src":""},
+                {"title":"Csharp", "src":""},
+                {"title":"Windows", "src":""},
+                {"title":"Linux", "src":""}
+            ],
+            [
+                {"title":"HTML", "src":""},
+                {"title":"CSS", "src":""},
+                {"title":"Javascript", "src":""},
+                {"title":"Angular 2", "src":""},
+                {"title":"TypeScript", "src":""},
+                {"title":"Bootstrap", "src":""},
+                {"title":"Figma", "src":""},
+                {"title":"jQuery", "src":""}
+            ],
+            [
+                {"title":"Spring Framework", "src":""},
+                {"title":"Spring Cloud", "src":""},
+                {"title":"Kafka", "src":""},
+                {"title":"RabbitMQ", "src":""},
+                {"title":"Spring Boot", "src":""},
+                {"title":"Spring MVC", "src":""},
+                {"title":"Hibernate", "src":""},
+                {"title":"JUnit", "src":""},
+                {"title":"Mockito", "src":""},
+                {"title":"MockMvc", "src":""}
+            ],
+            [
+                {"title":"ASP.NET", "src":""},
+                {"title":"Entity Framework", "src":""},
+                {"title":"Microsserviços", "src":""},
+                {"title":"RabbitMQ", "src":""},
+                {"title":"Ocelot", "src":""},
+                {"title":"Mass Transit", "src":""},
+                {"title":"Unit Testing", "src":""},
+                {"title":"Integration Test", "src":""},
+                {"title":"Identity", "src":""}
+            ],
+            [
+                {"title":"Git", "src":""},
+                {"title":"GitHub", "src":""},
+                {"title":"CI/CD", "src":""},
+                {"title":"GitLab", "src":""},
+                {"title":"Docker", "src":""},
+                {"title":"Docker Compose", "src":""}
+            ],
+            [
+                {"title":"SQL Server", "src":""},
+                {"title":"MySQL", "src":""},
+                {"title":"SQLite", "src":""},
+                {"title":"PostgreSQL", "src":""},
+                {"title":"Mongo DB", "src":""},
+                {"title":"Oracle", "src":""}
+            ]
+        ]
+    },
+    "contact": {
+        "title": "Contato",
+        "social-media": {
+            "title":"Midia Sociais",
+            "e-mail":"E-Mail",
+            "cel-phone":"Celular"
+        },
+        "form-send-message":{
+            "name":"Nome",
+            "message":"Mensagem",
+            "send":"Enviar"
+        }
     }
 }
