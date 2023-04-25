@@ -1,31 +1,33 @@
 // ---------------------------------
-// default config to add dark-theme to all elements in the container
+// DEFAULT CONFIG TO ADD DARK-THEME TO ALL ELEMENTS IN THE CONTAINER
 // ---------------------------------
 
+
+ main {
+     --bkg-color:  #F6F8FA;
+     --main-font: #1F2328;
+     --second-font: #656D7B;
+     --blue-buttons: #3E68FF;
+     --blue-buttons-hover: #753eff;
+     --bkg-container:#FFFFFF;
+     --border-color:#D0D7DE;
+     --highlight-border-container:#0000002c;
+     --box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.3);
+     transition: 0.7s;
+   }
+
 // main {
-//     --bkg-color:  #F6F8FA;
-//     --main-font: #1F2328;
-//     --second-font: #656D7B;
-//     --blue-buttons: #3E68FF;
-//     --blue-buttons-hover: #753eff;
-//     --bkg-container:#FFFFFF;
-//     --border-color:#D0D7DE;
-//     --highlight-border-container:#0000002c;
-//     --box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.3);
-//     transition: 0.7s;
-//   }
-main {
-  --bkg-color:  #D8DBDC;
-  --main-font: #343434;
-  --second-font: #797979;
-  --blue-buttons: #3E68FF;
-  --blue-buttons-hover: #753eff;
-  --bkg-container:#BDB6B6;
-  --border-color:#BDB6B6;
-  --highlight-border-container:#0000002c;
-  --box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.3);
-  transition: 0.7s;
-}
+//   --bkg-color:  #D8DBDC;
+//   --main-font: #343434;
+//   --second-font: #797979;
+//   --blue-buttons: #3E68FF;
+//   --blue-buttons-hover: #753eff;
+//   --bkg-container:#BDB6B6;
+//   --border-color:#BDB6B6;
+//   --highlight-border-container:#0000002c;
+//   --box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.3);
+//   transition: 0.7s;
+// }
  
   main.dark-theme {
     --bkg-color: #010409;
@@ -43,7 +45,7 @@ main {
   main {
     width: 100%;
     display: flex;
-    font-family: Inconsolata, Arial, Helvetica, sans-serif;
+    font-family: Inter Var, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     flex-direction: column;
     background-color: var(--bkg-color);
   }
@@ -710,7 +712,6 @@ main {
       align-items: center;
       background-color: var(--bkg-container);
       border-radius: 10px;
-  
       animation-name: fade;
       animation-duration: 1.5s;
     
