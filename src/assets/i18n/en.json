@@ -34,10 +34,13 @@
                     "selected":true,
                     "text":"I am currently a full stack web developer. I entered as a Junior and in a little less than a year I managed to reach the plenary position. My objective is to understand what my client needs and to deliver quickly and functionally. Work in backend, frontend, requirements gathering, table creation, data bank manipulation. Always using agile methodology.",
                     "skills": [
-                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
-                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
-                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
-                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"}
+                        {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
+                        {"title":"ASP NET","src":"..\\assets\\images\\qualification\\items\\skills\\light\\aspnet-light.svg"},
+                        {"title":"Bootstrap","src":"..\\assets\\images\\qualification\\items\\skills\\light\\bootstrap-light.svg"},
+                        {"title":"GitLab","src":"..\\assets\\images\\qualification\\items\\skills\\light\\gitlab-light.svg"},
+                        {"title":"Jquery","src":"..\\assets\\images\\qualification\\items\\skills\\light\\jquery-light.svg"},
+                        {"title":"Javascript","src":"..\\assets\\images\\qualification\\items\\skills\\light\\javascript-light.svg"},
+                        {"title":"Microservice","src":"..\\assets\\images\\qualification\\items\\skills\\light\\microservice-light.svg"}
                     ]
                 }
               
@@ -54,10 +57,13 @@
                     "selected":true,
                     "text":"Development of web pages, Portfolios, Landing Page, for small companies, using Java Spring boot with Angular 2 and C#, I provided more than 5 services during 2022. Now i'm working with backend C# (.NET) and Java (Spring Boot), and in the Frontend (Angular and JavaScript/TypeScript).",
                     "skills": [
-                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
-                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
-                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
-                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"}
+                        {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
+                        {"title":"Java","src":"..\\assets\\images\\qualification\\items\\skills\\light\\java-light.svg"},
+                        {"title":"Spring Boot","src":"..\\assets\\images\\qualification\\items\\skills\\light\\springboot-light.svg"},
+                        {"title":"Angula 2","src":"..\\assets\\images\\qualification\\items\\skills\\light\\angular-light.svg"},
+                        {"title":"Javascript","src":"..\\assets\\images\\qualification\\items\\skills\\light\\javascript-light.svg"},
+                        {"title":"HTML","src":"..\\assets\\images\\qualification\\items\\skills\\light\\html-light.svg"},
+                        {"title":"CSS","src":"..\\assets\\images\\qualification\\items\\skills\\light\\css-light.svg"}
                     ]
                 }
             },
@@ -73,10 +79,8 @@
                     "selected":true,
                     "text":"I worked in the service sector of Localiza for an Uber partner,in the support of directing emails and customers  to the respective departments where it is located, Localiza has more than 10 million customers, then with experience I was appointed to the administrative support sector, and soon after I went to the Emergency vehicular sector of Localiza,where I could contribute to a quick and analytical service.",
                     "skills": [
-                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
-                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
-                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"},
-                        {"title":"Office 365","src":"../assets/images/lamp-light.svg"}
+                        {"title":"Office 365","src":"..\\assets\\images\\qualification\\items\\skills\\light\\office-light.svg"},
+                        {"title":"Power BI","src":"..\\assets\\images\\qualification\\items\\skills\\light\\power-bi-light.svg"}
                     ]
                 }
             }

@@ -98,11 +98,15 @@ export class MainComponent implements OnInit {
       this.lampColor = "light";
       document.getElementById("container")!.classList.toggle('dark-theme');
       this.localStorage.setItem("theme", "dark");
+      this.qualifications.forEach(qualification => qualification.detail.skills.map( skills => skills.src =  skills.src.replace("dark","light")));
     } else
     {
       this.lampColor = "dark";
       document.getElementById("container")!.classList.toggle('dark-theme');
       this.localStorage.setItem("theme", "light");
+
+      this.qualifications.forEach(qualification => qualification.detail.skills.map( skills => skills.src =  skills.src.replace("light","dark")));
+      console.log(this.qualifications);
     }
   }
 
