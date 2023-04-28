@@ -53,7 +53,7 @@
                 "src":"../assets/images/qualification/items/freelance.svg",
                 "detail": {
                     "title": "Developer Freelance PJ",
-                    "subTitle":"Lewis Studios · Freelance",
+                    "subTitle":"Lewis Solution · Freelance",
                     "selected":true,
                     "text":"Development of web pages, Portfolios, Landing Page, for small companies, using Java Spring boot with Angular 2 and C#, I provided more than 5 services during 2022. Now i'm working with backend C# (.NET) and Java (Spring Boot), and in the Frontend (Angular and JavaScript/TypeScript).",
                     "skills": [

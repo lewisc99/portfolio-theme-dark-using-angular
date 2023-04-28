@@ -20,7 +20,71 @@
     },
     "qualification": {
         "title":"Qualificação",
-        "subtitle":"Para mais detalhes clique na empresa correspondente"
+        "subtitle":"Para mais detalhes clique na empresa correspondente",
+        "items": [
+            {
+                "id": 0,
+                "title":"Fullstack Dev Byteon Technologia",
+                "dateStart": "02/06/2023",
+                "dateFinish": "Present",
+                "src":"../assets/images/qualification/items/byteon.svg",
+                "detail": {
+                    "title": "Fullstack Byteon Technologia",
+                    "subTitle":"Full-Time Remoto PJ Job",
+                    "selected":true,
+                    "text":"Atualmente sou um desenvolvedor web full stack. Entrei como júnior e em pouco menos de um ano consegui chegar ao cargo de plenário. Meu objetivo é entender o que meu cliente precisa e entregar de forma rápida e funcional. Trabalho em backend, frontend, levantamento de requisitos, criação de tabelas, manipulação de banco de dados. Sempre usando metodologia ágil.",
+                    "skills": [
+                        {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
+                        {"title":"ASP NET","src":"..\\assets\\images\\qualification\\items\\skills\\light\\aspnet-light.svg"},
+                        {"title":"Bootstrap","src":"..\\assets\\images\\qualification\\items\\skills\\light\\bootstrap-light.svg"},
+                        {"title":"GitLab","src":"..\\assets\\images\\qualification\\items\\skills\\light\\gitlab-light.svg"},
+                        {"title":"Jquery","src":"..\\assets\\images\\qualification\\items\\skills\\light\\jquery-light.svg"},
+                        {"title":"Javascript","src":"..\\assets\\images\\qualification\\items\\skills\\light\\javascript-light.svg"},
+                        {"title":"Microservice","src":"..\\assets\\images\\qualification\\items\\skills\\light\\microservice-light.svg"}
+                    ]
+                }
+              
+            },
+            {
+                "id": 1,
+                "title":"Desenvolvedor Freelance PJ",
+                "dateStart": "02/02/2022",
+                "dateFinish": "02/06/2023",
+                "src":"../assets/images/qualification/items/freelance.svg",
+                "detail": {
+                    "title": "Desenvolvedor Freelance PJ",
+                    "subTitle":"Lewis Solution · Freelance",
+                    "selected":true,
+                    "text":"Desenvolvimento de páginas Web, Portfólios, Landing Page, para pequenas empresas, utilizando Java Spring boot com Angular 2 e C#, prestei mais de 5 serviços durante o ano de 2022. Agora estou trabalhando com Backend C# (.NET) e Java (Spring Boot), e no Frontend (Angular e JavaScript/TypeScript).",
+                    "skills": [
+                        {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
+                        {"title":"Java","src":"..\\assets\\images\\qualification\\items\\skills\\light\\java-light.svg"},
+                        {"title":"Spring Boot","src":"..\\assets\\images\\qualification\\items\\skills\\light\\springboot-light.svg"},
+                        {"title":"Angula 2","src":"..\\assets\\images\\qualification\\items\\skills\\light\\angular-light.svg"},
+                        {"title":"Javascript","src":"..\\assets\\images\\qualification\\items\\skills\\light\\javascript-light.svg"},
+                        {"title":"HTML","src":"..\\assets\\images\\qualification\\items\\skills\\light\\html-light.svg"},
+                        {"title":"CSS","src":"..\\assets\\images\\qualification\\items\\skills\\light\\css-light.svg"}
+                    ]
+                }
+            },
+            {
+                "id": 2,
+                "title":"Atendimento | ADM Localiza Hertz",
+                "dateStart": "06/01/2019",
+                "dateFinish": "12/15/2021",
+                "src":"../assets/images/qualification/items/localiza.svg",
+                "detail": {
+                    "title": "Localiza Hertz",
+                    "subTitle":"Auxiliar Administrativo",
+                    "selected":true,
+                    "text":"Trabalhei no setor de atendimento e Administrativo da Localiza para parceiros da Uber, no suporte de direcionamento de e-mails e clientes aos respectivos departamentos, a Localiza possui mais de 10 milhões de clientes, depois com experiência fui designada para o setor de suporte administrativo, e logo depois fui para o setor de emergência veicular da Localiza onde pude contribuir para um atendimento ágil e analítico.",
+                    "skills": [
+                        {"title":"Office 365","src":"..\\assets\\images\\qualification\\items\\skills\\light\\office-light.svg"},
+                        {"title":"Power BI","src":"..\\assets\\images\\qualification\\items\\skills\\light\\power-bi-light.svg"}
+                    ]
+                }
+            }
+        ]
     },
     "portfolio": {
         "title": "Portfólio",
