@@ -31,7 +31,7 @@
                 "detail": {
                     "title": "Fullstack Byteon Technologia",
                     "subTitle":"Full-Time Remote PJ Job",
-                    "selected":true,
+                    "selected":false,
                     "text":"I am currently a full stack web developer. I entered as a Junior and in a little less than a year I managed to reach the plenary position. My objective is to understand what my client needs and to deliver quickly and functionally. Work in backend, frontend, requirements gathering, table creation, data bank manipulation. Always using agile methodology.",
                     "skills": [
                         {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
@@ -54,7 +54,7 @@
                 "detail": {
                     "title": "Developer Freelance PJ",
                     "subTitle":"Lewis Solution · Freelance",
-                    "selected":true,
+                    "selected":false,
                     "text":"Development of web pages, Portfolios, Landing Page, for small companies, using Java Spring boot with Angular 2 and C#, I provided more than 5 services during 2022. Now i'm working with backend C# (.NET) and Java (Spring Boot), and in the Frontend (Angular and JavaScript/TypeScript).",
                     "skills": [
                         {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
@@ -76,7 +76,7 @@
                 "detail": {
                     "title": "Localiza Hertz",
                     "subTitle":"Administrative Assistant",
-                    "selected":true,
+                    "selected":false,
                     "text":"I worked in the service sector of Localiza for an Uber partner,in the support of directing emails and customers  to the respective departments where it is located, Localiza has more than 10 million customers, then with experience I was appointed to the administrative support sector, and soon after I went to the Emergency vehicular sector of Localiza,where I could contribute to a quick and analytical service.",
                     "skills": [
                         {"title":"Office 365","src":"..\\assets\\images\\qualification\\items\\skills\\light\\office-light.svg"},
@@ -169,59 +169,59 @@
         },
         "items": [
             [
-                {"title":"Java", "src":""},
-                {"title":"Csharp", "src":""},
-                {"title":"Windows", "src":""},
-                {"title":"Linux", "src":""}
+                {"title":"Java", "src":"../assets/images/skills/items/light/java-light.svg"},
+                {"title":"Csharp", "src":"../assets/images/skills/items/light/csharp-light.svg"},
+                {"title":"Windows", "src":"../assets/images/skills/items/light/windows-light.svg"},
+                {"title":"Linux", "src":"../assets/images/skills/items/light/linux-light.svg"}
             ],
             [
-                {"title":"HTML", "src":""},
-                {"title":"CSS", "src":""},
-                {"title":"Javascript", "src":""},
-                {"title":"Angular 2", "src":""},
-                {"title":"TypeScript", "src":""},
-                {"title":"Bootstrap", "src":""},
-                {"title":"Figma", "src":""},
-                {"title":"jQuery", "src":""}
+                {"title":"HTML", "src":"../assets/images/skills/items/light/html-light.svg"},
+                {"title":"CSS", "src":"../assets/images/skills/items/light/css-light.svg"},
+                {"title":"Javascript", "src":"../assets/images/skills/items/light/javascript-light.svg"},
+                {"title":"Angular 2", "src":"../assets/images/skills/items/light/angular-light.svg"},
+                {"title":"TypeScript", "src":"../assets/images/skills/items/light/typescript-light.svg"},
+                {"title":"Bootstrap", "src":"../assets/images/skills/items/light/bootstrap-light.svg"},
+                {"title":"Figma", "src":"../assets/images/skills/items/light/figma-light.svg"},
+                {"title":"jQuery", "src":"../assets/images/skills/items/light/jquery-light.svg"}
             ],
             [
-                {"title":"Spring Framework", "src":""},
-                {"title":"Spring Cloud", "src":""},
-                {"title":"Kafka", "src":""},
-                {"title":"RabbitMQ", "src":""},
-                {"title":"Spring Boot", "src":""},
-                {"title":"Spring MVC", "src":""},
-                {"title":"Hibernate", "src":""},
-                {"title":"JUnit", "src":""},
-                {"title":"Mockito", "src":""},
-                {"title":"MockMvc", "src":""}
+                {"title":"Spring Framework", "src":"../assets/images/skills/items/light/spring-light.svg"},
+                {"title":"Spring Cloud", "src":"../assets/images/skills/items/light/spring-light.svg"},
+                {"title":"Kafka", "src":"../assets/images/skills/items/light/kafka-light.svg"},
+                {"title":"RabbitMQ", "src":"../assets/images/skills/items/light/rabbitmq-light.svg"},
+                {"title":"Spring Boot", "src":"../assets/images/skills/items/light/spring-boot-light.svg"},
+                {"title":"Spring MVC", "src":"../assets/images/skills/items/light/spring-light.svg"},
+                {"title":"Hibernate", "src":"../assets/images/skills/items/light/hibernate-light.svg"},
+                {"title":"JUnit", "src":"../assets/images/skills/items/light/junit-light.svg"},
+                {"title":"Mockito", "src":"../assets/images/skills/items/light/mockito-light.svg"},
+                {"title":"MockMvc", "src":"../assets/images/skills/items/light/spring-light.svg"}
             ],
             [
-                {"title":"ASP.NET", "src":""},
-                {"title":"Entity Framework", "src":""},
-                {"title":"Microsserviços", "src":""},
-                {"title":"RabbitMQ", "src":""},
-                {"title":"Ocelot", "src":""},
-                {"title":"Mass Transit", "src":""},
-                {"title":"Unit Testing", "src":""},
-                {"title":"Integration Test", "src":""},
-                {"title":"Identity", "src":""}
+                {"title":"ASP.NET", "src":"../assets/images/skills/items/light/aspnet-light.svg"},
+                {"title":"Entity Framework", "src":"../assets/images/skills/items/light/ef-light.svg"},
+                {"title":"Microsserviços", "src":"../assets/images/skills/items/light/microservice-light.svg"},
+                {"title":"RabbitMQ", "src":"../assets/images/skills/items/light/rabbitmq-light.svg"},
+                {"title":"Ocelot", "src":"../assets/images/skills/items/light/ocelot-light.svg"},
+                {"title":"Mass Transit", "src":"../assets/images/skills/items/light/masstransit-light.svg"},
+                {"title":"Unit Testing", "src":"../assets/images/skills/items/light/unittesting-light.svg"},
+                {"title":"Integration Test", "src":"../assets/images/skills/items/light/unittesting-light.svg"},
+                {"title":"Identity", "src":"../assets/images/skills/items/light/identity-light.svg"}
             ],
             [
-                {"title":"Git", "src":""},
-                {"title":"GitHub", "src":""},
-                {"title":"CI/CD", "src":""},
-                {"title":"GitLab", "src":""},
-                {"title":"Docker", "src":""},
-                {"title":"Docker Compose", "src":""}
+                {"title":"Git", "src":"../assets/images/skills/items/light/angular-light.svg"},
+                {"title":"GitHub", "src":"../assets/images/skills/items/light/angular-light.svg"},
+                {"title":"CI/CD", "src":"../assets/images/skills/items/light/angular-light.svg"},
+                {"title":"GitLab", "src":"../assets/images/skills/items/light/angular-light.svg"},
+                {"title":"Docker", "src":"../assets/images/skills/items/light/angular-light.svg"},
+                {"title":"Docker Compose", "src":"../assets/images/skills/items/light/angular-light.svg"}
             ],
             [
-                {"title":"SQL Server", "src":""},
-                {"title":"MySQL", "src":""},
-                {"title":"SQLite", "src":""},
-                {"title":"PostgreSQL", "src":""},
-                {"title":"Mongo DB", "src":""},
-                {"title":"Oracle", "src":""}
+                {"title":"SQL Server", "src":"../assets/images/skills/items/light/angular-light.svg"},
+                {"title":"MySQL", "src":"../assets/images/skills/items/light/angular-light.svg"},
+                {"title":"SQLite", "src":"../assets/images/skills/items/light/angular-light.svg"},
+                {"title":"PostgreSQL", "src":"../assets/images/skills/items/light/angular-light.svg"},
+                {"title":"Mongo DB", "src":"../assets/images/skills/items/light/angular-light.svg"},
+                {"title":"Oracle", "src":"../assets/images/skills/items/light/angular-light.svg"}
             ]
         ]
     },

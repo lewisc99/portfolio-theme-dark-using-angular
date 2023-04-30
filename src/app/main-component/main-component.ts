@@ -165,8 +165,10 @@ export class MainComponent implements OnInit {
      this.qualifications.map(qualification => { 
       if (qualification.id == id )
       {
+        qualification.detail.selected = true;
         document.getElementById("item-experience-" + id)!.classList.add('active');
       } else {
+        qualification.detail.selected = false;
         document.getElementById("item-experience-" + qualification.id)!.classList.remove('active');
       }
      });
@@ -176,9 +178,16 @@ export class MainComponent implements OnInit {
   {
     this.translateService.get("qualification.items").subscribe(
       items => {
-        this.qualifications = items
+        this.qualifications.forEach(qualification => {
+          if (qualification.detail.selected)
+          {
+            this.qualificationDetail  = items.find((qualification:Qualification) => qualification.id == qualification.id).detail;
+            this.qualifications = items;
+          }
+        });
       }
     )
+    
     this.translateService.get("portfolio.items").subscribe(
       items => {
         this.portfolios = items
