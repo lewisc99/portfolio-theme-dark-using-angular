@@ -169,59 +169,59 @@
         },
         "items": [
             [
-                {"title":"Java", "src":""},
-                {"title":"Csharp", "src":""},
-                {"title":"Windows", "src":""},
-                {"title":"Linux", "src":""}
+                {"title":"Java", "src":"../assets/images/skills/items/light/java-light.svg"},
+                {"title":"Csharp", "src":"../assets/images/skills/items/light/csharp-light.svg"},
+                {"title":"Windows", "src":"../assets/images/skills/items/light/windows-light.svg"},
+                {"title":"Linux", "src":"../assets/images/skills/items/light/linux-light.svg"}
             ],
             [
-                {"title":"HTML", "src":""},
-                {"title":"CSS", "src":""},
-                {"title":"Javascript", "src":""},
-                {"title":"Angular 2", "src":""},
-                {"title":"TypeScript", "src":""},
-                {"title":"Bootstrap", "src":""},
-                {"title":"Figma", "src":""},
-                {"title":"jQuery", "src":""}
+                {"title":"HTML", "src":"../assets/images/skills/items/light/html-light.svg"},
+                {"title":"CSS", "src":"../assets/images/skills/items/light/css-light.svg"},
+                {"title":"Javascript", "src":"../assets/images/skills/items/light/javascript-light.svg"},
+                {"title":"Angular 2", "src":"../assets/images/skills/items/light/angular-light.svg"},
+                {"title":"TypeScript", "src":"../assets/images/skills/items/light/typescript-light.svg"},
+                {"title":"Bootstrap", "src":"../assets/images/skills/items/light/bootstrap-light.svg"},
+                {"title":"Figma", "src":"../assets/images/skills/items/light/figma-light.svg"},
+                {"title":"jQuery", "src":"../assets/images/skills/items/light/jquery-light.svg"}
             ],
             [
-                {"title":"Spring Framework", "src":""},
-                {"title":"Spring Cloud", "src":""},
-                {"title":"Kafka", "src":""},
-                {"title":"RabbitMQ", "src":""},
-                {"title":"Spring Boot", "src":""},
-                {"title":"Spring MVC", "src":""},
-                {"title":"Hibernate", "src":""},
-                {"title":"JUnit", "src":""},
-                {"title":"Mockito", "src":""},
-                {"title":"MockMvc", "src":""}
+                {"title":"Spring Framework", "src":"../assets/images/skills/items/light/spring-light.svg"},
+                {"title":"Spring Cloud", "src":"../assets/images/skills/items/light/spring-light.svg"},
+                {"title":"Kafka", "src":"../assets/images/skills/items/light/kafka-light.svg"},
+                {"title":"RabbitMQ", "src":"../assets/images/skills/items/light/rabbitmq-light.svg"},
+                {"title":"Spring Boot", "src":"../assets/images/skills/items/light/spring-boot-light.svg"},
+                {"title":"Spring MVC", "src":"../assets/images/skills/items/light/spring-light.svg"},
+                {"title":"Hibernate", "src":"../assets/images/skills/items/light/hibernate-light.svg"},
+                {"title":"JUnit", "src":"../assets/images/skills/items/light/junit-light.svg"},
+                {"title":"Mockito", "src":"../assets/images/skills/items/light/mockito-light.svg"},
+                {"title":"MockMvc", "src":"../assets/images/skills/items/light/spring-light.svg"}
             ],
             [
-                {"title":"ASP.NET", "src":""},
-                {"title":"Entity Framework", "src":""},
-                {"title":"Microsserviços", "src":""},
-                {"title":"RabbitMQ", "src":""},
-                {"title":"Ocelot", "src":""},
-                {"title":"Mass Transit", "src":""},
-                {"title":"Unit Testing", "src":""},
-                {"title":"Integration Test", "src":""},
-                {"title":"Identity", "src":""}
+                {"title":"ASP.NET", "src":"../assets/images/skills/items/light/aspnet-light.svg"},
+                {"title":"Entity Framework", "src":"../assets/images/skills/items/light/ef-light.svg"},
+                {"title":"Microsserviços", "src":"../assets/images/skills/items/light/microservice-light.svg"},
+                {"title":"RabbitMQ", "src":"../assets/images/skills/items/light/rabbitmq-light.svg"},
+                {"title":"Ocelot", "src":"../assets/images/skills/items/light/ocelot-light.svg"},
+                {"title":"Mass Transit", "src":"../assets/images/skills/items/light/masstransit-light.svg"},
+                {"title":"Unit Testing", "src":"../assets/images/skills/items/light/unittesting-light.svg"},
+                {"title":"Integration Test", "src":"../assets/images/skills/items/light/unittesting-light.svg"},
+                {"title":"Identity", "src":"../assets/images/skills/items/light/identity-light.svg"}
             ],
             [
-                {"title":"Git", "src":""},
-                {"title":"GitHub", "src":""},
-                {"title":"CI/CD", "src":""},
-                {"title":"GitLab", "src":""},
-                {"title":"Docker", "src":""},
-                {"title":"Docker Compose", "src":""}
+                {"title":"Docker Compose", "src":"../assets/images/skills/items/light/docker-light.svg"},
+                {"title":"Git", "src":"../assets/images/skills/items/light/git-light.svg"},
+                {"title":"GitHub", "src":"../assets/images/skills/items/light/github-light.svg"},
+                {"title":"CI/CD", "src":"../assets/images/skills/items/light/cicd-light.svg"},
+                {"title":"GitLab", "src":"../assets/images/skills/items/light/gitlab-light.svg"},
+                {"title":"Docker", "src":"../assets/images/skills/items/light/docker-light.svg"}
             ],
             [
-                {"title":"SQL Server", "src":""},
-                {"title":"MySQL", "src":""},
-                {"title":"SQLite", "src":""},
-                {"title":"PostgreSQL", "src":""},
-                {"title":"Mongo DB", "src":""},
-                {"title":"Oracle", "src":""}
+                {"title":"SQL Server", "src":"../assets/images/skills/items/light/sqlserver-light.svg"},
+                {"title":"MySQL", "src":"../assets/images/skills/items/light/mysql-light.svg"},
+                {"title":"SQLite", "src":"../assets/images/skills/items/light/sqllite-light.svg"},
+                {"title":"PostgreSQL", "src":"../assets/images/skills/items/light/postgresql-light.svg"},
+                {"title":"Mongo DB", "src":"../assets/images/skills/items/light/mongodb-light.svg"},
+                {"title":"Oracle", "src":"../assets/images/skills/items/light/oracle-light.svg"}
             ]
         ]
     },

@@ -14,6 +14,12 @@ export class MainComponent implements OnInit {
   public skills:Skills[] = [];
   public qualificationDetail:any = {};
   public qualifications:Qualification[] = [];
+  public contactSrc: any = {
+    linkedin: "../assets/images/contact/icon-linkedin-light.svg",
+    arroba: "../assets/images/contact/icon-arroba-light.svg",
+    github:"../assets/images/contact/icon-github-light.svg",
+    whatsapp:"../assets/images/contact/icon-whatsapp-light.svg"
+  };
 
   constructor(private translateService:TranslateService) {}
 
@@ -48,6 +54,8 @@ export class MainComponent implements OnInit {
   initializeCurrentTheme():void
   {
     const colorStorage = this.localStorage.getItem("theme");
+    let contact:ContactSrc = new ContactSrc();
+
     if (colorStorage == null)
     {
       document.getElementById("container")!.classList.toggle('dark-theme');
@@ -61,11 +69,15 @@ export class MainComponent implements OnInit {
         document.getElementById("container")!.classList.toggle('dark-theme');
         this.localStorage.setItem("theme", "dark");
         this.lampColor = "light";
+        contact.toggleTheme("dark");
+        
       } else {
         document.getElementById("container")!.classList.remove('dark-theme');
         this.localStorage.setItem("theme", "light");
         this.lampColor = "dark";
+        contact.toggleTheme("light");
       }
+      this.contactSrc = contact;
     }
   }
 
@@ -92,20 +104,26 @@ export class MainComponent implements OnInit {
   toggleTheme():void
   {
     let themeStorage = localStorage.getItem("theme"); 
+    let contact:ContactSrc = new ContactSrc();
     
     if (themeStorage == "light")
     {
       this.lampColor = "light";
       document.getElementById("container")!.classList.toggle('dark-theme');
       this.localStorage.setItem("theme", "dark");
-      this.qualifications.forEach(qualification => qualification.detail.skills.map( skills => skills.src =  skills.src.replaceAll("dark","light")));
+      this.qualifications.forEach(qualification =>  qualification.detail.skills.map( skills => skills.src =  skills.src.replaceAll("dark","light")));
+      this.skills.map(skill => skill.src = skill.src.replaceAll("dark","light"));
+      contact.toggleTheme("dark");
     } else
     {
       this.lampColor = "dark";
       document.getElementById("container")!.classList.toggle('dark-theme');
       this.localStorage.setItem("theme", "light");
       this.qualifications.forEach(qualification => qualification.detail.skills.map( skills => skills.src =  skills.src.replaceAll("light","dark")));
+      this.skills.map(skill => skill.src = skill.src.replaceAll("light","dark") );
+      contact.toggleTheme();
     }
+    this.contactSrc = contact;
   }
 
   initializeQualification():void 
@@ -237,45 +255,13 @@ export class MainComponent implements OnInit {
       items => {
         let skillsItems = items;
         this.skills = skillsItems[skillSelect.value];
+        if (this.localStorage.getItem("theme") == "light") {
+           this.skills.map(skill => skill.src = skill.src.replaceAll("light","dark") );
+        } else {
+           this.skills.map(skill => skill.src = skill.src.replaceAll("dark","light") );
+        }
       }
     )
   }
 } 
 
-interface Qualification {
-  id:number,
-  title:string,
-  dateStart:string,
-  dateFinish:string,
-  totalTime:string
-  src:string
-  detail: QualificationDetail
-}
-
-interface QualificationDetail {
-  title: string,
-  subTitle:string,
-  selected:boolean,
-  text:string,
-  skills: QualificationSkills[]
-}
-interface QualificationSkills {
-  title:string,
-  src:string
-}
-
-interface Portfolio 
-{
-  id:string,
-  title:string,
-  subtitle:string,
-  src:string,
-  href:string,
-  show: boolean
-}
-
-interface Skills 
-{
-  title: string;
-  src:string;
-}

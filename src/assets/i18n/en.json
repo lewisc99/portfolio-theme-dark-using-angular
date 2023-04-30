@@ -208,20 +208,20 @@
                 {"title":"Identity", "src":"../assets/images/skills/items/light/identity-light.svg"}
             ],
             [
-                {"title":"Git", "src":"../assets/images/skills/items/light/angular-light.svg"},
-                {"title":"GitHub", "src":"../assets/images/skills/items/light/angular-light.svg"},
-                {"title":"CI/CD", "src":"../assets/images/skills/items/light/angular-light.svg"},
-                {"title":"GitLab", "src":"../assets/images/skills/items/light/angular-light.svg"},
-                {"title":"Docker", "src":"../assets/images/skills/items/light/angular-light.svg"},
-                {"title":"Docker Compose", "src":"../assets/images/skills/items/light/angular-light.svg"}
+                {"title":"Docker Compose", "src":"../assets/images/skills/items/light/docker-light.svg"},
+                {"title":"Git", "src":"../assets/images/skills/items/light/git-light.svg"},
+                {"title":"GitHub", "src":"../assets/images/skills/items/light/github-light.svg"},
+                {"title":"CI/CD", "src":"../assets/images/skills/items/light/cicd-light.svg"},
+                {"title":"GitLab", "src":"../assets/images/skills/items/light/gitlab-light.svg"},
+                {"title":"Docker", "src":"../assets/images/skills/items/light/docker-light.svg"}
             ],
             [
-                {"title":"SQL Server", "src":"../assets/images/skills/items/light/angular-light.svg"},
-                {"title":"MySQL", "src":"../assets/images/skills/items/light/angular-light.svg"},
-                {"title":"SQLite", "src":"../assets/images/skills/items/light/angular-light.svg"},
-                {"title":"PostgreSQL", "src":"../assets/images/skills/items/light/angular-light.svg"},
-                {"title":"Mongo DB", "src":"../assets/images/skills/items/light/angular-light.svg"},
-                {"title":"Oracle", "src":"../assets/images/skills/items/light/angular-light.svg"}
+                {"title":"SQL Server", "src":"../assets/images/skills/items/light/sqlserver-light.svg"},
+                {"title":"MySQL", "src":"../assets/images/skills/items/light/mysql-light.svg"},
+                {"title":"SQLite", "src":"../assets/images/skills/items/light/sqllite-light.svg"},
+                {"title":"PostgreSQL", "src":"../assets/images/skills/items/light/postgresql-light.svg"},
+                {"title":"Mongo DB", "src":"../assets/images/skills/items/light/mongodb-light.svg"},
+                {"title":"Oracle", "src":"../assets/images/skills/items/light/oracle-light.svg"}
             ]
         ]
     },
