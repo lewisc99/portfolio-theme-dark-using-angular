@@ -1,5 +1,5 @@
 
-class ContactSrc {
+export class ContactSrc {
     linkedin = "../assets/images/contact/icon-linkedin-light.svg";
     arroba = "../assets/images/contact/icon-arroba-light.svg";
     github ="../assets/images/contact/icon-github-light.svg";

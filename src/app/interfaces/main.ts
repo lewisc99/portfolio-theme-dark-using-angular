@@ -1,4 +1,4 @@
-interface Qualification {
+export interface Qualification {
     id:number,
     title:string,
     dateStart:string,
@@ -8,19 +8,20 @@ interface Qualification {
     detail: QualificationDetail
 }
 
-interface QualificationDetail {
+export interface QualificationDetail {
+    id:number,
     title: string,
     subTitle:string,
     selected:boolean,
     text:string,
     skills: QualificationSkills[]
 }
-interface QualificationSkills {
+export interface QualificationSkills {
     title:string,
     src:string
 }
 
-interface Portfolio 
+export interface Portfolio 
 {
     id:string,
     title:string,
@@ -30,7 +31,7 @@ interface Portfolio
     show: boolean
 }
 
-interface Skills 
+export interface Skills 
 {
     title: string;
     src:string;

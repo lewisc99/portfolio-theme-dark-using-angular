@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
+import { Portfolio, Qualification, Skills, QualificationSkills } from '../interfaces/main';
+import { ContactSrc } from '../domain/contact-src';
 
 @Component({
   selector: 'app-main-component',
@@ -195,14 +197,16 @@ export class MainComponent implements OnInit {
   initializeContainersIdiom():void
   {
     this.translateService.get("qualification.items").subscribe(
-      items => {
-        this.qualifications.forEach(qualification => {
-          if (qualification.detail.selected)
-          {
-            this.qualificationDetail  = items.find((qualification:Qualification) => qualification.id == qualification.id).detail;
-            this.qualifications = items;
-          }
-        });
+      (items:Qualification[]) => {
+
+         let detail = items.find(item => item.detail.id == this.qualificationDetail.id);
+         this.qualificationDetail = detail?.detail;
+         this.qualifications = items;
+
+         if (this.localStorage.getItem("theme") == "dark")
+            this.qualificationDetail.skills.map( (item:any) => item.src = item.src.replaceAll("dark","light"));
+         else
+          this.qualificationDetail.skills.map( (item:any) => item.src = item.src.replaceAll("light","dark"));   
       }
     )
     

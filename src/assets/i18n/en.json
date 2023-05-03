@@ -29,6 +29,7 @@
                 "dateFinish": "Present",
                 "src":"../assets/images/qualification/items/byteon.svg",
                 "detail": {
+                    "id":0,
                     "title": "Fullstack Byteon Technologia",
                     "subTitle":"Full-Time Remote PJ Job",
                     "selected":false,
@@ -52,6 +53,7 @@
                 "dateFinish": "02/06/2023",
                 "src":"../assets/images/qualification/items/freelance.svg",
                 "detail": {
+                    "id":1,
                     "title": "Developer Freelance PJ",
                     "subTitle":"Lewis Solution · Freelance",
                     "selected":false,
@@ -74,6 +76,7 @@
                 "dateFinish": "12/15/2021",
                 "src":"../assets/images/qualification/items/localiza.svg",
                 "detail": {
+                    "id":2,
                     "title": "Localiza Hertz",
                     "subTitle":"Administrative Assistant",
                     "selected":false,
