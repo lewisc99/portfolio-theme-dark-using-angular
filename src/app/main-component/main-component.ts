@@ -26,7 +26,7 @@ export class MainComponent implements OnInit {
   constructor(private translateService:TranslateService) {}
 
   ngOnInit(): void {
- 
+
     this.initializeCurrentIdiom();
     this.initializeCurrentTheme();
     this.initializeContainersIdiom();
@@ -132,7 +132,6 @@ export class MainComponent implements OnInit {
   {
     this.translateService.get("qualification.items").subscribe(
       items => {
-         console.log(items);
          let qualifications:Qualification[] = items;
 
          qualifications.map(item => {
@@ -181,17 +180,20 @@ export class MainComponent implements OnInit {
 
   selectQualification(id:number):void
   {
-     this.qualificationDetail = this.qualifications.filter(qualification => qualification.id == id)[0].detail;
+     let qualification = this.qualifications.filter(qualification => qualification.id == id)[0];
+     if (qualification != null) {
+     this.qualificationDetail = qualification.detail;
      this.qualifications.map(qualification => { 
-      if (qualification.id == id )
-      {
-        qualification.detail.selected = true;
-        document.getElementById("item-experience-" + id)!.classList.add('active');
-      } else {
-        qualification.detail.selected = false;
-        document.getElementById("item-experience-" + qualification.id)!.classList.remove('active');
-      }
-     });
+          if (qualification.id == id )
+          {
+            qualification.detail.selected = true;
+            document.getElementById("item-experience-" + id)!.classList.add('active');
+          } else {
+            qualification.detail.selected = false;
+            document.getElementById("item-experience-" + qualification.id)!.classList.remove('active');
+          }
+     }
+     )};
   }
 
   initializeContainersIdiom():void
@@ -200,13 +202,27 @@ export class MainComponent implements OnInit {
       (items:Qualification[]) => {
 
          let detail = items.find(item => item.detail.id == this.qualificationDetail.id);
-         this.qualificationDetail = detail?.detail;
+         this.qualificationDetail = detail?.detail != null ||  detail?.detail == "undefined" ?  detail?.detail : null;
+         if (this.qualificationDetail == null)
+         {
+          this.selectQualification(0);
+         }
          this.qualifications = items;
+         this.qualifications.forEach(item => {
+          item.detail.skills.map( skill => {
+           if (this.localStorage.getItem("theme") == "dark")
+              skill.src = skill.src.replaceAll("dark","light");
+           else 
+             skill.src =  skill.src.replaceAll("light","dark");
+          })
+         });
 
+         if (this.qualificationDetail != null) {
          if (this.localStorage.getItem("theme") == "dark")
             this.qualificationDetail.skills.map( (item:any) => item.src = item.src.replaceAll("dark","light"));
          else
-          this.qualificationDetail.skills.map( (item:any) => item.src = item.src.replaceAll("light","dark"));   
+            this.qualificationDetail.skills.map( (item:any) => item.src = item.src.replaceAll("light","dark"));   
+          }
       }
     )
     
