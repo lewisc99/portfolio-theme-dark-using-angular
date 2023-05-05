@@ -2,7 +2,7 @@
     <div class="row row-nav" id="nav">
         <nav>
             <ul class="ul-items" #ulitems>
-                <li class="home"> <a href="#about" style="color:#3E68FF;">{{'navBar.Home' | translate}}</a></li>
+                <li class="home"> <a href="#about"   style="color:#3E68FF;">{{'navBar.Home' | translate}}</a></li>
                 <li class="qualification"> <a href="#qualification">{{'navBar.Qualification' | translate}}</a></li>
                 <li class="portfolio"> <a href="#portfolio">{{'navBar.Portfolio' | translate}}</a></li>
                 <li class="skills"> <a href="#skills">{{'navBar.Skills' | translate}}</a></li>
@@ -15,7 +15,9 @@
               </ul>
         </nav>
     </div>
+    <div class="exemple">
 
+    </div>
     <section class="row row-about-me" id="about">
        <div class="column column-about-me">
         <div class="title">
@@ -39,7 +41,7 @@
                     </div>
                 </div>
                 <div class="download-cv">
-                    <a target="_blank" href="https://drive.google.com/file/d/1E1TfJQBYjTY4kHWreT6E1DTVtjUAFDLx/view?usp=sharing" >Download CV</a>
+                    <a target="_blank" (click)="downloadCV()" [href]="downloadCvHref" >Download CV</a>
                 </div>
           </div>
       </div>
@@ -150,7 +152,7 @@
             </div>
             <div class="skills-items" >
                 <div class="skill-item" *ngFor="let skill of skills">
-                    <img src="../assets/images/lamp-light.svg"/>
+                    <img [src]="skill.src"/>
                     <p>{{skill.title}}</p>
                 </div>
             </div>
@@ -171,9 +173,9 @@
                         <h1>{{'contact.social-media.title' | translate}}</h1>
                     </div>
                     <div class="social-media-links">
-                        <div><a target="_blank" href="https://www.linkedin.com/in/luiz-carlos99/"><img src="../assets/images/contact/icon-linkedin.svg" alt="linkedIn Icon" /></a></div>
-                        <div><a target="_blank" href="https://github.com/lewisc99"><img src="../assets/images/contact/icon-github.svg" alt="Github Icon"/></a></div>
-                        <div><a target="_blank" href="https://api.whatsapp.com/send/?phone=31991143417&text&type=phone_number&app_absent=0"><img src="../assets/images/contact/icon-whatsapp.svg" alt="Whatsapp Icon" /></a></div>
+                        <div><a target="_blank" href="https://www.linkedin.com/in/luiz-carlos99/"><img  [src]="contactSrc.linkedin"  alt="linkedIn Icon" /></a></div>
+                        <div><a target="_blank" href="https://github.com/lewisc99"><img  [src]="contactSrc.github"  alt="Github Icon"/></a></div>
+                        <div><a target="_blank" href="https://api.whatsapp.com/send/?phone=31991143417&text&type=phone_number&app_absent=0"><img  [src]="contactSrc.whatsapp" alt="Whatsapp Icon" /></a></div>
                     </div>
                 </div>
 
@@ -182,7 +184,7 @@
                         <h1>{{'contact.social-media.e-mail' | translate}}</h1>
                     </div>
                     <div class="contact-item-info">
-                        <div class="contact-info-image"><img src="../assets/images/contact/arroba.png" alt="Icon Arroba"/></div>
+                        <div class="contact-info-image"><img [src]="contactSrc.arroba" alt="Icon Arroba"/></div>
                         <p>lewiscontato99@gmail.com</p>
                     </div>
                 </div>
@@ -192,7 +194,7 @@
                         <h1>{{'contact.social-media.cel-phone' | translate}}</h1>
                     </div>
                     <div class="contact-item-info">
-                        <div  class="contact-info-image"><img  src="../assets/images/contact/icon-whatsapp.svg" alt="Icon Whatsapp" /></div>
+                        <div  class="contact-info-image"><img  [src]="contactSrc.whatsapp" alt="Icon Whatsapp" /></div>
                         <p>+55 31 99114-3417</p> 
                     </div>
                 </div>
@@ -206,7 +208,7 @@
                     <textarea    placeholder="{{'contact.form-send-message.message'| translate}}"></textarea>
                 </div>
                 <div class="send-message-button">
-                    <button><img src="../assets/images/contact/icon-whatsapp.svg"  alt="Icon whatsapp"/> {{"contact.form-send-message.send" | translate}}</button>
+                    <button><img src="../assets/images/contact/icon-whatsapp-light.svg"  alt="Icon whatsapp"/> {{"contact.form-send-message.send" | translate}}</button>
                 </div>
             </div>
 
@@ -217,10 +219,10 @@
 <footer>
     <div class="footer-nav">
         <ul>
-            <li><a href="#nav">{{'navBar.Home' | translate}}</a></li>
+            <li><a href="#about">{{'navBar.Home' | translate}}</a></li>
             <li><a href="#portfolio">{{'navBar.Portfolio' | translate}}</a></li>
         </ul>
     </div>
-    <div class="arrow-roll-up"><div><a href="#nav"><img src="../assets/images/arrow-up.svg" alt="arrow up"/></a></div></div>
+    <div class="arrow-roll-up"><div><a href="#about"><img src="../assets/images/arrow-up.svg" alt="arrow up"/></a></div></div>
     <div class="footer-info"><p>© Lewis Solutions. All right reserved.</p></div>
 </footer>

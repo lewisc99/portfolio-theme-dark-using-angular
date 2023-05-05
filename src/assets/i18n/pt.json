@@ -12,15 +12,85 @@
         "title":"Olá, sou Luiz Mais conhecido como Lewis",
         "info":"Olá, sou um desenvolvedor de software de back-end. Adoro codificar e resolver problemas. Estou sempre procurando oportunidades interessantes de pesquisa em ciência da computação e assuntos relacionados. Você quer levar sua empresa para o próximo nível?",
         "cv-item": {
-            "years":"Anos de",
+            "years":"Ano de",
             "experience":"expêriencia",
             "completed":"Projetos",
             "projects":"completados"
+        },
+        "downloadCv": {
+            "href":"https://drive.google.com/file/d/165FJmZfonlyy56UcYmb5WZ8vmv5mCDB0/view?usp=share_link"
         }
     },
     "qualification": {
         "title":"Qualificação",
-        "subtitle":"Para mais detalhes clique na empresa correspondente"
+        "subtitle":"Para mais detalhes clique na empresa correspondente",
+        "items": [
+            {
+                "id": 0,
+                "title":"Fullstack Dev Byteon Technologia",
+                "dateStart": "02/06/2023",
+                "dateFinish": "Present",
+                "src":"../assets/images/qualification/items/byteon.svg",
+                "detail": {
+                    "id":0,
+                    "title": "Fullstack Byteon Technologia",
+                    "subTitle":"Full-Time Remoto PJ Job",
+                    "selected":false,
+                    "text":"Atualmente sou um desenvolvedor web full stack. Entrei como júnior e em pouco menos de um ano consegui chegar ao cargo de plenário. Meu objetivo é entender o que meu cliente precisa e entregar de forma rápida e funcional. Trabalho em backend, frontend, levantamento de requisitos, criação de tabelas, manipulação de banco de dados. Sempre usando metodologia ágil.",
+                    "skills": [
+                        {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
+                        {"title":"ASP NET","src":"..\\assets\\images\\qualification\\items\\skills\\light\\aspnet-light.svg"},
+                        {"title":"Bootstrap","src":"..\\assets\\images\\qualification\\items\\skills\\light\\bootstrap-light.svg"},
+                        {"title":"GitLab","src":"..\\assets\\images\\qualification\\items\\skills\\light\\gitlab-light.svg"},
+                        {"title":"Jquery","src":"..\\assets\\images\\qualification\\items\\skills\\light\\jquery-light.svg"},
+                        {"title":"Javascript","src":"..\\assets\\images\\qualification\\items\\skills\\light\\javascript-light.svg"},
+                        {"title":"Microservice","src":"..\\assets\\images\\qualification\\items\\skills\\light\\microservice-light.svg"}
+                    ]
+                }
+              
+            },
+            {
+                "id": 1,
+                "title":"Desenvolvedor Freelance PJ",
+                "dateStart": "02/02/2022",
+                "dateFinish": "02/06/2023",
+                "src":"../assets/images/qualification/items/freelance.svg",
+                "detail": {
+                    "id":1,
+                    "title": "Desenvolvedor Freelance PJ",
+                    "subTitle":"Lewis Solution · Freelance",
+                    "selected":false,
+                    "text":"Desenvolvimento de páginas Web, Portfólios, Landing Page, para pequenas empresas, utilizando Java Spring boot com Angular 2 e C#, prestei mais de 5 serviços durante o ano de 2022. Agora estou trabalhando com Backend C# (.NET) e Java (Spring Boot), e no Frontend (Angular e JavaScript/TypeScript).",
+                    "skills": [
+                        {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
+                        {"title":"Java","src":"..\\assets\\images\\qualification\\items\\skills\\light\\java-light.svg"},
+                        {"title":"Spring Boot","src":"..\\assets\\images\\qualification\\items\\skills\\light\\springboot-light.svg"},
+                        {"title":"Angula 2","src":"..\\assets\\images\\qualification\\items\\skills\\light\\angular-light.svg"},
+                        {"title":"Javascript","src":"..\\assets\\images\\qualification\\items\\skills\\light\\javascript-light.svg"},
+                        {"title":"HTML","src":"..\\assets\\images\\qualification\\items\\skills\\light\\html-light.svg"},
+                        {"title":"CSS","src":"..\\assets\\images\\qualification\\items\\skills\\light\\css-light.svg"}
+                    ]
+                }
+            },
+            {
+                "id": 2,
+                "title":"Atendimento | ADM Localiza Hertz",
+                "dateStart": "06/01/2019",
+                "dateFinish": "12/15/2021",
+                "src":"../assets/images/qualification/items/localiza.svg",
+                "detail": {
+                   "id": 2,
+                    "title": "Localiza Hertz",
+                    "subTitle":"Auxiliar Administrativo",
+                    "selected":false,
+                    "text":"Trabalhei no setor de atendimento e Administrativo da Localiza para parceiros da Uber, no suporte de direcionamento de e-mails e clientes aos respectivos departamentos, a Localiza possui mais de 10 milhões de clientes, depois com experiência fui designada para o setor de suporte administrativo, e logo depois fui para o setor de emergência veicular da Localiza onde pude contribuir para um atendimento ágil e analítico.",
+                    "skills": [
+                        {"title":"Office 365","src":"..\\assets\\images\\qualification\\items\\skills\\light\\office-light.svg"},
+                        {"title":"Power BI","src":"..\\assets\\images\\qualification\\items\\skills\\light\\power-bi-light.svg"}
+                    ]
+                }
+            }
+        ]
     },
     "portfolio": {
         "title": "Portfólio",
@@ -105,59 +175,59 @@
         },
         "items": [
             [
-                {"title":"Java", "src":""},
-                {"title":"Csharp", "src":""},
-                {"title":"Windows", "src":""},
-                {"title":"Linux", "src":""}
+                {"title":"Java", "src":"../assets/images/skills/items/light/java-light.svg"},
+                {"title":"Csharp", "src":"../assets/images/skills/items/light/csharp-light.svg"},
+                {"title":"Windows", "src":"../assets/images/skills/items/light/windows-light.svg"},
+                {"title":"Linux", "src":"../assets/images/skills/items/light/linux-light.svg"}
             ],
             [
-                {"title":"HTML", "src":""},
-                {"title":"CSS", "src":""},
-                {"title":"Javascript", "src":""},
-                {"title":"Angular 2", "src":""},
-                {"title":"TypeScript", "src":""},
-                {"title":"Bootstrap", "src":""},
-                {"title":"Figma", "src":""},
-                {"title":"jQuery", "src":""}
+                {"title":"HTML", "src":"../assets/images/skills/items/light/html-light.svg"},
+                {"title":"CSS", "src":"../assets/images/skills/items/light/css-light.svg"},
+                {"title":"Javascript", "src":"../assets/images/skills/items/light/javascript-light.svg"},
+                {"title":"Angular 2", "src":"../assets/images/skills/items/light/angular-light.svg"},
+                {"title":"TypeScript", "src":"../assets/images/skills/items/light/typescript-light.svg"},
+                {"title":"Bootstrap", "src":"../assets/images/skills/items/light/bootstrap-light.svg"},
+                {"title":"Figma", "src":"../assets/images/skills/items/light/figma-light.svg"},
+                {"title":"jQuery", "src":"../assets/images/skills/items/light/jquery-light.svg"}
             ],
             [
-                {"title":"Spring Framework", "src":""},
-                {"title":"Spring Cloud", "src":""},
-                {"title":"Kafka", "src":""},
-                {"title":"RabbitMQ", "src":""},
-                {"title":"Spring Boot", "src":""},
-                {"title":"Spring MVC", "src":""},
-                {"title":"Hibernate", "src":""},
-                {"title":"JUnit", "src":""},
-                {"title":"Mockito", "src":""},
-                {"title":"MockMvc", "src":""}
+                {"title":"Spring Framework", "src":"../assets/images/skills/items/light/spring-light.svg"},
+                {"title":"Spring Cloud", "src":"../assets/images/skills/items/light/spring-light.svg"},
+                {"title":"Kafka", "src":"../assets/images/skills/items/light/kafka-light.svg"},
+                {"title":"RabbitMQ", "src":"../assets/images/skills/items/light/rabbitmq-light.svg"},
+                {"title":"Spring Boot", "src":"../assets/images/skills/items/light/spring-boot-light.svg"},
+                {"title":"Spring MVC", "src":"../assets/images/skills/items/light/spring-light.svg"},
+                {"title":"Hibernate", "src":"../assets/images/skills/items/light/hibernate-light.svg"},
+                {"title":"JUnit", "src":"../assets/images/skills/items/light/junit-light.svg"},
+                {"title":"Mockito", "src":"../assets/images/skills/items/light/mockito-light.svg"},
+                {"title":"MockMvc", "src":"../assets/images/skills/items/light/spring-light.svg"}
             ],
             [
-                {"title":"ASP.NET", "src":""},
-                {"title":"Entity Framework", "src":""},
-                {"title":"Microsserviços", "src":""},
-                {"title":"RabbitMQ", "src":""},
-                {"title":"Ocelot", "src":""},
-                {"title":"Mass Transit", "src":""},
-                {"title":"Unit Testing", "src":""},
-                {"title":"Integration Test", "src":""},
-                {"title":"Identity", "src":""}
+                {"title":"ASP.NET", "src":"../assets/images/skills/items/light/aspnet-light.svg"},
+                {"title":"Entity Framework", "src":"../assets/images/skills/items/light/ef-light.svg"},
+                {"title":"Microsserviços", "src":"../assets/images/skills/items/light/microservice-light.svg"},
+                {"title":"RabbitMQ", "src":"../assets/images/skills/items/light/rabbitmq-light.svg"},
+                {"title":"Ocelot", "src":"../assets/images/skills/items/light/ocelot-light.svg"},
+                {"title":"Mass Transit", "src":"../assets/images/skills/items/light/masstransit-light.svg"},
+                {"title":"Unit Testing", "src":"../assets/images/skills/items/light/unittesting-light.svg"},
+                {"title":"Integration Test", "src":"../assets/images/skills/items/light/unittesting-light.svg"},
+                {"title":"Identity", "src":"../assets/images/skills/items/light/identity-light.svg"}
             ],
             [
-                {"title":"Git", "src":""},
-                {"title":"GitHub", "src":""},
-                {"title":"CI/CD", "src":""},
-                {"title":"GitLab", "src":""},
-                {"title":"Docker", "src":""},
-                {"title":"Docker Compose", "src":""}
+                {"title":"Docker Compose", "src":"../assets/images/skills/items/light/docker-light.svg"},
+                {"title":"Git", "src":"../assets/images/skills/items/light/git-light.svg"},
+                {"title":"GitHub", "src":"../assets/images/skills/items/light/github-light.svg"},
+                {"title":"CI/CD", "src":"../assets/images/skills/items/light/cicd-light.svg"},
+                {"title":"GitLab", "src":"../assets/images/skills/items/light/gitlab-light.svg"},
+                {"title":"Docker", "src":"../assets/images/skills/items/light/docker-light.svg"}
             ],
             [
-                {"title":"SQL Server", "src":""},
-                {"title":"MySQL", "src":""},
-                {"title":"SQLite", "src":""},
-                {"title":"PostgreSQL", "src":""},
-                {"title":"Mongo DB", "src":""},
-                {"title":"Oracle", "src":""}
+                {"title":"SQL Server", "src":"../assets/images/skills/items/light/sqlserver-light.svg"},
+                {"title":"MySQL", "src":"../assets/images/skills/items/light/mysql-light.svg"},
+                {"title":"SQLite", "src":"../assets/images/skills/items/light/sqllite-light.svg"},
+                {"title":"PostgreSQL", "src":"../assets/images/skills/items/light/postgresql-light.svg"},
+                {"title":"Mongo DB", "src":"../assets/images/skills/items/light/mongodb-light.svg"},
+                {"title":"Oracle", "src":"../assets/images/skills/items/light/oracle-light.svg"}
             ]
         ]
     },
