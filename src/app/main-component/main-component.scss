@@ -50,10 +50,7 @@ main {
   background-color: var(--bkg-color);
 }
 
-div.row  {
-  display: flex;
-  width: 100%;
-}
+
 
 div.column {
   width:60%;
@@ -73,9 +70,14 @@ section:not(.row-technologies):not(.row-qualification) {
 /* -------------------------------------------------------------------- */
 /* NAV BAR  - START */
 /* -------------------------------------------------------------------- */
+
 div.row-nav {
+  display: flex;
+  width: 100%;
   align-items: center;
   justify-content: center;
+  position: fixed;
+  background-color: var(--bkg-color);
 }
 
 nav {
@@ -165,7 +167,9 @@ h1 {
   /* -------------------------------------------------------------------- */
   /* ABOUT ME - START */
   /* -------------------------------------------------------------------- */
-  
+section.row-about-me {
+  margin-top: 60px;
+}
 div.column-about-me > div.title {
   height: 20%;
   margin-bottom: 3%;
@@ -1036,12 +1040,28 @@ div.detail-experience-skills {
   }
   
   
-  div.footer-info {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
-    height: 40%;
-    color: white;
-    font-size: calc(3.5px + 1vw);
-  }
+div.footer-info {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
+  color: white;
+  font-size: calc(3.5px + 1vw);
+}
+
+/* -------------------------------------------------------------------- */
+/* FOOTER - END */
+/* -------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
+/* RESPONSIVE - TV ETC */
+/* -------------------------------------------------------------------- */
+
+
+@media only screen and (min-width: 2000px) {
+      section.row-qualification {
+        height: 780px;
+      }
+      
+}

@@ -22,6 +22,7 @@ export class MainComponent implements OnInit {
     github:"../assets/images/contact/icon-github-light.svg",
     whatsapp:"../assets/images/contact/icon-whatsapp-light.svg"
   };
+  public downloadCvHref: string;
 
   constructor(private translateService:TranslateService) {}
 
@@ -282,6 +283,11 @@ export class MainComponent implements OnInit {
         }
       }
     )
+  }
+
+  downloadCV()
+  {
+    this.translateService.get("about-me.downloadCv.href").subscribe(item => this.downloadCvHref = item);
   }
 } 
 

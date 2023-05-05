@@ -2,7 +2,7 @@
     <div class="row row-nav" id="nav">
         <nav>
             <ul class="ul-items" #ulitems>
-                <li class="home"> <a href="#about" style="color:#3E68FF;">{{'navBar.Home' | translate}}</a></li>
+                <li class="home"> <a href="#about"   style="color:#3E68FF;">{{'navBar.Home' | translate}}</a></li>
                 <li class="qualification"> <a href="#qualification">{{'navBar.Qualification' | translate}}</a></li>
                 <li class="portfolio"> <a href="#portfolio">{{'navBar.Portfolio' | translate}}</a></li>
                 <li class="skills"> <a href="#skills">{{'navBar.Skills' | translate}}</a></li>
@@ -15,7 +15,9 @@
               </ul>
         </nav>
     </div>
+    <div class="exemple">
 
+    </div>
     <section class="row row-about-me" id="about">
        <div class="column column-about-me">
         <div class="title">
@@ -39,7 +41,7 @@
                     </div>
                 </div>
                 <div class="download-cv">
-                    <a target="_blank" href="https://drive.google.com/file/d/1E1TfJQBYjTY4kHWreT6E1DTVtjUAFDLx/view?usp=sharing" >Download CV</a>
+                    <a target="_blank" (click)="downloadCV()" [href]="downloadCvHref" >Download CV</a>
                 </div>
           </div>
       </div>
@@ -217,10 +219,10 @@
 <footer>
     <div class="footer-nav">
         <ul>
-            <li><a href="#nav">{{'navBar.Home' | translate}}</a></li>
+            <li><a href="#about">{{'navBar.Home' | translate}}</a></li>
             <li><a href="#portfolio">{{'navBar.Portfolio' | translate}}</a></li>
         </ul>
     </div>
-    <div class="arrow-roll-up"><div><a href="#nav"><img src="../assets/images/arrow-up.svg" alt="arrow up"/></a></div></div>
+    <div class="arrow-roll-up"><div><a href="#about"><img src="../assets/images/arrow-up.svg" alt="arrow up"/></a></div></div>
     <div class="footer-info"><p>© Lewis Solutions. All right reserved.</p></div>
 </footer>

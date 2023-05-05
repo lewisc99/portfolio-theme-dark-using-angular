@@ -16,6 +16,9 @@
             "experience":"experience",
             "completed":"completed",
             "projects":"projects"
+        },
+        "downloadCv": {
+            "href":"https://drive.google.com/file/d/1E1TfJQBYjTY4kHWreT6E1DTVtjUAFDLx/view?usp=sharing"
         }
     },
     "qualification": {

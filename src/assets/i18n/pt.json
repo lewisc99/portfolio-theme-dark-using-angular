@@ -12,10 +12,13 @@
         "title":"Olá, sou Luiz Mais conhecido como Lewis",
         "info":"Olá, sou um desenvolvedor de software de back-end. Adoro codificar e resolver problemas. Estou sempre procurando oportunidades interessantes de pesquisa em ciência da computação e assuntos relacionados. Você quer levar sua empresa para o próximo nível?",
         "cv-item": {
-            "years":"Anos de",
+            "years":"Ano de",
             "experience":"expêriencia",
             "completed":"Projetos",
             "projects":"completados"
+        },
+        "downloadCv": {
+            "href":"https://drive.google.com/file/d/165FJmZfonlyy56UcYmb5WZ8vmv5mCDB0/view?usp=share_link"
         }
     },
     "qualification": {
