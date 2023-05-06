@@ -6,29 +6,252 @@
 
 
 
-
 /* -------------------------------------------------------------------- */
-/* MAX SIZE 1500 */
+/* MAX SIZE 1000 */
 /* -------------------------------------------------------------------- */
 
-@media only screen and (max-width: 1500px) {
+@media only screen and (max-width: 1000px) {
 
-  div.column {
-    width:70%;
-    display: flex;
-    flex-direction: column;
+  section.row-about-me {
+    margin-top: 80px;
+  }
+
+h1 {
+  font-size: calc(38px + 1vw);
+  color: var(--main-font);
+}  
+
+div.column {
+  width: 88%;
+  display: flex;
+  flex-direction: column;
+}
+nav {
+  width: 80%;
+  height: 90px;
+}
+
+ul.ul-items a {
+  font-size: calc(13px + 1vw);
+}
+
+div.about-me  > p  {
+  font-size: calc(15px + 1vw);
+  display: flex;
+}
+
+  div.item-experience {
+    div.item-experience-title {
+      h1 {
+        font-size: calc(6px + 1vw);
+        color: var(--main-font);
+      }
+      p {
+        font-size: calc(8px + 0.5vw);
+        color: var(--second-font);
+        margin-top: 4px;
+      }
+    }
+  }
+
+  div.info-cv-items {
+    width: 48%; 
   }
   
+  div.cv-item > h1 {
+    font-size: 30px;
+  }
+  div.cv-item > p {
+    font-size: calc(17px - 0.2vw);
+  }
+  
+  div.download-cv {
+    width: 43%;
+  }
+    
+  div.download-cv  > a {
+      width: 70%;
+      height: 60%;
+      font-size: calc(12px - 0.2vw);
+  }
+  
+  div.download-cv  > a {
+      font-size: calc(17px - 0.2vw); 
+  }
+  
+div.detail-experience-skills {
+    div {
+      width: 20%;
+      height: 27%;
+      border: calc(0.7px + 0.3vw) solid #3E68FF;
+      color: var(--main-font);
+        p {
+          font-size: calc(4.8px + 0.8vw);
+        }
+    }
+  }
+
+    //DETAIL EXPERIENCE 
+    // --------------------------
+    
+  div.detail-experience-title
+  {
+    height: 20%;
+    padding-top: 15px;
+  }
+
+  div.detail-experience-text {
+    height: 35%;
+    p {
+      font-size: 15px;
+      color: var(--main-font);
+    }
+  }
+
+  div.selected-portfolio-items > ul > li {
+    width: 6%;
+  }
+
+div.column-qualification {
+     div.title {
+      p {
+         font-size: 15px;
+      }
+    }
+}
+div.portfolio-items {
+  width: 70%;
+
+  div.info {
+    h1 {
+      font-size: calc(16px + 1vw);
+    }
+    p {
+      color: var(--second-font);
+    }
+  }
+
+}
+
+div.select-box {
+  select {
+    width: 60%;
+  }
+}
+
+div.skills-items {
+
+  .skill-item {
+    display: flex;
+    width: 40%;
+  }
+}
+
+div.contact-container {
+  height: 70%;
+
+// SOCIAL MEDIA //
+// ------------------- //
+
+  div.social-medias {
+
+    .social-media-links {
+      div {
+        width: 14%;
+        img {
+          width: 80%;
+          height: 75%;
+        }
+      }
+    }
+    // CONTACT ITEM - INFO //
+// ------------------- //
+    div.contact-item {
+
+       div.contact-item-info {
+        div {
+          width: 15%;
+          img {
+            width: 65%;
+          }
+        }
+        p {
+          width: 78%;
+          font-size: calc(15px - 0.1vw);
+          }
+       }  
+    }
+  }
 }
 
 
 
+.form-group-send-message {
+  
+  input, textarea {
+    font-size: calc(15px - 0.1vw);
+  }
+  
+}
+.send-message-name, .send-message-button{
+  height: 20%;
+
+  button {
+    width: 33%;
+    height: 60%;
+    border: 0px;
+    color: #FFFFFF;
+    background-color: #32BC59;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: calc(15px - 0.1vw);
+    text-align: center;
+    font-weight: bold;
+    box-shadow:  var(--box-shadow); //shadow behind the scrollbar
+   }
+ 
+}
+
+
+div.arrow-roll-up {
+  div {
+    width: 9%;
+  }
+}
+
+div.footer-nav {
+  display: flex;
+  width: 100%;
+  height: 30%;
+  color: white;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    font-size: calc(21px - 0.1vw);
+    text-decoration: none;
+    color: white;
+  }
+  a:hover {
+    color:  #3E68FF;
+  }
+  li {
+    margin-right: 2%;
+  }
+}
+footer {
+    p { 
+      font-size: calc(15px - 0.1vw);
+    }
+  }
+
+}
 
 /* -------------------------------------------------------------------- */
 /* MAX SIZE 1200 */
 /* -------------------------------------------------------------------- */
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
 
   div.column {
     width:78%;
@@ -51,13 +274,6 @@ div.about-me  > p  {
   display: flex;
   width: 60%;
 }
-  div.column {
-    width:78%;
-    display: flex;
-    flex-direction: column;
-  }
-
-
     
   div.item-experience {
     div.item-experience-title {
@@ -95,6 +311,11 @@ div.detail-experience-skills {
   {
     height: 20%;
     padding-top: 15px;
+
+    h3 {
+      font-size: calc(14px - 0.1vw);
+      color: var(--second-font);
+    }
   }
 
   div.detail-experience-text {
@@ -179,172 +400,19 @@ div.arrow-roll-up {
     width: 6%;
   }
 }
-
 }
 
-
-
-
 /* -------------------------------------------------------------------- */
-/* MAX SIZE 1000 */
+/* MAX SIZE 1500 */
 /* -------------------------------------------------------------------- */
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
 
   div.column {
-    width:78%;
+    width:72%;
     display: flex;
     flex-direction: column;
   }
-
-
-nav {
-  width: 78%;
-  height: 90px;
-}
-
-ul.ul-items a {
-  font-size: calc(7px + 1vw);
-}
-
-div.about-me  > p  {
-  font-size: calc(14px + 1vw);
-  display: flex;
-}
-  div.column {
-    width:82%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  div.item-experience {
-    div.item-experience-title {
-      h1 {
-        font-size: calc(5px + 1vw);
-        color: var(--main-font);
-      }
-      p {
-        font-size: calc(7px + 0.5vw);
-        color: var(--second-font);
-        margin-top: 4px;
-      }
-    }
-  }
-
-div.detail-experience-skills {
-    div {
-      width: 20%;
-      height: 27%;
-      border: calc(0.7px + 0.3vw) solid #3E68FF;
-      color: var(--main-font);
-        p {
-          font-size: calc(4.4px + 0.8vw);
-        }
-    }
-  }
-
-    //DETAIL EXPERIENCE 
-    // --------------------------
-    
-  div.detail-experience-title
-  {
-    height: 20%;
-    padding-top: 15px;
-  }
-
-  div.detail-experience-text {
-    height: 35%;
-    p {
-      font-size: 15px;
-      color: var(--main-font);
-    }
-  }
-
-  div.detail-experience-skills {
-  height: 30%;
-  flex-wrap: wrap;
-  }
-
-  div.selected-portfolio-items > ul > li {
-    width: 7%;
-  }
-
-div.info-cv-items {
-  width: 48%; 
-}
-
-div.cv-item > h1 {
-  font-size: 25px;
-}
-div.cv-item > p {
-  font-size: calc(17px - 0.2vw);
-}
-
-
-
-div.download-cv {
-  width: 40%;
-}
-  
-div.download-cv  > a {
-    width: 70%;
-    height: 60%;
-    font-size: calc(10px - 0.2vw);
-}
-
-div.download-cv  > a {
-    font-size: calc(16px - 0.2vw); 
-}
-
-
-
-div.contact-container {
-  display: flex;
-  height: 70%;
-  flex-direction: row;
-  justify-content: center;
-
-
-// SOCIAL MEDIA //
-// ------------------- //
-
-  div.social-medias {
-
-    .social-media-links {
-      div {
-        width: 11%;
-        img {
-          width: 80%;
-          height: 75%;
-        }
-      }
-    }
-
-    // CONTACT ITEM - INFO //
-// ------------------- //
-    div.contact-item {
-
-       div.contact-item-info {
-        div {
-          width: 12%;
-          img {
-            width: 65%;
-          }
-        }
-        p {
-          width: 78%;
-          }
-       }  
-    }
-  }
-}
-
-div.arrow-roll-up {
-  div {
-    width: 6%;
-  }
-}
-
 }
 
 

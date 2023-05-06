@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Portfolio, Qualification, Skills, QualificationSkills } from '../interfaces/main';
+import { Portfolio, Qualification, Skills } from '../interfaces/main';
 import { ContactSrc } from '../domain/contact-src';
 
 @Component({
