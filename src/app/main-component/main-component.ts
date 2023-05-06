@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Portfolio, Qualification, Skills } from '../interfaces/main';
 import { ContactSrc } from '../domain/contact-src';
@@ -23,6 +23,7 @@ export class MainComponent implements OnInit {
     whatsapp:"../assets/images/contact/icon-whatsapp-light.svg"
   };
   public downloadCvHref: string;
+  @ViewChild('nav', { static: false }) public navBar: ElementRef = new ElementRef({});
 
   constructor(private translateService:TranslateService) {}
 
@@ -288,6 +289,32 @@ export class MainComponent implements OnInit {
   downloadCV()
   {
     this.translateService.get("about-me.downloadCv.href").subscribe(item => this.downloadCvHref = item);
+  }
+
+  toggleNavBarMobile()
+  {
+    let display = this.navBar.nativeElement.style.display;
+    if (display == "" || display == "none") 
+    {
+      this.navBar.nativeElement.style.display = "flex";
+      this.navBar.nativeElement.classList.add("nav-active-animation");
+    } else {
+      this.navBar.nativeElement.classList.remove("nav-active-animation");
+      this.navBar.nativeElement.classList.toggle("nav-unactive-animation");
+      this.navBar.nativeElement.addEventListener("animationend",(event:AnimationEvent) =>
+      {
+        if (event.animationName == "fadeOut")
+        {
+          this.navBar.nativeElement.classList.remove("nav-unactive-animation");
+          this.navBar.nativeElement.style.display = "";
+        }
+      })
+    }
+  }
+
+ closeNavBarMobile() {
+   this.navBar.nativeElement.style.display = "flex";
+   this.toggleNavBarMobile();
   }
 } 
 

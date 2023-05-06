@@ -13,7 +13,7 @@ import { MainComponent } from './main-component/main-component';
   declarations: [
     AppComponent,
     PortfolioDetailComponent,
-    MainComponent
+    MainComponent,
   ],
   imports: [
     BrowserModule,

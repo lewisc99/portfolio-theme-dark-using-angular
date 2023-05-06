@@ -1,7 +1,16 @@
 <main class="container" id="container" #container>
-    <div class="row row-nav" id="nav">
+  
+    <div class="row row-nav-mobile-button">
+        <div (click)="toggleNavBarMobile()">
+            <i></i>
+            <i></i>
+            <i></i>
+            </div>
+        </div>
+    <div class="row row-nav" id="nav" #nav>
         <nav>
             <ul class="ul-items" #ulitems>
+                <li class="close" (click)="closeNavBarMobile()"><div>&#10005;</div></li>
                 <li class="home"> <a href="#about"   style="color:#3E68FF;">{{'navBar.Home' | translate}}</a></li>
                 <li class="qualification"> <a href="#qualification">{{'navBar.Qualification' | translate}}</a></li>
                 <li class="portfolio"> <a href="#portfolio">{{'navBar.Portfolio' | translate}}</a></li>
@@ -15,9 +24,7 @@
               </ul>
         </nav>
     </div>
-    <div class="exemple">
 
-    </div>
     <section class="row row-about-me" id="about">
        <div class="column column-about-me">
         <div class="title">

@@ -50,8 +50,6 @@ main {
   background-color: var(--bkg-color);
 }
 
-
-
 div.column {
   width:60%;
   display: flex;
@@ -96,6 +94,10 @@ ul {
 li {
   margin-right: 1%;
   display: inline;
+}
+
+li.close {
+  display: none;
 }
 
 ul.ul-items a {
