@@ -6,7 +6,7 @@ import { ContactSrc } from '../domain/contact-src';
 @Component({
   selector: 'app-main-component',
   templateUrl: './main-component.html',
-  styleUrls: ['./main-component.scss']
+  styleUrls: ['./main-component.scss','./section-component.scss','./responsive-component.scss']
 })
 export class MainComponent implements OnInit {
 
