@@ -10,7 +10,7 @@
     },
     "about-me": {
         "title":"Olá, sou Luiz Mais conhecido como Lewis",
-        "info":"Olá, sou um desenvolvedor de software de back-end. Adoro codificar e resolver problemas. Estou sempre procurando oportunidades interessantes de pesquisa em ciência da computação e assuntos relacionados. Você quer levar sua empresa para o próximo nível?",
+        "info":"Olá, sou um desenvolvedor de software de back-end. Adoro codar e resolver problemas. Estou sempre procurando oportunidades interessantes de pesquisa em ciência da computação e assuntos relacionados. Você quer levar sua empresa para o próximo nível?",
         "cv-item": {
             "years":"Ano de",
             "experience":"expêriencia",
@@ -27,16 +27,16 @@
         "items": [
             {
                 "id": 0,
-                "title":"Fullstack Dev Byteon Technologia",
+                "title":"Fullstack Dev Martins",
                 "dateStart": "02/06/2023",
-                "dateFinish": "Present",
-                "src":"../assets/images/qualification/items/byteon.svg",
+                "dateFinish": "05/06/2023",
+                "src":"../assets/images/qualification/items/martins.jpg",
                 "detail": {
                     "id":0,
-                    "title": "Fullstack Byteon Technologia",
+                    "title": "Fullstack Martins",
                     "subTitle":"Full-Time Remoto PJ Job",
                     "selected":false,
-                    "text":"Atualmente sou um desenvolvedor web full stack. Entrei como júnior e em pouco menos de um ano consegui chegar ao cargo de plenário. Meu objetivo é entender o que meu cliente precisa e entregar de forma rápida e funcional. Trabalho em backend, frontend, levantamento de requisitos, criação de tabelas, manipulação de banco de dados. Sempre usando metodologia ágil.",
+                    "text":"Trabalhei como desenvolvedor web full stack. Meu objetivo era entender o que o cliente precisava e entregar de forma rápida e funcional. trabalhei como fullstack Developer, fazendo manutenção em sistemas legados, criação de tabelas, manipulação de banco de dados, desenvolver serviços novos usando metodologia ágil.",
                     "skills": [
                         {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
                         {"title":"ASP NET","src":"..\\assets\\images\\qualification\\items\\skills\\light\\aspnet-light.svg"},

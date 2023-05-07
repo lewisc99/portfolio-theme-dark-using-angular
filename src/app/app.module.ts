@@ -7,6 +7,7 @@ import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.component';
 import { MainComponent } from './main-component/main-component';
+import { NavActiveDirective } from './directives/nav-active.directive';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { MainComponent } from './main-component/main-component';
     AppComponent,
     PortfolioDetailComponent,
     MainComponent,
+    NavActiveDirective,
   ],
   imports: [
     BrowserModule,

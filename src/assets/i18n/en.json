@@ -10,9 +10,9 @@
     },
     "about-me": {
         "title":"Hi, I’m Luiz Most know as Lewis",
-        "info":"Hi, I’m a Backend Software Developer I love coding and solving Problems, I am always looking for exciting research opportunities in computer science and related subjects.  Do you want to take you company to the next level?",
+        "info":"I’m a Backend Software Developer  I possess a strong passion for coding and solving Problems, I am always looking for exciting research opportunities in computer science and related subjects.  Do you want to take you company to the next level?",
         "cv-item": {
-            "years":"years of",
+            "years":"year of",
             "experience":"experience",
             "completed":"completed",
             "projects":"projects"
@@ -27,16 +27,16 @@
         "items": [
             {
                 "id": 0,
-                "title":"Fullstack Dev Byteon Technologia",
+                "title":"Fullstack Dev Martins",
                 "dateStart": "02/06/2023",
-                "dateFinish": "Present",
-                "src":"../assets/images/qualification/items/byteon.svg",
+                "dateFinish": "05/06/2023",
+                "src":"../assets/images/qualification/items/martins.jpg",
                 "detail": {
                     "id":0,
-                    "title": "Fullstack Byteon Technologia",
+                    "title": "Fullstack Martins",
                     "subTitle":"Full-Time Remote PJ Job",
                     "selected":false,
-                    "text":"I am currently a full stack web developer. I entered as a Junior and in a little less than a year I managed to reach the plenary position. My objective is to understand what my client needs and to deliver quickly and functionally. Work in backend, frontend, requirements gathering, table creation, data bank manipulation. Always using agile methodology.",
+                    "text":"I worked as a full stack web developer. My goal was to understand what the customer needed and deliver it quickly and functionally. I worked as a fullstack Developer, doing maintenance on legacy systems, creating tables, handling databases, developing new services using agile methodology.",
                     "skills": [
                         {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
                         {"title":"ASP NET","src":"..\\assets\\images\\qualification\\items\\skills\\light\\aspnet-light.svg"},

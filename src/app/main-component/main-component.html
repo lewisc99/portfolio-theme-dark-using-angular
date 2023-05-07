@@ -11,11 +11,11 @@
         <nav>
             <ul class="ul-items" #ulitems>
                 <li class="close" (click)="closeNavBarMobile()"><div>&#10005;</div></li>
-                <li class="home"> <a href="#about"   style="color:#3E68FF;">{{'navBar.Home' | translate}}</a></li>
-                <li class="qualification"> <a href="#qualification">{{'navBar.Qualification' | translate}}</a></li>
-                <li class="portfolio"> <a href="#portfolio">{{'navBar.Portfolio' | translate}}</a></li>
-                <li class="skills"> <a href="#skills">{{'navBar.Skills' | translate}}</a></li>
-                <li class="contact"> <a href="#contact">{{'navBar.Contact' | translate}}</a></li>
+                <li class="home"> <a href="#about" NavActive [navBar]="this.navBar" [ngClass]="clickedNavBarActive == 'home' ? 'nav-item-active' : ''" >{{'navBar.Home' | translate}}</a></li>
+                <li class="qualification"> <a href="#qualification" NavActive [navBar]="this.navBar" >{{'navBar.Qualification' | translate}}</a></li>
+                <li class="portfolio"> <a href="#portfolio" NavActive [navBar]="this.navBar" > {{'navBar.Portfolio' | translate}}</a></li>
+                <li class="skills"> <a href="#skills" NavActive [navBar]="this.navBar" >{{'navBar.Skills' | translate}}</a></li>
+                <li class="contact" > <a href="#contact" NavActive [navBar]="this.navBar" >{{'navBar.Contact' | translate}}</a></li>
                 <li > <a  (click)="toggleTheme()"> <img class="lamp" [src]="'assets/images/lamp-' + lampColor + '.svg'"/></a></li>
                 <li class="idiom-choose"><div class="idiom-choose">
                     <a (click)="toggleIdiom()"><img id="image-brazil" src="assets/images/brazil.jpg"/></a>

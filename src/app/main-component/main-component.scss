@@ -83,6 +83,11 @@ nav {
   height: 80px;
 }
 
+.nav-item-active {
+  color:var(--blue-buttons) !important;
+  transition: 0.5s;
+}
+
 ul {
   display: flex;
   align-items: center;

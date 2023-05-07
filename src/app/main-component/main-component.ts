@@ -24,6 +24,7 @@ export class MainComponent implements OnInit {
   };
   public downloadCvHref: string;
   @ViewChild('nav', { static: false }) public navBar: ElementRef = new ElementRef({});
+  public clickedNavBarActive:string = "home";
 
   constructor(private translateService:TranslateService) {}
 
@@ -85,6 +86,11 @@ export class MainComponent implements OnInit {
     }
   }
 
+  closeNavBarMobile() {
+    this.navBar.nativeElement.style.display = "flex";
+    this.toggleNavBarMobile();
+   }
+
   toggleIdiom():void
   {
     let currentIdiom = this.localStorage.getItem("idiom");
@@ -130,6 +136,7 @@ export class MainComponent implements OnInit {
     this.contactSrc = contact;
   }
 
+  
   initializeQualification():void 
   {
     this.translateService.get("qualification.items").subscribe(
@@ -137,36 +144,7 @@ export class MainComponent implements OnInit {
          let qualifications:Qualification[] = items;
 
          qualifications.map(item => {
-              let dateStart = new Date(item.dateStart);
-              let dateFinish = new Date(item.dateFinish);
-              let currentDate = new Date();
-              var diffDays:any;
-              var diffTime:any;
-              var totalTime:any;
-
-              if (dateFinish.toString() != "Invalid Date")
-              {
-                 diffTime = Math.abs(dateFinish.getTime() - dateStart.getTime());
-              } else {
-                 diffTime = Math.abs(currentDate.getTime() - dateStart.getTime());
-              }
-               diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-               if (diffDays > 365)
-               {
-                  let totalYears = Math.floor((diffDays / 365));
-                  let totalMonth = Math.floor(((diffDays % 365) / 30 ));
-
-                  if (totalMonth != 0)
-                  {
-                    totalTime = totalYears + " yr " + totalMonth + " months";
-                  } else {
-                    totalTime = totalYears + " yr";
-                  }
-               } else {
-                let totalMonth = (diffDays / 30 ).toFixed(1);
-                totalTime = totalMonth + " months";
-               }
-               item.totalTime = totalTime;
+             this.formatDataQualification(item);
 
             if (this.localStorage.getItem("theme") == "light")
             {
@@ -198,6 +176,40 @@ export class MainComponent implements OnInit {
      )};
   }
 
+  formatDataQualification(item: Qualification)
+  {
+    let dateStart = new Date(item.dateStart);
+    let dateFinish = new Date(item.dateFinish);
+    let currentDate = new Date();
+    var diffDays:any;
+    var diffTime:any;
+    var totalTime:any;
+
+    if (dateFinish.toString() != "Invalid Date")
+    {
+       diffTime = Math.abs(dateFinish.getTime() - dateStart.getTime());
+    } else {
+       diffTime = Math.abs(currentDate.getTime() - dateStart.getTime());
+    }
+     diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+     if (diffDays > 365)
+     {
+        let totalYears = Math.floor((diffDays / 365));
+        let totalMonth = Math.floor(((diffDays % 365) / 30 ));
+
+        if (totalMonth != 0)
+        {
+          totalTime = totalYears + " yr " + totalMonth + " months";
+        } else {
+          totalTime = totalYears + " yr";
+        }
+     } else {
+      let totalMonth = (diffDays / 30 ).toFixed(1);
+      totalTime = totalMonth + " months";
+     }
+     item.totalTime = totalTime;
+  }
+
   initializeContainersIdiom():void
   {
     this.translateService.get("qualification.items").subscribe(
@@ -210,7 +222,10 @@ export class MainComponent implements OnInit {
           this.selectQualification(0);
          }
          this.qualifications = items;
+         
          this.qualifications.forEach(item => {
+          this.formatDataQualification(item);
+          
           item.detail.skills.map( skill => {
            if (this.localStorage.getItem("theme") == "dark")
               skill.src = skill.src.replaceAll("dark","light");
@@ -312,9 +327,6 @@ export class MainComponent implements OnInit {
     }
   }
 
- closeNavBarMobile() {
-   this.navBar.nativeElement.style.display = "flex";
-   this.toggleNavBarMobile();
-  }
+
 } 
 
