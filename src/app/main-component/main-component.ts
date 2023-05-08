@@ -87,11 +87,6 @@ export class MainComponent implements OnInit {
     }
   }
 
-  closeNavBarMobile() {
-    this.navBar.nativeElement.style.display = "flex";
-    this.toggleNavBarMobile();
-   }
-
   toggleIdiom():void
   {
     let currentIdiom = this.localStorage.getItem("idiom");
@@ -327,6 +322,11 @@ export class MainComponent implements OnInit {
       })
     }
   }
+  
+  closeNavBarMobile() {
+    this.navBar.nativeElement.style.display = "flex";
+    this.toggleNavBarMobile();
+   }
 
 
 } 

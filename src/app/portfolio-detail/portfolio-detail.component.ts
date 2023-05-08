@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { PortfolioDetail } from '../interfaces/detail';
@@ -38,6 +38,8 @@ export class PortfolioDetailComponent  implements OnInit{
   public siteActive:boolean = false;
   private localStorage:Storage = localStorage;
   public lampColor:string = "light";
+  @ViewChild('nav', { static: false }) public navBar: ElementRef = new ElementRef({});
+  public clickedNavBarActive:string = "home";
   
     ngOnInit(): void {
       this.activatedRoute.paramMap.subscribe(
@@ -98,5 +100,30 @@ export class PortfolioDetailComponent  implements OnInit{
       this.localStorage.setItem("theme", "light");
     }
   }
+  toggleNavBarMobile()
+  {
+    let display = this.navBar.nativeElement.style.display;
+    if (display == "" || display == "none") 
+    {
+      this.navBar.nativeElement.style.display = "flex";
+      this.navBar.nativeElement.classList.add("nav-active-animation");
+    } else {
+      this.navBar.nativeElement.classList.remove("nav-active-animation");
+      this.navBar.nativeElement.classList.toggle("nav-unactive-animation");
+      this.navBar.nativeElement.addEventListener("animationend",(event:AnimationEvent) =>
+      {
+        if (event.animationName == "fadeOut")
+        {
+          this.navBar.nativeElement.classList.remove("nav-unactive-animation");
+          this.navBar.nativeElement.style.display = "";
+        }
+      })
+    }
+  }
   
+  closeNavBarMobile() {
+    this.navBar.nativeElement.style.display = "flex";
+    this.toggleNavBarMobile();
+   }
+
 }
