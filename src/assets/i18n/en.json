@@ -252,7 +252,7 @@
             {
                 "id":"gym-dashboard",
                 "subId":"gym",
-                "title":"Microservices Gym Dashboard",
+                "title":"Microservices 'Gym Corpus' Customer management dashboard",
                 "text":"This Freelancer project for a local gym where you can manage clients and users where you can easily change users' debt status as well as plan category. My expertise in creating a secure infrastructure with JWT, scale microservices and apply TDD with unit and integration testing ensure the system is robust and reliable.",
                 "youtubeSrc":"https://www.youtube.com/embed/F2DXXOortBE",
                 "github": {

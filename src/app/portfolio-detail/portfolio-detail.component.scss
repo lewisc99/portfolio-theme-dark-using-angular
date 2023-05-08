@@ -153,6 +153,9 @@ div.portfolio-overview-title {
 div.portfolio-overview-text {
     height: 30%;
     flex-wrap: wrap;
+    p {
+      font-size: 17.5px;
+    }
 }
 
 div.portfolio-overview-links 
@@ -246,11 +249,12 @@ div.portfolio-skills {
       }
         div.portfolio-skills-items-content {
           overflow-y: visible;
+          scroll-behavior: smooth;
           overflow-x: hidden;
           width: 100%;
           height: 85%;
           flex-direction: column;
-          overflow-wrap: normal;
+          display: block; //not change the height size after scroll
 
           div.item {
              margin-top: 10px;
@@ -258,7 +262,7 @@ div.portfolio-skills {
              border: 2px solid var(--blue-buttons);
              width: 70%;
              align-items: center;
-             height: 30px;
+             height: 35px;
              border-radius: 10px;
              background-color: #ffffff2a;
              box-shadow: var(--box-shadow);

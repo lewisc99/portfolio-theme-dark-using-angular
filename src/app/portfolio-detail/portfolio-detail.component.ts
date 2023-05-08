@@ -1,5 +1,5 @@
-import { Component, Inject, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { PortfolioDetail } from '../interfaces/detail';
 import { DOCUMENT } from '@angular/common'
@@ -11,9 +11,14 @@ import { DOCUMENT } from '@angular/common'
 })
 export class PortfolioDetailComponent  implements OnInit{
 
-  constructor(private activatedRoute:ActivatedRoute,private translateService:TranslateService, @Inject(DOCUMENT) private _document: Document) {
-    this.translateService.setDefaultLang("en");
+  constructor(private activatedRoute:ActivatedRoute,private translateService:TranslateService,
+     @Inject(DOCUMENT) private _document: Document, private router:Router) {
+      if (this.localStorage.getItem("idiom") == "pt" && (this.localStorage.getItem("idiom") != null))
+        this.translateService.setDefaultLang("pt");
+      else 
+        this.translateService.setDefaultLang("en");
   }
+
   public detail: PortfolioDetail = {
     id: '',
     title: '',
@@ -31,6 +36,8 @@ export class PortfolioDetailComponent  implements OnInit{
     subId: ''
   };
   public siteActive:boolean = false;
+  private localStorage:Storage = localStorage;
+  public lampColor:string = "light";
   
     ngOnInit(): void {
       this.activatedRoute.paramMap.subscribe(
@@ -50,13 +57,15 @@ export class PortfolioDetailComponent  implements OnInit{
           error: error => alert(error)
         }
       );
-    
   }
 
   targetPortfolioDetail(id:string) {
     this.translateService.get("portfolio-detail.items").subscribe(
       (items:PortfolioDetail[]) => {
         this.detail = items.find(item => item.id == id)!;
+        if (this.detail == null) 
+          this.router.navigate(['/..']);
+      
         let subId = this.detail.subId;
         let rowNav = this._document.getElementsByClassName("row-nav") as HTMLCollectionOf<HTMLElement>;
         let background = "url('../../assets/images/portfolio/detail/background/" + subId +".svg')"
@@ -69,30 +78,7 @@ export class PortfolioDetailComponent  implements OnInit{
       }
     )
   }
-
-  private localStorage:Storage = localStorage;
-  public lampColor:string = "light";
-
-
-  initializeCurrentIdiom():void 
-  {
-    let currentIdiom = this.localStorage.getItem("idiom");
-    if(currentIdiom != null)
-    {
-       this.translateService.setDefaultLang(this.localStorage.getItem("idiom")!);
-       if (currentIdiom == "pt")
-       {
-        this._document.getElementById("image-brazil")!.classList.add('flag-image');
-        this._document.getElementById("image-usa")!.classList.remove('flag-image');
-       } else {
-        this._document.getElementById("image-usa")!.classList.add('flag-image');
-        this._document.getElementById("image-brazil")!.classList.remove('flag-image');
-       }
-    } else {
-     this.translateService.setDefaultLang("en");
-     this.localStorage.setItem("idiom","en");
-    }
-  }
+  
   toggleTheme():void
   {
     let themeStorage = localStorage.getItem("theme"); 
@@ -102,7 +88,7 @@ export class PortfolioDetailComponent  implements OnInit{
     {
       this.lampColor = "light";
       this._document.getElementById("container")!.classList.add('dark-theme');
-      rowNav.item(0)!.style.boxShadow = "inset 0 0 0 2000px rgb(0 0 0 / 70%) ";
+      rowNav.item(0)!.style.boxShadow = "inset 0 0 0 2000px rgb(0 0 0 / 80%) ";
       this.localStorage.setItem("theme", "dark");
     } else
     {
