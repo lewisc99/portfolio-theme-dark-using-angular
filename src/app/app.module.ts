@@ -8,6 +8,7 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.component';
 import { MainComponent } from './main-component/main-component';
 import { NavActiveDirective } from './directives/nav-active.directive';
+import { SafeUrlPipe } from './pipes/safe-url.pipe';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { NavActiveDirective } from './directives/nav-active.directive';
     PortfolioDetailComponent,
     MainComponent,
     NavActiveDirective,
+    SafeUrlPipe,
   ],
   imports: [
     BrowserModule,

@@ -36,7 +36,7 @@
                     "title": "Fullstack Martins",
                     "subTitle":"Full-Time Remoto PJ Job",
                     "selected":false,
-                    "text":"Trabalhei como desenvolvedor web full stack. Meu objetivo era entender o que o cliente precisava e entregar de forma rápida e funcional. trabalhei como fullstack Developer, fazendo manutenção em sistemas legados, criação de tabelas, manipulação de banco de dados, desenvolver serviços novos usando metodologia ágil.",
+                    "text":"Trabalhei como desenvolvedor Web Fullstack. Meu objetivo era entender o que o cliente precisava e entregar de forma rápida e funcional. Trabalhei  fazendo manutenção em sistemas legados, criação de tabelas, manipulação de banco de dados, desenvolver serviços novos usando metodologia ágil.",
                     "skills": [
                         {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
                         {"title":"ASP NET","src":"..\\assets\\images\\qualification\\items\\skills\\light\\aspnet-light.svg"},
@@ -100,7 +100,7 @@
                 "id":"portfolio-1",
                 "title":"Academia Projeto",
                 "subtitle":"Freelance Projeto para uma Academia",
-                "src":"../assets/images/portfolio/gym.jpg",
+                "src":"../assets/images/portfolio/gym.svg",
                 "href":"#",
                 "show":true
             },
@@ -108,7 +108,7 @@
                 "id":"portfolio-2",
                 "title":"E-Commerce Projeto",
                 "subtitle":"Usando Java e Angular 2",
-                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "src":"../assets/images/portfolio/ecommerce.svg",
                 "href":"#",
                 "show":false
             },
@@ -116,7 +116,7 @@
                 "id":"portfolio-3",
                 "title":"Aplicativo de Chat",
                 "subtitle":"Em tempo real Aplicativo de Bate-Papo",
-                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "src":"../assets/images/portfolio/chat.svg",
                 "href":"#",
                 "show":false
             },
@@ -124,7 +124,7 @@
                 "id":"portfolio-4",
                 "title":"Candidato Dashboard",
                 "subtitle":"CRUD Aplicativo para uma entrevista",
-                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "src":"../assets/images/portfolio/candidate.svg",
                 "href":"#",
                 "show":false
             },
@@ -132,7 +132,7 @@
                 "id":"portfolio-5",
                 "title":"Pessoa Microserviço API",
                 "subtitle":"API usando RabbitMQ e Mongo",
-                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "src":"../assets/images/portfolio/person.svg",
                 "href":"#",
                 "show":false
             },
@@ -140,7 +140,7 @@
                 "id":"portfolio-6",
                 "title":"Currículo Dashboard",
                 "subtitle":"ASPNET MVC Currículo app",
-                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "src":"../assets/images/portfolio/curriculum.svg",
                 "href":"#",
                 "show":false
             },
@@ -148,7 +148,7 @@
                 "id":"portfolio-7",
                 "title":"Landing Page Máquina de Lavar",
                 "subtitle":"Freelance Máquina de Lavar",
-                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "src":"../assets/images/portfolio/lavamaq.svg",
                 "href":"#",
                 "show":false
             },
@@ -156,7 +156,7 @@
                 "id":"portfolio-8",
                 "title":"Microservice Desconto API",
                 "subtitle":"Projeto para empresa Bidea Factory",
-                "src":"../assets/images/portfolio/ecommerce.jpg",
+                "src":"../assets/images/portfolio/discount.svg",
                 "href":"#",
                 "show":false
             }

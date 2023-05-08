@@ -2,7 +2,7 @@
     <div class="row row-nav" id="nav">
         <nav>
             <ul class="ul-items" #ulitems>
-                <li class="home"> <a href="#about" style="color:#3E68FF;">{{'navBar.Home' | translate}}</a></li>
+                <li class="home"> <a href="#about">{{'navBar.Home' | translate}}</a></li>
                 <li class="qualification"> <a href="#qualification">{{'navBar.Qualification' | translate}}</a></li>
                 <li class="portfolio"> <a href="#portfolio">{{'navBar.Portfolio' | translate}}</a></li>
                 <li class="skills"> <a href="#skills">{{'navBar.Skills' | translate}}</a></li>
@@ -10,7 +10,7 @@
                <li > <a  (click)="toggleTheme()"> <img class="lamp" [src]="'assets/images/lamp-' + lampColor + '.svg'"/></a></li> 
              </ul>
               <div>
-                <h1>Microservices Gym Dashboard</h1>
+                <h1>{{detail.title}}</h1>
               </div>
         </nav>
     </div>
@@ -20,30 +20,27 @@
                 <h1>Overview</h1>
             </div>
             <div class="portfolio-overview-text">
-                <p>This Freelancer project for a local gym where you can manage clients
-                    and users where you can easily change users' debt status as well as plan category.
-                    My expertise in creating a secure infrastructure with JWT, scale microservices
-                    and apply TDD with unit and integration testing ensure the system is robust and reliable.</p>
+                <p>{{detail.text}}</p>
                     <div class="portfolio-overview-links">
-                    <a class="portfolio-link"><img alt="icon-github" src="../../assets/images/portfolio/detail/icon-github.svg"/> Github</a>
-                    <a class="portfolio-link"><img  alt="icon-rocket" src="../../assets/images/portfolio/detail/icon-rocket.svg"/>Site</a>
-                    <a routerLink="..">Back</a>
+                    <a class="portfolio-link" target="_blank"  [href]="detail.github.href"><img alt="icon-github" src="../../assets/images/portfolio/detail/icon-github.svg"/> Github</a>
+                    <a class="portfolio-link" target="_blank" [ngClass]="siteActive ? '': 'disabled-link'" [href]="detail.site.href"><img  alt="icon-rocket" src="../../assets/images/portfolio/detail/icon-rocket.svg"/>Site</a>
+                    <a routerLink="../">{{"portfolio-detail.back" | translate}}</a>
                 </div>
             </div>
         
             <div class="portfolio-overview-video">
-                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                <iframe [src]="detail.youtubeSrc  | safe">
                 </iframe>
             </div>
         </div>
         <div class="portfolio-skills">
             <div class="portfolio-skills-items">
-                <h2>Technologies</h2>
-                <div class="item item-top"><i></i>Spring Boot</div>
-                <div class="item"><i></i>Spring Cloud</div>
-                <div class="item"><i></i>Hateoas</div>
-                <div class="item"><i></i>Docker</div>
-                <div class="item"><i></i>PostgreSQL</div>
+                <div class="portfolio-skills-items-title">
+                    <h2>{{"portfolio-detail.technologies" | translate}}</h2>
+                </div>
+                <div class="portfolio-skills-items-content" >
+                    <div class="item item-top" *ngFor="let item of detail.technologies"><i></i>{{item}}</div>
+            </div>
             </div>
         </div>
     </section>

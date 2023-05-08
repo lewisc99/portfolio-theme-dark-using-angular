@@ -1,7 +1,8 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Portfolio, Qualification, Skills } from '../interfaces/main';
 import { ContactSrc } from '../domain/contact-src';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-main-component',
@@ -26,7 +27,7 @@ export class MainComponent implements OnInit {
   @ViewChild('nav', { static: false }) public navBar: ElementRef = new ElementRef({});
   public clickedNavBarActive:string = "home";
 
-  constructor(private translateService:TranslateService) {}
+  constructor(private translateService:TranslateService, @Inject(DOCUMENT) private _document: Document) {}
 
   ngOnInit(): void {
 
@@ -44,11 +45,11 @@ export class MainComponent implements OnInit {
        this.translateService.setDefaultLang(this.localStorage.getItem("idiom")!);
        if (currentIdiom == "pt")
        {
-        document.getElementById("image-brazil")!.classList.add('flag-image');
-        document.getElementById("image-usa")!.classList.remove('flag-image');
+        this._document.getElementById("image-brazil")!.classList.add('flag-image');
+        this._document.getElementById("image-usa")!.classList.remove('flag-image');
        } else {
-        document.getElementById("image-usa")!.classList.add('flag-image');
-        document.getElementById("image-brazil")!.classList.remove('flag-image');
+        this._document.getElementById("image-usa")!.classList.add('flag-image');
+        this._document.getElementById("image-brazil")!.classList.remove('flag-image');
        }
     } else {
      this.translateService.setDefaultLang("en");
@@ -63,7 +64,7 @@ export class MainComponent implements OnInit {
 
     if (colorStorage == null)
     {
-      document.getElementById("container")!.classList.toggle('dark-theme');
+      this._document.getElementById("container")!.classList.toggle('dark-theme');
       this.localStorage.setItem("theme", "dark");
       this.lampColor = "light";
     } else
@@ -71,13 +72,13 @@ export class MainComponent implements OnInit {
       let isDark =colorStorage == "dark" ? true : false;
       if (isDark)
       {
-        document.getElementById("container")!.classList.toggle('dark-theme');
+        this._document.getElementById("container")!.classList.toggle('dark-theme');
         this.localStorage.setItem("theme", "dark");
         this.lampColor = "light";
         contact.toggleTheme("dark");
         
       } else {
-        document.getElementById("container")!.classList.remove('dark-theme');
+        this._document.getElementById("container")!.classList.remove('dark-theme');
         this.localStorage.setItem("theme", "light");
         this.lampColor = "dark";
         contact.toggleTheme("light");
@@ -98,14 +99,14 @@ export class MainComponent implements OnInit {
    if (isEnglish)
    {
       this.localStorage.setItem("idiom", "pt");
-      document.getElementById("image-brazil")!.classList.add('flag-image');
-      document.getElementById("image-usa")!.classList.remove('flag-image');
+      this._document.getElementById("image-brazil")!.classList.add('flag-image');
+      this._document.getElementById("image-usa")!.classList.remove('flag-image');
       this.translateService.use("pt");
    }
    else {
     this.localStorage.setItem("idiom", "en");
-    document.getElementById("image-usa")!.classList.add('flag-image');
-    document.getElementById("image-brazil")!.classList.remove('flag-image');
+    this._document.getElementById("image-usa")!.classList.add('flag-image');
+    this._document.getElementById("image-brazil")!.classList.remove('flag-image');
     this.translateService.use("en");
    }
    this.initializeContainersIdiom();
@@ -119,7 +120,7 @@ export class MainComponent implements OnInit {
     if (themeStorage == "light")
     {
       this.lampColor = "light";
-      document.getElementById("container")!.classList.toggle('dark-theme');
+      this._document.getElementById("container")!.classList.toggle('dark-theme');
       this.localStorage.setItem("theme", "dark");
       this.qualifications.forEach(qualification =>  qualification.detail.skills.map( skills => skills.src =  skills.src.replaceAll("dark","light")));
       this.skills.map(skill => skill.src = skill.src.replaceAll("dark","light"));
@@ -127,7 +128,7 @@ export class MainComponent implements OnInit {
     } else
     {
       this.lampColor = "dark";
-      document.getElementById("container")!.classList.toggle('dark-theme');
+      this._document.getElementById("container")!.classList.toggle('dark-theme');
       this.localStorage.setItem("theme", "light");
       this.qualifications.forEach(qualification => qualification.detail.skills.map( skills => skills.src =  skills.src.replaceAll("light","dark")));
       this.skills.map(skill => skill.src = skill.src.replaceAll("light","dark") );
@@ -167,10 +168,10 @@ export class MainComponent implements OnInit {
           if (qualification.id == id )
           {
             qualification.detail.selected = true;
-            document.getElementById("item-experience-" + id)!.classList.add('active');
+            this._document.getElementById("item-experience-" + id)!.classList.add('active');
           } else {
             qualification.detail.selected = false;
-            document.getElementById("item-experience-" + qualification.id)!.classList.remove('active');
+            this._document.getElementById("item-experience-" + qualification.id)!.classList.remove('active');
           }
      }
      )};

@@ -54,7 +54,8 @@ main.dark-theme {
     justify-content: center;
     background: url("../../assets/images/portfolio/localiza.png");
     background-size: cover;
-    box-shadow: inset 0 0 0 1000px rgba(221, 216, 216, 0.2);
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
+    background-repeat: no-repeat;
     
     img {
         opacity: 0.4s;
@@ -203,6 +204,12 @@ div.portfolio-overview-links
         color:var(--blue-buttons-hover)
     }
 
+     .disabled-link {
+      opacity: 0.5;
+      cursor: default !important;
+      pointer-events: none;
+    }
+
 }
 
 a.portfolio-link {
@@ -244,42 +251,70 @@ div.portfolio-skills {
     align-items: flex-start;
     justify-content: center;
     display: flex;
-    
+ 
     div {
         display: flex;
     }
     div.portfolio-skills-items {
-         margin-top: 10%;
-         padding: 10px;
-         background-color: var(--bkg-container);
-         width: 60%;
-         height: 70%;
-         flex-direction: column;
-         border-radius: 13px;
-         border-bottom: 5px solid  var(--highlight-border-container);
-         flex-wrap: wrap;
-         text-align: center;
-         box-shadow: var(--box-shadow);
-      
-         div.item {
-            margin-top: 10px;
-            margin-left:5%;
-            border: 2px solid var(--blue-buttons);
-            width: 70%;
-            align-items: center;
-            height: 30px;
-            border-radius: 10px;
-            background-color: #ffffff2a;
-            box-shadow: var(--box-shadow);
+      width: 60%;
+      height: 70%;
+      margin-top: 10%;
+      padding: 10px;
+      background-color: var(--bkg-container);
+      display: flex;
+    
+      border-radius: 13px;
+      border-bottom: 5px solid  var(--highlight-border-container);
+      flex-wrap: wrap;
+      text-align: center;
+      box-shadow: var(--box-shadow);
 
-            i {
-                width: 4px;
-                height: 4px;
-                border-radius: 10px;
-                padding: 1px;
-                border: 3px solid var(--blue-buttons);
-                margin-right: 10px;
-            }
+      div.portfolio-skills-items-title {
+          display: flex;
+          height: 15%;
+      }
+        div.portfolio-skills-items-content {
+          overflow-y: visible;
+          overflow-x: hidden;
+          width: 100%;
+          height: 85%;
+          flex-direction: column;
+          overflow-wrap: normal;
+
+          div.item {
+             margin-top: 10px;
+             margin-left:5%;
+             border: 2px solid var(--blue-buttons);
+             width: 70%;
+             align-items: center;
+             height: 30px;
+             border-radius: 10px;
+             background-color: #ffffff2a;
+             box-shadow: var(--box-shadow);
+ 
+             i {
+                 width: 4px;
+                 height: 4px;
+                 border-radius: 10px;
+                 padding: 1px;
+                 border: 3px solid var(--blue-buttons);
+                 margin-right: 10px;
+             }
+           }
          }
+              
+      div.portfolio-skills-items-content::-webkit-scrollbar {
+        width: 1em; //width of the scrollbar
+      }
+
+      div.portfolio-skills-items-content::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); //shadow behind the scrollbar
+      }
+
+      div.portfolio-skills-items-content::-webkit-scrollbar-thumb {
+      background-color: var(--second-font); //scrollbar item to roll up and down
+      outline: 1px solid rgb(212, 227, 242);
+      }
     }
+
 }
