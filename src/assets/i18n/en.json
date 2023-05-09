@@ -28,7 +28,7 @@
             {
                 "id": 0,
                 "title":"Fullstack Dev Martins",
-                "dateStart": "02/06/2023",
+                "dateStart": "01/06/2023",
                 "dateFinish": "05/06/2023",
                 "src":"../assets/images/qualification/items/martins.jpg",
                 "detail": {
@@ -346,7 +346,7 @@
                 "id":"candidate-dashboard",
                 "subId":"candidate",
                 "title":"Registration of Candidates Dashboard",
-                "text":"This candidate registration project for a job interview is a perfect opportunity to demonstrate your skills. With the validation of each user input and the implementation of various tests to ensure the proper functioning of the application, you will be sure that you are delivering a quality product. Furthermore, the fact that all tests passed by CI/CD and the deployment was successfully performed on Heroku is concrete proof of the excellence of their work. Don't miss the chance to stand out in a highly competitive field like IT and show potential employers that you have what it takes to create high-performance solutions in short periods of time. Invest in yourself and your career and join this project today!",
+                "text":"This candidate registration project for a job interview is a perfect opportunity to demonstrate your skills. With the validation of each user input and the implementation of various tests to ensure the proper functioning of the application, you will be sure that you are delivering a quality product. Furthermore, the fact that all tests passed by CI/CD and the deployment was successfully performed on Heroku is concrete proof of the excellence of their work.",
                 "youtubeSrc":"https://www.youtube.com/embed/HyDB_rIHoW4",
                 "github": {
                     "href":"https://github.com/lewisc99/java-springboot-candidate-dashboard",
