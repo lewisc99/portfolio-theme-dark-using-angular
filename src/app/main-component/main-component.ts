@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, ViewChild } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Portfolio, Qualification, Skills, QualificationSkills } from '../interfaces/main';
+import { Portfolio, Qualification, Skills } from '../interfaces/main';
 import { ContactSrc } from '../domain/contact-src';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-main-component',
   templateUrl: './main-component.html',
-  styleUrls: ['./main-component.scss','./section-component.scss','./responsive-component.scss']
+  styleUrls: ['./main-component.scss','./section-component.scss','./responsive-mobile-component.scss','./responsive-tv-component.scss']
 })
 export class MainComponent implements OnInit {
 
@@ -23,8 +24,10 @@ export class MainComponent implements OnInit {
     whatsapp:"../assets/images/contact/icon-whatsapp-light.svg"
   };
   public downloadCvHref: string;
+  @ViewChild('nav', { static: false }) public navBar: ElementRef = new ElementRef({});
+  public clickedNavBarActive:string = "home";
 
-  constructor(private translateService:TranslateService) {}
+  constructor(private translateService:TranslateService, @Inject(DOCUMENT) private _document: Document) {}
 
   ngOnInit(): void {
 
@@ -42,11 +45,11 @@ export class MainComponent implements OnInit {
        this.translateService.setDefaultLang(this.localStorage.getItem("idiom")!);
        if (currentIdiom == "pt")
        {
-        document.getElementById("image-brazil")!.classList.add('flag-image');
-        document.getElementById("image-usa")!.classList.remove('flag-image');
+        this._document.getElementById("image-brazil")!.classList.add('flag-image');
+        this._document.getElementById("image-usa")!.classList.remove('flag-image');
        } else {
-        document.getElementById("image-usa")!.classList.add('flag-image');
-        document.getElementById("image-brazil")!.classList.remove('flag-image');
+        this._document.getElementById("image-usa")!.classList.add('flag-image');
+        this._document.getElementById("image-brazil")!.classList.remove('flag-image');
        }
     } else {
      this.translateService.setDefaultLang("en");
@@ -61,7 +64,7 @@ export class MainComponent implements OnInit {
 
     if (colorStorage == null)
     {
-      document.getElementById("container")!.classList.toggle('dark-theme');
+      this._document.getElementById("container")!.classList.toggle('dark-theme');
       this.localStorage.setItem("theme", "dark");
       this.lampColor = "light";
     } else
@@ -69,13 +72,13 @@ export class MainComponent implements OnInit {
       let isDark =colorStorage == "dark" ? true : false;
       if (isDark)
       {
-        document.getElementById("container")!.classList.toggle('dark-theme');
+        this._document.getElementById("container")!.classList.toggle('dark-theme');
         this.localStorage.setItem("theme", "dark");
         this.lampColor = "light";
         contact.toggleTheme("dark");
         
       } else {
-        document.getElementById("container")!.classList.remove('dark-theme');
+        this._document.getElementById("container")!.classList.remove('dark-theme');
         this.localStorage.setItem("theme", "light");
         this.lampColor = "dark";
         contact.toggleTheme("light");
@@ -91,14 +94,14 @@ export class MainComponent implements OnInit {
    if (isEnglish)
    {
       this.localStorage.setItem("idiom", "pt");
-      document.getElementById("image-brazil")!.classList.add('flag-image');
-      document.getElementById("image-usa")!.classList.remove('flag-image');
+      this._document.getElementById("image-brazil")!.classList.add('flag-image');
+      this._document.getElementById("image-usa")!.classList.remove('flag-image');
       this.translateService.use("pt");
    }
    else {
     this.localStorage.setItem("idiom", "en");
-    document.getElementById("image-usa")!.classList.add('flag-image');
-    document.getElementById("image-brazil")!.classList.remove('flag-image');
+    this._document.getElementById("image-usa")!.classList.add('flag-image');
+    this._document.getElementById("image-brazil")!.classList.remove('flag-image');
     this.translateService.use("en");
    }
    this.initializeContainersIdiom();
@@ -112,7 +115,7 @@ export class MainComponent implements OnInit {
     if (themeStorage == "light")
     {
       this.lampColor = "light";
-      document.getElementById("container")!.classList.toggle('dark-theme');
+      this._document.getElementById("container")!.classList.toggle('dark-theme');
       this.localStorage.setItem("theme", "dark");
       this.qualifications.forEach(qualification =>  qualification.detail.skills.map( skills => skills.src =  skills.src.replaceAll("dark","light")));
       this.skills.map(skill => skill.src = skill.src.replaceAll("dark","light"));
@@ -120,7 +123,7 @@ export class MainComponent implements OnInit {
     } else
     {
       this.lampColor = "dark";
-      document.getElementById("container")!.classList.toggle('dark-theme');
+      this._document.getElementById("container")!.classList.toggle('dark-theme');
       this.localStorage.setItem("theme", "light");
       this.qualifications.forEach(qualification => qualification.detail.skills.map( skills => skills.src =  skills.src.replaceAll("light","dark")));
       this.skills.map(skill => skill.src = skill.src.replaceAll("light","dark") );
@@ -129,6 +132,7 @@ export class MainComponent implements OnInit {
     this.contactSrc = contact;
   }
 
+  
   initializeQualification():void 
   {
     this.translateService.get("qualification.items").subscribe(
@@ -136,36 +140,7 @@ export class MainComponent implements OnInit {
          let qualifications:Qualification[] = items;
 
          qualifications.map(item => {
-              let dateStart = new Date(item.dateStart);
-              let dateFinish = new Date(item.dateFinish);
-              let currentDate = new Date();
-              var diffDays:any;
-              var diffTime:any;
-              var totalTime:any;
-
-              if (dateFinish.toString() != "Invalid Date")
-              {
-                 diffTime = Math.abs(dateFinish.getTime() - dateStart.getTime());
-              } else {
-                 diffTime = Math.abs(currentDate.getTime() - dateStart.getTime());
-              }
-               diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-               if (diffDays > 365)
-               {
-                  let totalYears = Math.floor((diffDays / 365));
-                  let totalMonth = Math.floor(((diffDays % 365) / 30 ));
-
-                  if (totalMonth != 0)
-                  {
-                    totalTime = totalYears + " yr " + totalMonth + " months";
-                  } else {
-                    totalTime = totalYears + " yr";
-                  }
-               } else {
-                let totalMonth = (diffDays / 30 ).toFixed(1);
-                totalTime = totalMonth + " months";
-               }
-               item.totalTime = totalTime;
+             this.formatDataQualification(item);
 
             if (this.localStorage.getItem("theme") == "light")
             {
@@ -188,13 +163,47 @@ export class MainComponent implements OnInit {
           if (qualification.id == id )
           {
             qualification.detail.selected = true;
-            document.getElementById("item-experience-" + id)!.classList.add('active');
+            this._document.getElementById("item-experience-" + id)!.classList.add('active');
           } else {
             qualification.detail.selected = false;
-            document.getElementById("item-experience-" + qualification.id)!.classList.remove('active');
+            this._document.getElementById("item-experience-" + qualification.id)!.classList.remove('active');
           }
      }
      )};
+  }
+
+  formatDataQualification(item: Qualification)
+  {
+    let dateStart = new Date(item.dateStart);
+    let dateFinish = new Date(item.dateFinish);
+    let currentDate = new Date();
+    var diffDays:any;
+    var diffTime:any;
+    var totalTime:any;
+
+    if (dateFinish.toString() != "Invalid Date")
+    {
+       diffTime = Math.abs(dateFinish.getTime() - dateStart.getTime());
+    } else {
+       diffTime = Math.abs(currentDate.getTime() - dateStart.getTime());
+    }
+     diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+     if (diffDays > 365)
+     {
+        let totalYears = Math.floor((diffDays / 365));
+        let totalMonth = Math.floor(((diffDays % 365) / 30 ));
+
+        if (totalMonth != 0)
+        {
+          totalTime = totalYears + " yr " + totalMonth + " months";
+        } else {
+          totalTime = totalYears + " yr";
+        }
+     } else {
+      let totalMonth = (diffDays / 30 ).toFixed(1);
+      totalTime = totalMonth + " months";
+     }
+     item.totalTime = totalTime;
   }
 
   initializeContainersIdiom():void
@@ -209,7 +218,10 @@ export class MainComponent implements OnInit {
           this.selectQualification(0);
          }
          this.qualifications = items;
+         
          this.qualifications.forEach(item => {
+          this.formatDataQualification(item);
+          
           item.detail.skills.map( skill => {
            if (this.localStorage.getItem("theme") == "dark")
               skill.src = skill.src.replaceAll("dark","light");
@@ -289,5 +301,33 @@ export class MainComponent implements OnInit {
   {
     this.translateService.get("about-me.downloadCv.href").subscribe(item => this.downloadCvHref = item);
   }
+
+  toggleNavBarMobile()
+  {
+    let display = this.navBar.nativeElement.style.display;
+    if (display == "" || display == "none") 
+    {
+      this.navBar.nativeElement.style.display = "flex";
+      this.navBar.nativeElement.classList.add("nav-active-animation");
+    } else {
+      this.navBar.nativeElement.classList.remove("nav-active-animation");
+      this.navBar.nativeElement.classList.toggle("nav-unactive-animation");
+      this.navBar.nativeElement.addEventListener("animationend",(event:AnimationEvent) =>
+      {
+        if (event.animationName == "fadeOut")
+        {
+          this.navBar.nativeElement.classList.remove("nav-unactive-animation");
+          this.navBar.nativeElement.style.display = "";
+        }
+      })
+    }
+  }
+  
+  closeNavBarMobile() {
+    this.navBar.nativeElement.style.display = "flex";
+    this.toggleNavBarMobile();
+   }
+
+
 } 
 

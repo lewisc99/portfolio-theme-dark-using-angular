@@ -1,51 +1,7 @@
-// DEFAULT CONFIG TO ADD DARK-THEME TO ALL ELEMENTS IN THE CONTAINER
-// ---------------------------------
-
-main {
-  --bkg-color:  #D8DBDC;
-  --main-font: #343434;
-  --second-font: #797979;
-  --blue-buttons: #3E68FF;
-  --blue-buttons-hover: #753eff;
-  --bkg-container:#BDB6B6;
-  --border-color:#BDB6B6;
-  --highlight-border-container:#0000002c;
-  --box-shadow: 0 6px 11px 0 rgba(0, 0, 0, 0.3);
-  transition: 0.7s;
+div.row  {
+  display: flex;
+  width: 100%;
 }
-
-main.dark-theme {
-  --bkg-color: #010409;
-  --main-font: #E4ECF3;
-  --second-font: #4a505f;
-  --blue-buttons: #3E68FF;
-  --blue-buttons-hover:  #753eff;
-  --bkg-container:#0D1117;
-  --border-color:#161616;
-  --highlight-border-container:#0000003a;
-  --box-shadow:  0 6px 11px 0 rgb(0 0 0 / 54%);
-  transition: 0.7s;
-}
-
-  main {
-    width: 100%;
-    display: flex;
-    font-family: Inconsolata, Arial, Helvetica, sans-serif;
-    flex-direction: column;
-  }
-  
-  div.row  {
-    display: flex;
-    width: 100%;
-  }
-  
-  div.column {
-    width:60%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-
   /* -------------------------------------------------------------------- */
   /* NAV BAR  - START */
   /* -------------------------------------------------------------------- */
@@ -54,7 +10,8 @@ main.dark-theme {
     justify-content: center;
     background: url("../../assets/images/portfolio/localiza.png");
     background-size: cover;
-    box-shadow: inset 0 0 0 1000px rgba(221, 216, 216, 0.2);
+    box-shadow: inset 0 0 0 1000px rgba(255, 255, 255, 0.2);
+    background-repeat: no-repeat;
     
     img {
         opacity: 0.4s;
@@ -102,46 +59,10 @@ main.dark-theme {
     transition: 0.5s;
   }
   
-  div.idiom-choose {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-around;
-    border: 3px solid var( --main-font);
-    border-radius: 10px;
-  
-    a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-  
-    img {
-      height: calc(10px + 1vh);
-      border-radius: 10px;
-      object-position: center;
-      width: 60%;
-      opacity: 0.5;
-    }
-    img:hover
-    {
-      width: 68%;
-      transition: 0.3s;
-    }
-  
-    img.flag-image {
-      width: 90%;
-      border: 2px solid var(--main-font);
-      transition: 0.2s;
-      opacity: 1.0;
-    }
-  }
-  
-  }
-  
-  h1 {
-    font-size: calc(28px + 1vw);
-    color: var(--main-font);
-  }
+h1 {
+  font-size: calc(28px + 1vw);
+  color: var(--main-font);
+}
   
   /* -------------------------------------------------------------------- */
   /* NAV BAR - END */
@@ -156,7 +77,7 @@ section {
     // background-color: var(--bkg-color);
     flex-direction: row;
     display: flex;
-    height: 690px;
+    height: 800px;
     background-color: var(--bkg-color);
 }
 
@@ -181,6 +102,9 @@ div.portfolio-overview-title {
 div.portfolio-overview-text {
     height: 30%;
     flex-wrap: wrap;
+    p {
+      font-size: 17.5px;
+    }
 }
 
 div.portfolio-overview-links 
@@ -203,6 +127,16 @@ div.portfolio-overview-links
         color:var(--blue-buttons-hover)
     }
 
+     .disabled-link {
+      opacity: 0.5;
+      cursor: default !important;
+      pointer-events: none;
+    }
+
+}
+
+li.close {
+  display: none;
 }
 
 a.portfolio-link {
@@ -244,42 +178,423 @@ div.portfolio-skills {
     align-items: flex-start;
     justify-content: center;
     display: flex;
-    
+ 
     div {
         display: flex;
     }
     div.portfolio-skills-items {
-         margin-top: 10%;
-         padding: 10px;
-         background-color: var(--bkg-container);
-         width: 60%;
-         height: 70%;
-         flex-direction: column;
-         border-radius: 13px;
-         border-bottom: 5px solid  var(--highlight-border-container);
-         flex-wrap: wrap;
-         text-align: center;
-         box-shadow: var(--box-shadow);
-      
-         div.item {
-            margin-top: 10px;
-            margin-left:5%;
-            border: 2px solid var(--blue-buttons);
-            width: 70%;
-            align-items: center;
-            height: 30px;
-            border-radius: 10px;
-            background-color: #ffffff2a;
-            box-shadow: var(--box-shadow);
+      width: 60%;
+      height: 70%;
+      margin-top: 10%;
+      padding: 10px;
+      background-color: var(--bkg-container);
+      display: flex;
+    
+      border-radius: 13px;
+      border-bottom: 5px solid  var(--highlight-border-container);
+      flex-wrap: wrap;
+      text-align: center;
+      box-shadow: var(--box-shadow);
 
-            i {
-                width: 4px;
-                height: 4px;
-                border-radius: 10px;
-                padding: 1px;
-                border: 3px solid var(--blue-buttons);
-                margin-right: 10px;
-            }
+      div.portfolio-skills-items-title {
+          display: flex;
+          height: 15%;
+      }
+        div.portfolio-skills-items-content {
+          overflow-y: visible;
+          scroll-behavior: smooth;
+          overflow-x: hidden;
+          width: 100%;
+          height: 85%;
+          flex-direction: column;
+          display: block; //not change the height size after scroll
+
+          div.item {
+             margin-top: 10px;
+             margin-left:5%;
+             border: 2px solid var(--blue-buttons);
+             width: 70%;
+             align-items: center;
+             height: 35px;
+             border-radius: 10px;
+             background-color: #ffffff2a;
+             box-shadow: var(--box-shadow);
+ 
+             i {
+                 width: 4px;
+                 height: 4px;
+                 border-radius: 10px;
+                 padding: 1px;
+                 border: 3px solid var(--blue-buttons);
+                 margin-right: 10px;
+             }
+           }
          }
+              
+      div.portfolio-skills-items-content::-webkit-scrollbar {
+        width: 1em; //width of the scrollbar
+      }
+
+      div.portfolio-skills-items-content::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,0.3); //shadow behind the scrollbar
+      }
+
+      div.portfolio-skills-items-content::-webkit-scrollbar-thumb {
+      background-color: var(--second-font); //scrollbar item to roll up and down
+      outline: 1px solid rgb(212, 227, 242);
+      }
     }
+
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------- */
+/* RESPONSIVE - SMALL-SCREEN - MOBILE - START */
+/* -------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------- */
+/* MAX SIZE 850 */
+/* -------------------------------------------------------------------- */
+@media only screen and (max-width: 850px) {
+
+div.row-nav-mobile-button {
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    background-color: var(--bkg-color);
+}
+
+  div.column-nav-mobile-button {
+    display: flex;
+    width: 90%;
+    align-items: flex-end;
+    justify-content: center;
+  
+    div {
+      width: 7%;
+      
+      display: flex;
+      flex-direction: column;
+      i {
+        width: 100%;
+        border: calc(3px + 0.1vw) solid var(--blue-buttons);
+        margin-top: 15%;
+      }
+    }
+    div:hover {
+      i {
+        border: calc(3px + 0.1vw) solid var(--blue-buttons-hover);
+      }
+    }
+  }
+  
+  .nav-active {
+    background-color: var(--bkg-color) !important;
+  }
+
+  .nav-active-animation {
+        animation-name: fadeIn;
+        animation-duration: 0.6s;
+      
+        //move a little the portfolio box
+        @keyframes fadeIn {
+          from {
+            width: 0%;
+            opacity: 0.8;
+          } 
+          to {
+            opacity: 1;
+            width: 50%;
+          }
+        }
+  }
+  
+  .nav-unactive-animation {
+    animation-name: fadeOut;
+    animation-duration: 0.6s;
+  
+    //move a little the portfolio box
+    @keyframes fadeOut {
+      from {
+        width: 50%;
+        opacity: 0.8;
+      } 
+      to {
+        opacity: 0;
+        width: 0%;
+      }
+    }
+  }
+  
+  div.row-nav {
+    box-shadow: 0 6px 11px 0 rgb(0 0 0 / 54%) !important;
+    width: 50%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 20;
+    background: var(--bkg-color) !important;
+
+    h1 {
+      display: none !important;
+    }
+  }
+  
+  nav {
+    width: 100%;
+    height: calc(600px + 0.1vh);
+  }
+  
+  ul.ul-items {
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100%;
+  }
+  
+  li {
+    display: inline;
+    height: 7%;
+  }
+  
+li.close{
+    display: flex !important;
+    align-self: flex-end;
+    width: 40% !important;
+    height: 25% !important;
+    justify-self: flex-start;
+    div {
+      font-size: calc(44px - 0.1vw);
+      align-items: center;
+      justify-content: center;
+      display: flex;
+      width: 100%;
+      color: var(--main-font);
+    }
+  }
+  
+  ul.ul-items a {
+    font-size: calc(18px + 1vw);
+  }
+  
+  section {
+    color: var(--main-font);
+    // background-color: var(--bkg-color);
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    background-color: var(--bkg-color) !important;
+    height: 1000px !important; 
+}
+
+div.portfolio-overview {
+  width: 90%;
+}
+
+
+div.portfolio-overview-text {
+  height: 30%;
+  margin: 30px 0px 30px 0px;
+}
+
+div.portfolio-overview-video {
+  width: 90% !important;
+  height: 70% !important;
+
+  iframe {
+      width: 100%;
+  }
+}
+
+div.portfolio-skills {
+  width: 90%;
+  height: 400px;
+
+  div.portfolio-skills-items {
+    width: 80%;
+  }
+}
+
+div.portfolio-overview-links 
+{
+    width: 100%;
+    margin-top: 10px;
+}
+
+a.portfolio-link {
+  padding: 7px;
+  height: 20px;
+  width: 100px;
+  span {
+    width: 60%;
+    height: 70%;
+    text-align: center;
+    font-size: calc(15px - 0.1vw);
+  }
+  img {
+      width: 15%;
+      height: 70%;
+  }
+}
+
+}
+
+/* -------------------------------------------------------------------- */
+/* MAX SIZE 1200 */
+/* -------------------------------------------------------------------- */
+@media only screen and (max-width: 1400px) {
+  
+  img.lamp {
+    transform: translateY(-4px) !important;
+  }  
+  
+  li {
+    display: inline;
+    height: 7%;
+  }
+    
+  li.close{
+        display: none;
+    }
+    
+  ul.ul-items a {
+    font-size: calc(10px + 1vw);
+    color: var( --main-font);
+  }
+
+  section {
+      flex-direction: column;
+      background-color: var(--bkg-color);
+      height: 1200px;
+  }
+  
+  div.portfolio-overview {
+    width: 90%;
+    height: 100%;
+  }
+  
+  div.portfolio-overview-text {
+    height: 30%;
+    margin: 30px 0px 30px 0px;
+    height: max-content;
+  }
+  
+  div.portfolio-overview-video {
+    width: 60% ;
+    height: 50%;
+  
+    iframe {
+        width: 90%;
+    }
+  }
+  
+  div.portfolio-skills {
+    width: 70%;
+    height: 400px;
+  
+    div.portfolio-skills-items {
+      width: 80%;
+    }
+  }
+  
+  div.portfolio-overview-links 
+  {
+      width: 100%;
+      margin-top: 10px;
+  }
+  
+  a.portfolio-link {
+    padding: 7px;
+    height: 20px;
+    width: 100px;
+    span {
+      width: 60%;
+      height: 70%;
+      text-align: center;
+      font-size: calc(15px - 0.1vw);
+    }
+    img {
+        width: 15%;
+        height: 70%;
+    }
+  }
+  
+  }
+  
+
+
+/* -------------------------------------------------------------------- */
+/*  RESPONSIVE - TV ETC - START */
+/* -------------------------------------------------------------------- */
+
+@media only screen and (min-height: 1000px) and (max-height: 1200px)  and (min-width:1200px){
+  section {
+    flex-direction: row;
+    min-height: 1000px;
+    max-height: 1200px;
+}
+}
+
+@media only screen and (min-height: 1200px) and (max-height: 1500px)  and (min-width:1200px){
+  section {
+    flex-direction: row;
+    min-height: 1200px;
+    max-height: 1500px;
+}
+}
+
+
+@media only screen and (min-height: 1500px) and (max-height: 1800px)  and (min-width:1500px){
+  section {
+    flex-direction: row;
+    min-height: 1500px;
+    max-height: 1800px;
+}
+}
+
+
+@media only screen and (min-height: 1800px) and (max-height: 2000px)  and (min-width:1500px){
+  section {
+    flex-direction: row;
+    min-height: 1800px;
+    max-height: 2000px;
+  }
+}
+
+
+@media only screen and (min-height: 2000px) and (max-height: 3000px)  and (min-width:1500px) {
+  section {
+    flex-direction: row;
+     min-height: 3000px;
+     max-height: 4000px;
+
+  }
+
+  div.portfolio-overview-text {
+    height: 30%;
+    flex-wrap: wrap;
+    p {
+      font-size: 30.5px;
+    }
+  }
+}
+
+
+@media only screen and (min-height: 3000px) and (max-height: 4000px)  and (min-width:2500px) {
+  section {
+    flex-direction: row;
+     min-height: 3500px;
+     max-height: 5000px;
+
+  }
+
+  div.portfolio-overview-text {
+    height: 30%;
+    flex-direction: column;
+    p {
+      font-size: 30.5px;
+    }
+  }
 }

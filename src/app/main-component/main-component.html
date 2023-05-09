@@ -1,12 +1,21 @@
 <main class="container" id="container" #container>
-    <div class="row row-nav" id="nav">
+  
+    <div class="row row-nav-mobile-button">
+        <div (click)="toggleNavBarMobile()">
+            <i></i>
+            <i></i>
+            <i></i>
+            </div>
+        </div>
+    <div class="row row-nav" id="nav" #nav>
         <nav>
             <ul class="ul-items" #ulitems>
-                <li class="home"> <a href="#about"   style="color:#3E68FF;">{{'navBar.Home' | translate}}</a></li>
-                <li class="qualification"> <a href="#qualification">{{'navBar.Qualification' | translate}}</a></li>
-                <li class="portfolio"> <a href="#portfolio">{{'navBar.Portfolio' | translate}}</a></li>
-                <li class="skills"> <a href="#skills">{{'navBar.Skills' | translate}}</a></li>
-                <li class="contact"> <a href="#contact">{{'navBar.Contact' | translate}}</a></li>
+                <li class="close" (click)="closeNavBarMobile()"><div>&#10005;</div></li>
+                <li class="home"> <a href="#about" NavActive [navBar]="this.navBar" [ngClass]="clickedNavBarActive == 'home' ? 'nav-item-active' : ''" >{{'navBar.Home' | translate}}</a></li>
+                <li class="qualification"> <a href="#qualification" NavActive [navBar]="this.navBar" >{{'navBar.Qualification' | translate}}</a></li>
+                <li class="portfolio"> <a href="#portfolio" NavActive [navBar]="this.navBar" > {{'navBar.Portfolio' | translate}}</a></li>
+                <li class="skills"> <a href="#skills" NavActive [navBar]="this.navBar" >{{'navBar.Skills' | translate}}</a></li>
+                <li class="contact" > <a href="#contact" NavActive [navBar]="this.navBar" >{{'navBar.Contact' | translate}}</a></li>
                 <li > <a  (click)="toggleTheme()"> <img class="lamp" [src]="'assets/images/lamp-' + lampColor + '.svg'"/></a></li>
                 <li class="idiom-choose"><div class="idiom-choose">
                     <a (click)="toggleIdiom()"><img id="image-brazil" src="assets/images/brazil.jpg"/></a>
@@ -15,9 +24,7 @@
               </ul>
         </nav>
     </div>
-    <div class="exemple">
 
-    </div>
     <section class="row row-about-me" id="about">
        <div class="column column-about-me">
         <div class="title">
@@ -112,7 +119,7 @@
                             <p>{{portfolio.subtitle}}</p>
                         </div>
                         <div class="portfolio-more-information">
-                            <a [href]="portfolio.href">+ {{'portfolio.information' | translate}}</a>
+                            <a [routerLink]="portfolio.href">+ {{'portfolio.information' | translate}}</a>
                         </div>
                     </div>
                 </div>
