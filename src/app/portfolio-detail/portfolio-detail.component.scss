@@ -77,7 +77,7 @@ section {
     // background-color: var(--bkg-color);
     flex-direction: row;
     display: flex;
-    height: 690px;
+    height: 800px;
     background-color: var(--bkg-color);
 }
 
@@ -329,6 +329,7 @@ div.row-nav-mobile-button {
   div.row-nav {
     box-shadow: 0 6px 11px 0 rgb(0 0 0 / 54%) !important;
     width: 50%;
+    height: 100%;
     display: none;
     align-items: center;
     justify-content: center;
@@ -465,7 +466,6 @@ a.portfolio-link {
 
   section {
       flex-direction: column;
-      height: max-content;
       background-color: var(--bkg-color);
       height: 1200px;
   }
@@ -523,3 +523,78 @@ a.portfolio-link {
   
   }
   
+
+
+/* -------------------------------------------------------------------- */
+/*  RESPONSIVE - TV ETC - START */
+/* -------------------------------------------------------------------- */
+
+@media only screen and (min-height: 1000px) and (max-height: 1200px)  and (min-width:1200px){
+  section {
+    flex-direction: row;
+    min-height: 1000px;
+    max-height: 1200px;
+}
+}
+
+@media only screen and (min-height: 1200px) and (max-height: 1500px)  and (min-width:1200px){
+  section {
+    flex-direction: row;
+    min-height: 1200px;
+    max-height: 1500px;
+}
+}
+
+
+@media only screen and (min-height: 1500px) and (max-height: 1800px)  and (min-width:1500px){
+  section {
+    flex-direction: row;
+    min-height: 1500px;
+    max-height: 1800px;
+}
+}
+
+
+@media only screen and (min-height: 1800px) and (max-height: 2000px)  and (min-width:1500px){
+  section {
+    flex-direction: row;
+    min-height: 1800px;
+    max-height: 2000px;
+  }
+}
+
+
+@media only screen and (min-height: 2000px) and (max-height: 3000px)  and (min-width:1500px) {
+  section {
+    flex-direction: row;
+     min-height: 3000px;
+     max-height: 4000px;
+
+  }
+
+  div.portfolio-overview-text {
+    height: 30%;
+    flex-wrap: wrap;
+    p {
+      font-size: 30.5px;
+    }
+  }
+}
+
+
+@media only screen and (min-height: 3000px) and (max-height: 4000px)  and (min-width:2500px) {
+  section {
+    flex-direction: row;
+     min-height: 3500px;
+     max-height: 5000px;
+
+  }
+
+  div.portfolio-overview-text {
+    height: 30%;
+    flex-direction: column;
+    p {
+      font-size: 30.5px;
+    }
+  }
+}
