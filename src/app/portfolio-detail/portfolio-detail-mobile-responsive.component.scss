@@ -6,7 +6,7 @@
 /* -------------------------------------------------------------------- */
 /* MAX SIZE 850 */
 /* -------------------------------------------------------------------- */
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 800px) {
 
 div.row-nav-mobile-button {
     width: 100%;
@@ -137,7 +137,7 @@ li.close{
     display: flex;
     width: 100%;
     background-color: var(--bkg-color) !important;
-    height: 1000px !important; 
+    height: max-content !important;  //will fit according to the device's height
 }
 
 div.portfolio-overview {
@@ -218,7 +218,7 @@ a.portfolio-link {
   section {
       flex-direction: column;
       background-color: var(--bkg-color);
-      height: 1200px;
+      height: 1200px !important;
   }
   
   div.portfolio-overview {
@@ -233,6 +233,7 @@ a.portfolio-link {
   }
   
   div.portfolio-overview-video {
+    margin-top: 20px;
     width: 60% ;
     height: 50%;
   
