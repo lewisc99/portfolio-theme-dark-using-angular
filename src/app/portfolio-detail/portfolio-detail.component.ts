@@ -7,7 +7,7 @@ import { DOCUMENT } from '@angular/common'
 @Component({
   selector: 'app-portfolio-detail',
   templateUrl: './portfolio-detail.component.html',
-  styleUrls: ['./portfolio-detail.component.scss']
+  styleUrls: ['./portfolio-detail.component.scss','./portfolio-detail-mobile-responsive.component.scss','./portfolio-detail-large-responsive.component.scss',]
 })
 export class PortfolioDetailComponent  implements OnInit{
 
