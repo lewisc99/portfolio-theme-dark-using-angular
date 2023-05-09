@@ -9,6 +9,11 @@
     min-height: 1000px;
     max-height: 1200px;
 }
+div.portfolio-overview-text {
+  height: 30%;
+  flex-direction: column;
+ 
+}
 }
 
 @media only screen and (min-height: 1200px) and (max-height: 1500px)  and (min-width:1200px){
@@ -16,6 +21,11 @@
     flex-direction: row;
     min-height: 1200px;
     max-height: 1500px;
+}
+div.portfolio-overview-text {
+  height: 30%;
+  flex-direction: column;
+
 }
 }
 
@@ -25,6 +35,10 @@
     flex-direction: row;
     min-height: 1500px;
     max-height: 1800px;
+}
+div.portfolio-overview-text {
+  height: 30%;
+  flex-direction: column;
 }
 }
 
