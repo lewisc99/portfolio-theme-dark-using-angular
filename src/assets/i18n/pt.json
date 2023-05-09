@@ -28,7 +28,7 @@
             {
                 "id": 0,
                 "title":"Fullstack Dev Martins",
-                "dateStart": "02/06/2023",
+                "dateStart": "01/06/2023",
                 "dateFinish": "05/06/2023",
                 "src":"../assets/images/qualification/items/martins.jpg",
                 "detail": {
@@ -346,7 +346,7 @@
                 "id":"candidate-dashboard",
                 "subId":"candidate",
                 "title":"Painel de Cadastro de Candidatos",
-                "text":"Este projeto de cadastramento de candidatos para uma entrevista de emprego é uma oportunidade perfeita para demonstrar suas habilidades. Com a validação de cada input do usuário e a implementação de vários testes para garantir o bom funcionamento da aplicação, você terá a certeza de que está entregando um produto de qualidade. Além disso, o fato de que todos os testes foram aprovados pelo CI/CD e o deploy foi realizado com sucesso no Heroku, é uma prova concreta da excelência do seu trabalho. Não perca a chance de se destacar em uma área altamente competitiva como a de TI e mostre aos empregadores em potencial que você tem o que é preciso para criar soluções de alto desempenho em curtos períodos de tempo. Invista em si mesmo e em sua carreira e participe deste projeto hoje mesmo!",
+                "text":"Este projeto de cadastramento de candidatos para uma entrevista de emprego é uma oportunidade perfeita para demonstrar suas habilidades. Com a validação de cada input do usuário e a implementação de vários testes para garantir o bom funcionamento da aplicação, você terá a certeza de que está entregando um produto de qualidade. Além disso, o fato de que todos os testes foram aprovados pelo CI/CD e o deploy foi realizado com sucesso no Heroku, é uma prova concreta da excelência do seu trabalho.",
                 "youtubeSrc":"https://www.youtube.com/embed/HyDB_rIHoW4",
                 "github": {
                     "href":"https://github.com/lewisc99/java-springboot-candidate-dashboard",

@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Portfolio, Qualification, Skills } from '../interfaces/main';
 import { ContactSrc } from '../domain/contact-src';
 import { DOCUMENT } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-component',
@@ -25,9 +26,11 @@ export class MainComponent implements OnInit {
   };
   public downloadCvHref: string;
   @ViewChild('nav', { static: false }) public navBar: ElementRef = new ElementRef({});
+  @ViewChild('name', { static: false }) public name: ElementRef = new ElementRef({});
+  @ViewChild('text', { static: false }) public text: ElementRef = new ElementRef({});
   public clickedNavBarActive:string = "home";
 
-  constructor(private translateService:TranslateService, @Inject(DOCUMENT) private _document: Document) {}
+  constructor(private translateService:TranslateService, @Inject(DOCUMENT) private _document: Document, private router:Router) {}
 
   ngOnInit(): void {
 
@@ -327,6 +330,17 @@ export class MainComponent implements OnInit {
     this.navBar.nativeElement.style.display = "flex";
     this.toggleNavBarMobile();
    }
+
+  sendMessageWhatsapp()
+  {
+   let text =  this.text.nativeElement.value;
+   let name =  this.name.nativeElement.value;
+
+   let link = document.createElement('a');
+   link.href = `https://api.whatsapp.com/send?phone=5531991143417&text=*name:*${name}*text:*${text}*MENSAGEM ENVIADA PELO SITE*`;
+   link.target = "_blank";
+   link.click();
+  }
 
 
 } 

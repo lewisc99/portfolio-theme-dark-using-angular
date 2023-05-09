@@ -33,7 +33,7 @@
         <div class="about-me">
             <p>{{'about-me.info' | translate}}</p>
             <div>
-                <img class="myself" src="../assets/images/perfil.jpeg"/>
+                <img class="myself" src="../assets/images/perfil.png"/>
             </div>
         </div>
         <div class="info-cv">
@@ -209,13 +209,13 @@
 
             <div class="form-group-send-message">
                 <div class="send-message-name">
-                    <input type="text"  placeholder="{{'contact.form-send-message.name'| translate}}"/>
+                    <input type="text"  placeholder="{{'contact.form-send-message.name'| translate}}" #name/>
                 </div>
                 <div class="send-message-text">
-                    <textarea    placeholder="{{'contact.form-send-message.message'| translate}}"></textarea>
+                    <textarea    placeholder="{{'contact.form-send-message.message'| translate}}" #text></textarea>
                 </div>
                 <div class="send-message-button">
-                    <button><img src="../assets/images/contact/icon-whatsapp-light.svg"  alt="Icon whatsapp"/> {{"contact.form-send-message.send" | translate}}</button>
+                    <button (click)="sendMessageWhatsapp()"><img src="../assets/images/contact/icon-whatsapp-light.svg"  alt="Icon whatsapp"/> {{"contact.form-send-message.send" | translate}}</button>
                 </div>
             </div>
 
