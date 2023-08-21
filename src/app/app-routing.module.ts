@@ -4,13 +4,13 @@ import { PortfolioDetailComponent } from './portfolio-detail/portfolio-detail.co
 import { MainComponent } from './main-component/main-component';
 
 const routes: Routes = [
-  {path:"", component: MainComponent},
-  {path:":id", component: PortfolioDetailComponent},
-  {path:"**", redirectTo:'',pathMatch:'full'}
+  { path: '', component: MainComponent },
+  { path: ':id', component: PortfolioDetailComponent },
+  { path: '**', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
