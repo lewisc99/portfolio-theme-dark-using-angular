@@ -1,0 +1,138 @@
+section:not(.row-technologies):not(.row-qualification) {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  color: var(--main-font);
+}
+
+/* -------------------------------------------------------------------- */
+/* NAV BAR  - START */
+/* -------------------------------------------------------------------- */
+
+div.row-nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: var(--bkg-color);
+}
+
+nav {
+  width: 70%;
+  height: 80px;
+}
+
+.nav-item-active {
+  color:var(--blue-buttons) !important;
+  transition: 0.5s;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+li {
+  margin-right: 1%;
+  display: inline;
+}
+
+li.close {
+  display: none;
+}
+
+ul.ul-items a {
+  font-size: calc(4px + 1vw);
+  text-decoration: none;
+  cursor: pointer;
+  color: var( --main-font);
+}
+
+ul a:hover {
+  color:var(--blue-buttons)
+}
+
+img.lamp {
+    width: calc(30px + 1vw);
+    height: calc(30px + 1vh);
+}
+
+img.lamp:hover {
+  transform: translateY(-5px);
+  transition: 0.5s;
+}
+
+div.idiom-choose {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  border: 3px solid var( --main-font);
+  border-radius: 10px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  img {
+    height: calc(10px + 1vh);
+    border-radius: 10px;
+    object-position: center;
+    width: 60%;
+    opacity: 0.5;
+  }
+  img:hover
+  {
+    width: 68%;
+    transition: 0.3s;
+  }
+
+  img.flag-image {
+    width: 90%;
+    border: 2px solid var(--main-font);
+    transition: 0.2s;
+    opacity: 1.0;
+  }
+}
+
+}
+
+h1 {
+  font-size: calc(28px + 1vw);
+  color: var(--main-font);
+}
+  
+  /* -------------------------------------------------------------------- */
+  /* NAV BAR - END */
+  /* ----------------- */
+  /* --------------------------------------------------------------------------------------------- */
+  /* Add this CSS to your stylesheet */
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#scrollToTop:hover {
+  opacity: 0.7;
+}
+
+#scrollToTop img {
+  width: 40px;
+  height: 40px;
+}
+
+#scrollToTop.active {
+  transform: translateY(0);
+  opacity: 1;
+}

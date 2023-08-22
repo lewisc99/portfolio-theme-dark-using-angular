@@ -1,0 +1,476 @@
+{
+    "hello":"Hello",
+    "navBar": {
+        "Home":"Home",
+        "Qualification":"Qualification",
+        "Portfolio":"Portfolio",
+        "Skills":"Skills",
+        "Contact":"Contact",
+        "Idiom":"Idiom"
+    },
+    "about-me": {
+        "title":"Hi, I’m Luiz Most know as Lewis",
+        "info":"I’m a Backend Software Developer  I possess a strong passion for coding and solving Problems, I am always looking for exciting research opportunities in computer science and related subjects.  Do you want to take you company to the next level?",
+        "cv-item": {
+            "years":"year of",
+            "experience":"experience",
+            "completed":"completed",
+            "projects":"projects"
+        },
+        "downloadCv": {
+            "href":"https://drive.google.com/file/d/1ZPQ-uCCbPfyHlOq2vzrUoCXhrQjmj02Y/view?usp=share_link"
+        }
+    },
+    "qualification": {
+        "title":"Qualification",
+        "subtitle":"For more Details click on the corresponding company",
+        "items": [
+            {
+                "id": 0,
+                "title":"Fullstack Dev Martins",
+                "dateStart": "01/06/2023",
+                "dateFinish": "05/06/2023",
+                "src":"../assets/images/qualification/items/martins.jpg",
+                "detail": {
+                    "id":0,
+                    "title": "Fullstack Martins",
+                    "subTitle":"Full-Time Remote PJ Job",
+                    "selected":false,
+                    "text":"I worked as a Fullstack Web Developer. My goal was to understand what the customer needed and deliver it quickly and functionally. I worked doing maintenance on legacy systems, creating tables, handling databases, developing new services using agile methodology.",
+                    "skills": [
+                        {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
+                        {"title":"ASP NET","src":"..\\assets\\images\\qualification\\items\\skills\\light\\aspnet-light.svg"},
+                        {"title":"Bootstrap","src":"..\\assets\\images\\qualification\\items\\skills\\light\\bootstrap-light.svg"},
+                        {"title":"GitLab","src":"..\\assets\\images\\qualification\\items\\skills\\light\\gitlab-light.svg"},
+                        {"title":"Jquery","src":"..\\assets\\images\\qualification\\items\\skills\\light\\jquery-light.svg"},
+                        {"title":"Javascript","src":"..\\assets\\images\\qualification\\items\\skills\\light\\javascript-light.svg"},
+                        {"title":"Microservice","src":"..\\assets\\images\\qualification\\items\\skills\\light\\microservice-light.svg"}
+                    ]
+                }
+              
+            },
+            {
+                "id": 1,
+                "title":"Developer Freelance PJ",
+                "dateStart": "02/02/2022",
+                "dateFinish": "02/06/2023",
+                "src":"../assets/images/qualification/items/freelance.svg",
+                "detail": {
+                    "id":1,
+                    "title": "Developer Freelance PJ",
+                    "subTitle":"Lewis Solution · Freelance",
+                    "selected":false,
+                    "text":"Development of web pages, Portfolios, Landing Page, for small companies, using Java Spring boot with Angular 2 and C#, I provided more than 5 services during 2022. Now i'm working with backend C# (.NET) and Java (Spring Boot), and in the Frontend (Angular and JavaScript/TypeScript).",
+                    "skills": [
+                        {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
+                        {"title":"Java","src":"..\\assets\\images\\qualification\\items\\skills\\light\\java-light.svg"},
+                        {"title":"Spring Boot","src":"..\\assets\\images\\qualification\\items\\skills\\light\\springboot-light.svg"},
+                        {"title":"Angula 2","src":"..\\assets\\images\\qualification\\items\\skills\\light\\angular-light.svg"},
+                        {"title":"Javascript","src":"..\\assets\\images\\qualification\\items\\skills\\light\\javascript-light.svg"},
+                        {"title":"HTML","src":"..\\assets\\images\\qualification\\items\\skills\\light\\html-light.svg"},
+                        {"title":"CSS","src":"..\\assets\\images\\qualification\\items\\skills\\light\\css-light.svg"}
+                    ]
+                }
+            },
+            {
+                "id": 2,
+                "title":"Customer Service | ADM Localiza Hertz",
+                "dateStart": "06/01/2019",
+                "dateFinish": "12/15/2021",
+                "src":"../assets/images/qualification/items/localiza.svg",
+                "detail": {
+                    "id":2,
+                    "title": "Localiza Hertz",
+                    "subTitle":"Administrative Assistant",
+                    "selected":false,
+                    "text":"I worked in the service sector of Localiza for an Uber partner,in the support of directing emails and customers  to the respective departments where it is located, Localiza has more than 10 million customers, then with experience I was appointed to the administrative support sector, and soon after I went to the Emergency vehicular sector of Localiza,where I could contribute to a quick and analytical service.",
+                    "skills": [
+                        {"title":"Office 365","src":"..\\assets\\images\\qualification\\items\\skills\\light\\office-light.svg"},
+                        {"title":"Power BI","src":"..\\assets\\images\\qualification\\items\\skills\\light\\power-bi-light.svg"}
+                    ]
+                }
+            }
+        ]
+    },
+    "portfolio": {
+        "title": "Portfolio",
+        "information":"Informations",
+        "items": [
+            {
+                "id":"portfolio-1",
+                "title":"Gym Project",
+                "subtitle":"Freelance Gym Dashboard",
+                "src":"../assets/images/portfolio/gym.svg",
+                "href":"gym-dashboard",
+                "show":true
+            },
+            {
+                "id":"portfolio-2",
+                "title":"Commerce Project",
+                "subtitle":"Commerce Project",
+                "src":"../assets/images/portfolio/ecommerce.svg",
+                "href":"ecommerce-project",
+                "show":false
+            },
+            {
+                "id":"portfolio-3",
+                "title":"Chat App",
+                "subtitle":"Real Time Message App",
+                "src":"../assets/images/portfolio/chat.svg",
+                "href":"chat-app",
+                "show":false
+            },
+            {
+                "id":"portfolio-4",
+                "title":"Candidate Dashboard",
+                "subtitle":"CRUD app to interview test",
+                "src":"../assets/images/portfolio/candidate.svg",
+                "href":"candidate-dashboard",
+                "show":false
+            },
+            {
+                "id":"portfolio-5",
+                "title":"Person Microservice API",
+                "subtitle":"API using RabbitMQ and Mongo",
+                "src":"../assets/images/portfolio/person.svg",
+                "href":"person-microservice",
+                "show":false
+            },
+            {
+                "id":"portfolio-6",
+                "title":"Curriculum Dashboard",
+                "subtitle":"ASPNET MVC Curriculum app",
+                "src":"../assets/images/portfolio/curriculum.svg",
+                "href":"curriculum-dashboard",
+                "show":false
+            },
+            {
+                "id":"portfolio-7",
+                "title":"Landing Page Laundry Website",
+                "subtitle":"Freelance Laundry Machine",
+                "src":"../assets/images/portfolio/lavamaq.svg",
+                "href":"laundry-landing-page",
+                "show":false
+            },
+            {
+                "id":"portfolio-8",
+                "title":"Microservice Discount API",
+                "subtitle":"Project to Bidea Factory Company",
+                "src":"../assets/images/portfolio/discount.svg",
+                "href":"discount-api-microservice",
+                "show":false
+            }
+        ]
+    },
+    "skills": {
+        "title": "technologies",
+        "select-items": {
+            "select":"Select a Skill",
+            "backend":"Back End",
+            "frontend":"Front End",
+            "java":"Java",
+            "csharp":"C#",
+            "others":"Others",
+            "database":"Database"
+        },
+        "items": [
+            [
+                {"title":"Java", "src":"../assets/images/skills/items/light/java-light.svg"},
+                {"title":"Csharp", "src":"../assets/images/skills/items/light/csharp-light.svg"},
+                {"title":"Windows", "src":"../assets/images/skills/items/light/windows-light.svg"},
+                {"title":"Linux", "src":"../assets/images/skills/items/light/linux-light.svg"}
+            ],
+            [
+                {"title":"HTML", "src":"../assets/images/skills/items/light/html-light.svg"},
+                {"title":"CSS", "src":"../assets/images/skills/items/light/css-light.svg"},
+                {"title":"Javascript", "src":"../assets/images/skills/items/light/javascript-light.svg"},
+                {"title":"Angular 2", "src":"../assets/images/skills/items/light/angular-light.svg"},
+                {"title":"TypeScript", "src":"../assets/images/skills/items/light/typescript-light.svg"},
+                {"title":"Bootstrap", "src":"../assets/images/skills/items/light/bootstrap-light.svg"},
+                {"title":"Figma", "src":"../assets/images/skills/items/light/figma-light.svg"},
+                {"title":"jQuery", "src":"../assets/images/skills/items/light/jquery-light.svg"}
+            ],
+            [
+                {"title":"Spring Framework", "src":"../assets/images/skills/items/light/spring-light.svg"},
+                {"title":"Spring Cloud", "src":"../assets/images/skills/items/light/spring-light.svg"},
+                {"title":"Kafka", "src":"../assets/images/skills/items/light/kafka-light.svg"},
+                {"title":"RabbitMQ", "src":"../assets/images/skills/items/light/rabbitmq-light.svg"},
+                {"title":"Spring Boot", "src":"../assets/images/skills/items/light/spring-boot-light.svg"},
+                {"title":"Spring MVC", "src":"../assets/images/skills/items/light/spring-light.svg"},
+                {"title":"Hibernate", "src":"../assets/images/skills/items/light/hibernate-light.svg"},
+                {"title":"JUnit", "src":"../assets/images/skills/items/light/junit-light.svg"},
+                {"title":"Mockito", "src":"../assets/images/skills/items/light/mockito-light.svg"},
+                {"title":"MockMvc", "src":"../assets/images/skills/items/light/spring-light.svg"}
+            ],
+            [
+                {"title":"ASP.NET", "src":"../assets/images/skills/items/light/aspnet-light.svg"},
+                {"title":"Entity Framework", "src":"../assets/images/skills/items/light/ef-light.svg"},
+                {"title":"Microsserviços", "src":"../assets/images/skills/items/light/microservice-light.svg"},
+                {"title":"RabbitMQ", "src":"../assets/images/skills/items/light/rabbitmq-light.svg"},
+                {"title":"Ocelot", "src":"../assets/images/skills/items/light/ocelot-light.svg"},
+                {"title":"Mass Transit", "src":"../assets/images/skills/items/light/masstransit-light.svg"},
+                {"title":"Unit Testing", "src":"../assets/images/skills/items/light/unittesting-light.svg"},
+                {"title":"Integration Test", "src":"../assets/images/skills/items/light/unittesting-light.svg"},
+                {"title":"Identity", "src":"../assets/images/skills/items/light/identity-light.svg"}
+            ],
+            [
+                {"title":"Docker Compose", "src":"../assets/images/skills/items/light/docker-light.svg"},
+                {"title":"Git", "src":"../assets/images/skills/items/light/git-light.svg"},
+                {"title":"GitHub", "src":"../assets/images/skills/items/light/github-light.svg"},
+                {"title":"CI/CD", "src":"../assets/images/skills/items/light/cicd-light.svg"},
+                {"title":"GitLab", "src":"../assets/images/skills/items/light/gitlab-light.svg"},
+                {"title":"Docker", "src":"../assets/images/skills/items/light/docker-light.svg"}
+            ],
+            [
+                {"title":"SQL Server", "src":"../assets/images/skills/items/light/sqlserver-light.svg"},
+                {"title":"MySQL", "src":"../assets/images/skills/items/light/mysql-light.svg"},
+                {"title":"SQLite", "src":"../assets/images/skills/items/light/sqllite-light.svg"},
+                {"title":"PostgreSQL", "src":"../assets/images/skills/items/light/postgresql-light.svg"},
+                {"title":"Mongo DB", "src":"../assets/images/skills/items/light/mongodb-light.svg"},
+                {"title":"Oracle", "src":"../assets/images/skills/items/light/oracle-light.svg"}
+            ]
+        ]
+    },
+    "contact": {
+        "title": "Contact me",
+        "social-media": {
+            "title":"Social Medias",
+            "e-mail":"E-Mail",
+            "cel-phone":"Cel-Phone"
+        },
+        "form-send-message":{
+            "name":"Name",
+            "message":"Message",
+            "send":"Send"
+        }
+    }, 
+    "portfolio-detail":
+    {
+        "back":"back",
+        "technologies":"technologies",
+       "items": [
+            {
+                "id":"gym-dashboard",
+                "subId":"gym",
+                "title":"Microservices 'Gym Corpus' Customer management dashboard",
+                "text":"This Freelancer project for a local gym where you can manage clients and users where you can easily change users' debt status as well as plan category. My expertise in creating a secure infrastructure with JWT, scale microservices and apply TDD with unit and integration testing ensure the system is robust and reliable.",
+                "youtubeSrc":"https://www.youtube.com/embed/F2DXXOortBE",
+                "github": {
+                    "href":"https://github.com/lewisc99/freelancer-springboot-microservices-gym-dashboard",
+                    "active":true
+                },
+                "site": {
+                    "href":"",
+                    "active":false
+                }, 
+                "technologies": [
+                    "Java 11",
+                    "Kafka",
+                    "Messaging",
+                    "Spring Boot",
+                    "Spring Cloud",
+                    "HTML",
+                    "CSS",
+                    "HATEOAS",
+                    "Clean Code",
+                    "Angular 2",
+                    "Bootstrap",
+                    "Unit testing",
+                    "TDD",
+                    "Integration Tests",
+                    "Swagger",
+                    "Docker",
+                    "PostgreSQL",
+                    "CI/CD",
+                    "JUnit",
+                    "Token JWT"
+                ]
+            },
+            {
+                "id":"ecommerce-project",
+                "subId":"ecommerce",
+                "title":"Project Ecommerce Shop",
+                "text":"With Ecommerce Website Mock Project, you can experience all the main functionalities without having to invest in a definitive platform. Add products to cart, search by name and category, remove unwanted items and even add quantities as needed. And best of all: checkout adding your personal data and feel what your customer's experience would be like when buying in your virtual store. Try the Ecommerce website simulation project right now and be surprised by the result.",
+                "youtubeSrc":"https://www.youtube.com/embed/lNjuPMSH87c",
+                "github": {
+                    "href":"https://github.com/lewisc99/project-ecommerce-shop-java-angular",
+                    "active":true
+                },
+                "site": {
+                    "href":"",
+                    "active":false
+                }, 
+                "technologies": [
+                    "Java 11",
+                    "Spring Boot",
+                    "H2-database",
+                    "HTML",
+                    "CSS",
+                    "Hibernate",
+                    "JPA",
+                    "Angular 2",
+                    "Typescript"
+                ]
+            },
+            {
+                "id":"chat-app",
+                "subId":"chat",
+                "title":"Project Chat App in  Real Time",
+                "text":"This project provided me with a great deal of learning about how an API works, as well as the importance of using proper status codes to return accurate information to users. Furthermore, I was able to explore how to structure a project that uses WebSocket to send and receive messages in real time between users, with each one having their own credentials, implemented through the use of Identity and JWT Token for authentication and authorization. The frontend was developed using Angular 2, following standards and advanced techniques to ensure the implementation of a light and clean code. With this project, it was possible to improve technical skills in web programming.",
+                "youtubeSrc":"https://www.youtube.com/embed/PD6N1qYnqsU",
+                "github": {
+                    "href":"https://github.com/lewisc99/project-chat-message-csharp-angular2",
+                    "active":true
+                },
+                "site": {
+                    "href":"",
+                    "active":false
+                }, 
+                "technologies": [
+                    "C#",
+                    "SQL Server",
+                    "HTML",
+                    "CSS",
+                    "Angular 2",
+                    "SignalR",
+                    "NUnit",
+                    "Unit Testing",
+                    "Mocking Test",
+                    "Swagger",
+                    "Entity Framework",
+                    "Authorization Identity",
+                    "Authentication Token JWT"
+                ]
+            },
+            {
+                "id":"candidate-dashboard",
+                "subId":"candidate",
+                "title":"Registration of Candidates Dashboard",
+                "text":"This candidate registration project for a job interview is a perfect opportunity to demonstrate your skills. With the validation of each user input and the implementation of various tests to ensure the proper functioning of the application, you will be sure that you are delivering a quality product. Furthermore, the fact that all tests passed by CI/CD and the deployment was successfully performed on Heroku is concrete proof of the excellence of their work.",
+                "youtubeSrc":"https://www.youtube.com/embed/HyDB_rIHoW4",
+                "github": {
+                    "href":"https://github.com/lewisc99/java-springboot-candidate-dashboard",
+                    "active":true
+                },
+                "site": {
+                    "href":"",
+                    "active":false
+                }, 
+                "technologies": [
+                    "Java",
+                    "Spring Boot",
+                    "Gradle",
+                    "CSS3",
+                    "HTML5",
+                    "JSP",
+                    "Docker",
+                    "NUnit",
+                    "Unit Testing",
+                    "Mocking Test",
+                    "H2 DATABASE",
+                    "CI/CD",
+                    "Heroku"
+                ]
+            },
+            {
+                "id":"person-microservice",
+                "subId":"person",
+                "title":"People Registration Microservices with RabbitMQ Messaging",
+                "text":"With the people registration application that uses RabbitMQ and MassTransit, you can be confident that your data will be updated in real time in another Microservice of User with its own Database. Don't waste any more time with spreadsheets and physical documents, have an efficient and secure system to manage your records and optimize your processes. Person registration application, where you can register a new person, and this registration and forwarded to another User Microservice with RabbitMQ and MassTransit, where this other user who also has their own Database is updated or registered.",
+                "youtubeSrc":"https://www.youtube.com/embed/cculJPYXSzs",
+                "github": {
+                    "href":"https://github.com/lewisc99/csharp-microservice-using-masstransit-rabbitmq-mongodb",
+                    "active":true
+                },
+                "site": {
+                    "href":"",
+                    "active":false
+                }, 
+                "technologies": [
+                    ".NET",
+                    "C#",
+                    "MongoDB",
+                    "RabbitMQ",
+                    "HATEOAS",
+                    "Clean Code",
+                    "Docker",
+                    "MassTransit",
+                    "Swagger"
+                ]
+            },
+            {
+                "id":"curriculum-dashboard",
+                "subId":"curriculum",
+                "title":"Curriculum Registration Dashboard Project",
+                "text":"This project aims to create a basic system for Registering Curriculums and Departments, using CRUD as a basis. In order to guarantee data security and privacy, a Basic Login will be implemented, with employees previously registered in the database. Only logged-in users will have access to the curriculum registration system, thus ensuring the security of stored data. The system will allow the registration, updating and deletion of information referring to curriculum and departments, facilitating the management of human resources of companies and organizations.",
+                "youtubeSrc":"https://www.youtube.com/embed/YLYO9FQFl8c",
+                "github": {
+                    "href":"https://github.com/lewisc99/cadastro-de-curriculo-aspnetMVC5",
+                    "active":true
+                },
+                "site": {
+                    "href":"",
+                    "active":false
+                }, 
+                "technologies": [
+                    ".NET",
+                    "C#",
+                    "MySQL",
+                    "HTML",
+                    "CSS",
+                    "Razor",
+                    "ORM",
+                    "Boostrap",
+                    "jQuery"
+                ]
+            },
+            {
+                "id":"laundry-landing-page",
+                "subId":"laundry",
+                "title":"Freelancer Landing Page Laundry Machine",
+                "text":"Landing Page created for a Freelancer, using the best of CSS, responsible Website, using less code, This page can be fit to any Size of Screen, and the User can Zoom Out and In to any size.",
+                "youtubeSrc":"https://www.youtube.com/embed/EV_2sxUIFM4",
+                "github": {
+                    "href":"https://github.com/lewisc99/freelancer-work-static-landing-page-laundry-machine",
+                    "active":true
+                },
+                "site": {
+                    "href":"https://lewisc99.github.io/freelancer-work-static-landing-page-laundry-machine/Index",
+                    "active":true
+                }, 
+                "technologies": [
+                    "HTML",
+                    "CSS",
+                    "jQuery"
+                ]
+            },
+            {
+                "id":"discount-api-microservice",
+                "subId":"discount",
+                "title":"Microservice Springboot Booking A House",
+                "text":"Goal: Create a rest API that allows you to book a house, for which a request must be received, validate said request, if a discount code is indicated, validate it through an api rest, and to Finish saving the request data in a PostgreSQL Database.",
+                "youtubeSrc":"https://www.youtube.com/embed/vRx7hXHFaZE",
+                "github": {
+                    "href":"https://github.com/lewisc99/microservice-springboot-booking-test-bidea-factory",
+                    "active":true
+                },
+                "site": {
+                    "href":"",
+                    "active":false
+                }, 
+                "technologies": [
+                    "Spring Boot",
+                    "Spring Cloud",
+                    "Microserviços",
+                    "Clean Code",
+                    "PostgreSQL",
+                    "Swagger",
+                    "Docker",
+                    "Docker-compose",
+                    "Feign Client",
+                    "REST"
+                ]
+            }
+        ]
+    }
+}

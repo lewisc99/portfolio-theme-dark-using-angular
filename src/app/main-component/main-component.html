@@ -1,0 +1,354 @@
+<main class="container" id="container" #container>
+  <div class="row row-nav-mobile-button">
+    <div (click)="toggleNavBarMobile()">
+      <i></i>
+      <i></i>
+      <i></i>
+    </div>
+  </div>
+  <div class="row row-nav" id="nav" #nav>
+    <nav>
+      <ul class="ul-items" #ulitems>
+        <li class="close" (click)="closeNavBarMobile()"><div>&#10005;</div></li>
+        <li class="home">
+          <a
+            href="#about"
+            NavActive
+            [navBar]="this.navBar"
+            [ngClass]="clickedNavBarActive == 'home' ? 'nav-item-active' : ''"
+            >{{'navBar.Home' | translate}}</a
+          >
+        </li>
+        <li class="qualification">
+          <a href="#qualification" NavActive [navBar]="this.navBar"
+            >{{'navBar.Qualification' | translate}}</a
+          >
+        </li>
+        <li class="portfolio">
+          <a href="#portfolio" NavActive [navBar]="this.navBar">
+            {{'navBar.Portfolio' | translate}}</a
+          >
+        </li>
+        <li class="skills">
+          <a href="#skills" NavActive [navBar]="this.navBar"
+            >{{'navBar.Skills' | translate}}</a
+          >
+        </li>
+        <li class="contact">
+          <a href="#contact" NavActive [navBar]="this.navBar"
+            >{{'navBar.Contact' | translate}}</a
+          >
+        </li>
+        <li>
+          <a (click)="toggleTheme()">
+            <img
+              class="lamp"
+              [src]="'assets/images/lamp-' + lampColor + '.svg'"
+          /></a>
+        </li>
+        <li class="idiom-choose">
+          <div class="idiom-choose">
+            <a (click)="toggleIdiom()"
+              ><img id="image-brazil" src="assets/images/brazil.jpg"
+            /></a>
+            <a (click)="toggleIdiom()"
+              ><img
+                id="image-usa"
+                class="flag-image"
+                src="assets/images/usa.jpg"
+            /></a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <section class="row row-about-me" id="about">
+    <div class="column column-about-me">
+      <div class="title">
+        <h1>{{'about-me.title' | translate}}</h1>
+      </div>
+      <div class="about-me">
+        <p>{{'about-me.info' | translate}}</p>
+        <div>
+          <img class="myself" src="../assets/images/perfil.png" />
+        </div>
+      </div>
+      <div class="info-cv">
+        <div class="info-cv-items">
+          <div class="cv-item">
+            <h1>1+</h1>
+            <p>
+              {{'about-me.cv-item.years' | translate}}<br />{{'about-me.cv-item.experience'
+              | translate}}
+            </p>
+          </div>
+          <div class="cv-item">
+            <h1>30+</h1>
+            <p>
+              {{'about-me.cv-item.completed' | translate}}<br />{{'about-me.cv-item.projects'
+              | translate}}
+            </p>
+          </div>
+        </div>
+        <div class="download-cv">
+          <a target="_blank" [href]="downloadCvHref">Download CV</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row row-qualification" id="qualification">
+    <div class="column column-qualification">
+      <div class="title">
+        <div class="title-info">
+          <h1>{{'qualification.title' | translate}}</h1>
+          <img src="../assets/images/qualification-icon.svg" />
+        </div>
+        <p>{{'qualification.subtitle' | translate}}</p>
+      </div>
+
+      <div class="experiences-container">
+        <div class="items-experience">
+          <div
+            class="item-experience"
+            *ngFor="let qualification of qualifications"
+            (click)="selectQualification(qualification.id)"
+            [id]="'item-experience-' + qualification.id"
+          >
+            <img [alt]="qualification.title" [src]="qualification.src" />
+            <div class="item-experience-title">
+              <h1>{{qualification.title}}</h1>
+              <p>
+                {{qualification.dateStart | date}} - {{qualification.dateFinish
+                == "Present" ? "Present" : qualification.dateFinish | date }} |
+                {{qualification.totalTime}}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="detail-experience">
+          <div class="detail-item detail-experience-title">
+            <h1>{{qualificationDetail.title}}</h1>
+            <h3>{{qualificationDetail.subTitle}}</h3>
+          </div>
+          <div class="detail-item detail-experience-text">
+            <p>{{qualificationDetail.text}}</p>
+          </div>
+          <div class="detail-item detail-experience-skills">
+            <div *ngFor="let skill of qualificationDetail.skills">
+              <img [alt]="skill.title" [src]="skill.src" />
+              <p>{{skill.title}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row row-portfolio" id="portfolio">
+    <div class="column column-portfolio">
+      <div class="title">
+        <div class="title-info">
+          <h1>{{'portfolio.title' | translate}}</h1>
+        </div>
+      </div>
+
+      <div class="portfolio-container">
+        <div
+          class="portfolio-items-arrow left"
+          (click)="slidePortfolio('left')"
+        >
+          <div>
+            <i class="arrow left"></i>
+          </div>
+        </div>
+        <div
+          class="portfolio-items"
+          *ngFor="let portfolio of portfolios"
+          [id]="portfolio.id"
+          [ngClass]="{'hide-portfolio': portfolio.show == false}"
+        >
+          <div class="portfolio-item image">
+            <img [src]="portfolio.src" />
+          </div>
+          <div class="portfolio-item info">
+            <div class="portfolio-title">
+              <h1>{{portfolio.title}}</h1>
+            </div>
+            <div class="portfolio-subtitle">
+              <p>{{portfolio.subtitle}}</p>
+            </div>
+            <div class="portfolio-more-information">
+              <a [routerLink]="portfolio.href"
+                >+ {{'portfolio.information' | translate}}</a
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          class="portfolio-items-arrow right"
+          (click)="slidePortfolio('right')"
+        >
+          <div>
+            <i class="arrow right"></i>
+          </div>
+        </div>
+      </div>
+
+      <div class="selected-portfolio-items">
+        <ul class="selected-portfolio">
+          <li
+            *ngFor="let portfolio of portfolios"
+            (click)="dotSelectedPortfolio(portfolio.id)"
+            [ngStyle]="{'background-color': portfolio.show ? 'var(--blue-buttons)': ''}"
+          ></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="row row-technologies" id="skills">
+    <div class="column column-technologies">
+      <div class="title">
+        <div class="title-info">
+          <h1>{{'skills.title' | translate}}</h1>
+        </div>
+      </div>
+      <div class="select-box">
+        <select name="cars" id="cars" (change)="selectedSkill($event.target)">
+          <option [disabled]="true">
+            {{'skills.select-items.select' | translate}}
+          </option>
+          <option value="0">
+            {{'skills.select-items.backend' | translate}}
+          </option>
+          <option value="1">
+            {{'skills.select-items.frontend' | translate}}
+          </option>
+          <option value="2">{{'skills.select-items.java' | translate}}</option>
+          <option value="3">
+            {{'skills.select-items.csharp' | translate}}
+          </option>
+          <option value="4">
+            {{'skills.select-items.others' | translate}}
+          </option>
+          <option value="5">
+            {{'skills.select-items.database' | translate}}
+          </option>
+        </select>
+      </div>
+      <div class="skills-items">
+        <div class="skill-item" *ngFor="let skill of skillsSelectedList">
+          <img [src]="skill.src" />
+          <p>{{skill.title}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="row row-contact" id="contact">
+    <div class="column column-contact">
+      <div class="title">
+        <div class="title-info">
+          <h1>{{'contact.title' | translate}}</h1>
+        </div>
+      </div>
+      <div class="contact-container">
+        <div class="social-medias">
+          <div class="social-media-box">
+            <div class="social-media-title">
+              <h1>{{'contact.social-media.title' | translate}}</h1>
+            </div>
+            <div class="social-media-links">
+              <div>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/luiz-carlos99/"
+                  ><img [src]="contactSrc.linkedin" alt="linkedIn Icon"
+                /></a>
+              </div>
+              <div>
+                <a target="_blank" href="https://github.com/lewisc99"
+                  ><img [src]="contactSrc.github" alt="Github Icon"
+                /></a>
+              </div>
+              <div>
+                <a
+                  target="_blank"
+                  href="https://api.whatsapp.com/send/?phone=31991143417&text&type=phone_number&app_absent=0"
+                  ><img [src]="contactSrc.whatsapp" alt="Whatsapp Icon"
+                /></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-media-box contact-item">
+            <div class="social-media-title">
+              <h1>{{'contact.social-media.e-mail' | translate}}</h1>
+            </div>
+            <div class="contact-item-info">
+              <div class="contact-info-image">
+                <img [src]="contactSrc.arroba" alt="Icon Arroba" />
+              </div>
+              <p>lewiscontato99@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="social-media-box contact-item">
+            <div class="social-media-title">
+              <h1>{{'contact.social-media.cel-phone' | translate}}</h1>
+            </div>
+            <div class="contact-item-info">
+              <div class="contact-info-image">
+                <img [src]="contactSrc.whatsapp" alt="Icon Whatsapp" />
+              </div>
+              <p>+55 31 99114-3417</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group-send-message">
+          <div class="send-message-name">
+            <input
+              type="text"
+              placeholder="{{'contact.form-send-message.name'| translate}}"
+              #name
+            />
+          </div>
+          <div class="send-message-text">
+            <textarea
+              placeholder="{{'contact.form-send-message.message'| translate}}"
+              #text
+            ></textarea>
+          </div>
+          <div class="send-message-button">
+            <button (click)="sendMessageWhatsapp()">
+              <img
+                src="../assets/images/contact/icon-whatsapp-light.svg"
+                alt="Icon whatsapp"
+              />
+              {{"contact.form-send-message.send" | translate}}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="footer-nav">
+    <ul>
+      <li><a href="#about">{{'navBar.Home' | translate}}</a></li>
+      <li><a href="#portfolio">{{'navBar.Portfolio' | translate}}</a></li>
+    </ul>
+  </div>
+  <div class="arrow-roll-up">
+    <div>
+      <a href="#about"
+        ><img src="../assets/images/arrow-up.svg" alt="arrow up"
+      /></a>
+    </div>
+  </div>
+  <div class="footer-info"><p>© Lewis Solutions. All right reserved.</p></div>
+</footer>
