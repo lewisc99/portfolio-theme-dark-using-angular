@@ -40,7 +40,6 @@ export class PortfolioDetailComponent implements OnInit, OnDestroy {
   };
   public siteActive: boolean = false;
   private localStorage: Storage = localStorage;
-  public lampColor: string = 'light';
   @ViewChild('nav', { static: false }) public navBar: ElementRef =
     new ElementRef({});
   public clickedNavBarActive: string = 'home';
@@ -90,20 +89,16 @@ export class PortfolioDetailComponent implements OnInit, OnDestroy {
     ) as HTMLCollectionOf<HTMLElement>;
 
     if (themeStorage === 'dark') {
-      this.lampColor = 'dark';
       containerElement?.classList.remove('dark-theme');
       if (rowNav.length > 0) {
         rowNav[0].style.boxShadow =
           'rgb(255 255 255 / 70%) 0px 0px 0px 1000px inset';
       }
-      this.localStorage.setItem('theme', 'light');
     } else {
-      this.lampColor = 'light';
       containerElement?.classList.add('dark-theme');
       if (rowNav.length > 0) {
         rowNav[0].style.boxShadow = 'inset 0 0 0 2000px rgb(0 0 0 / 80%)';
       }
-      this.localStorage.setItem('theme', 'dark');
     }
   }
 
@@ -161,11 +156,6 @@ export class PortfolioDetailComponent implements OnInit, OnDestroy {
   }
 
   redirectToPortfolio(): void {
-    if (this.localStorage.getItem('theme') == 'light') {
-      this.localStorage.setItem('theme', 'light');
-    } else {
-      this.localStorage.setItem('theme', 'dark');
-    }
     this.router.navigate(['/portfolio']);
   }
 }
