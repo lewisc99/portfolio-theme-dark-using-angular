@@ -30,7 +30,7 @@ export interface Portfolio {
   show: boolean;
 }
 
-export interface Skills {
+export interface Skill {
   title: string;
   src: string;
 }

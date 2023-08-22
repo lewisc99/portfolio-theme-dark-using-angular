@@ -112,3 +112,27 @@ h1 {
   /* NAV BAR - END */
   /* ----------------- */
   /* --------------------------------------------------------------------------------------------- */
+  /* Add this CSS to your stylesheet */
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+#scrollToTop:hover {
+  opacity: 0.7;
+}
+
+#scrollToTop img {
+  width: 40px;
+  height: 40px;
+}
+
+#scrollToTop.active {
+  transform: translateY(0);
+  opacity: 1;
+}

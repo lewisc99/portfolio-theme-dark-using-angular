@@ -7,7 +7,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Portfolio, Qualification, Skills } from '../interfaces/main';
+import { Portfolio, Qualification, Skill } from '../interfaces/main';
 import { ContactSrc } from '../domain/contact-src';
 import { DOCUMENT } from '@angular/common';
 import { Subscription } from 'rxjs';
@@ -26,9 +26,11 @@ export class MainComponent implements OnInit, OnDestroy {
   private localStorage: Storage = localStorage;
   public lampColor: string = 'light';
   public portfolios: Portfolio[] = [];
-  public skills: Skills[] = [];
+  public skills: Skill[] = [];
+  public qualificationSkillList: Skill[] = [];
   public qualificationDetail: any = {};
   public qualifications: Qualification[] = [];
+  public skillsSelectedList: any = [];
   public contactSrc: any = {
     linkedin: '../assets/images/contact/icon-linkedin-light.svg',
     arroba: '../assets/images/contact/icon-arroba-light.svg',
@@ -55,13 +57,17 @@ export class MainComponent implements OnInit, OnDestroy {
     this.initializeSubscriptions();
     this.initializeCurrentIdiom();
     this.initializeCurrentTheme();
-    this.initializeContainersIdiom();
-    this.initializeQualification();
+    this.initializeTranslation();
     this.changeTranslation();
   }
+
   ngOnDestroy(): void {
     this.translateSubscription.unsubscribe();
     this.changeTranslationSubscription.unsubscribe();
+  }
+  initializeTranslation() {
+    this.initializeContainersIdiom();
+    this.initializeQualification();
   }
 
   initializeSubscriptions() {
@@ -70,21 +76,17 @@ export class MainComponent implements OnInit, OnDestroy {
   }
 
   initializeCurrentIdiom(): void {
-    let currentIdiom = this.localStorage.getItem('idiom');
-    if (currentIdiom != null) {
-      this.translateService.setDefaultLang(this.localStorage.getItem('idiom')!);
-      if (currentIdiom == 'pt') {
-        this._document
-          .getElementById('image-brazil')!
-          .classList.add('flag-image');
-        this._document
-          .getElementById('image-usa')!
-          .classList.remove('flag-image');
-      } else {
-        this._document.getElementById('image-usa')!.classList.add('flag-image');
-        this._document
-          .getElementById('image-brazil')!
-          .classList.remove('flag-image');
+    const currentIdiom = this.localStorage.getItem('idiom');
+    const brazilFlagElement = this._document.getElementById('image-brazil');
+    const usaFlagElement = this._document.getElementById('image-usa');
+
+    if (currentIdiom !== null) {
+      this.translateService.setDefaultLang(currentIdiom);
+
+      const isBrazilianIdiom = currentIdiom === 'pt';
+      if (brazilFlagElement && usaFlagElement) {
+        brazilFlagElement.classList.toggle('flag-image', isBrazilianIdiom);
+        usaFlagElement.classList.toggle('flag-image', !isBrazilianIdiom);
       }
     } else {
       this.translateService.setDefaultLang('en');
@@ -94,96 +96,76 @@ export class MainComponent implements OnInit, OnDestroy {
 
   initializeCurrentTheme(): void {
     const colorStorage = this.localStorage.getItem('theme');
-    let contact: ContactSrc = new ContactSrc();
+    const containerElement = this._document.getElementById('container');
+    const contact = new ContactSrc();
 
-    if (colorStorage == null) {
-      this._document
-        .getElementById('container')!
-        .classList.toggle('dark-theme');
-      this.localStorage.setItem('theme', 'dark');
-      this.lampColor = 'light';
-    } else {
-      let isDark = colorStorage == 'dark' ? true : false;
-      if (isDark) {
-        this._document
-          .getElementById('container')!
-          .classList.toggle('dark-theme');
-        this.localStorage.setItem('theme', 'dark');
-        this.lampColor = 'light';
-        contact.toggleTheme('dark');
-      } else {
-        this._document
-          .getElementById('container')!
-          .classList.remove('dark-theme');
-        this.localStorage.setItem('theme', 'light');
-        this.lampColor = 'dark';
-        contact.toggleTheme('light');
-      }
-      this.contactSrc = contact;
-    }
-  }
-
-  toggleIdiom(): void {
-    let currentIdiom = this.localStorage.getItem('idiom');
-    let isEnglish = currentIdiom == 'en' ? true : false;
-    if (isEnglish) {
-      this.localStorage.setItem('idiom', 'pt');
-      this._document
-        .getElementById('image-brazil')!
-        .classList.add('flag-image');
-      this._document
-        .getElementById('image-usa')!
-        .classList.remove('flag-image');
-      this.translateService.use('pt');
-    } else {
-      this.localStorage.setItem('idiom', 'en');
-      this._document.getElementById('image-usa')!.classList.add('flag-image');
-      this._document
-        .getElementById('image-brazil')!
-        .classList.remove('flag-image');
-      this.translateService.use('en');
-    }
-    this.initializeContainersIdiom();
-  }
-
-  toggleTheme(): void {
-    let themeStorage = localStorage.getItem('theme');
-    let contact: ContactSrc = new ContactSrc();
-
-    if (themeStorage == 'light') {
-      this.lampColor = 'light';
-      this._document
-        .getElementById('container')!
-        .classList.toggle('dark-theme');
-      this.localStorage.setItem('theme', 'dark');
-      this.qualifications.forEach((qualification) =>
-        qualification.detail.skills.map(
-          (skills) => (skills.src = skills.src.replaceAll('dark', 'light'))
-        )
-      );
-      this.skills.map(
-        (skill) => (skill.src = skill.src.replaceAll('dark', 'light'))
-      );
-      contact.toggleTheme('dark');
-    } else {
-      this.lampColor = 'dark';
-      this._document
-        .getElementById('container')!
-        .classList.toggle('dark-theme');
+    if (colorStorage === null || colorStorage === 'light') {
+      containerElement!.classList.toggle('dark-theme');
       this.localStorage.setItem('theme', 'light');
-      this.qualifications.forEach((qualification) =>
-        qualification.detail.skills.map(
-          (skills) => (skills.src = skills.src.replaceAll('light', 'dark'))
-        )
-      );
-      this.skills.map(
-        (skill) => (skill.src = skill.src.replaceAll('light', 'dark'))
-      );
-      contact.toggleTheme();
+      this.lampColor = 'light';
+      contact.toggleTheme('light');
+    } else {
+      containerElement!.classList.remove('dark-theme');
+      this.localStorage.setItem('theme', 'dark');
+      this.lampColor = 'dark';
+      contact.toggleTheme('dark');
     }
+
     this.contactSrc = contact;
   }
 
+  toggleIdiom(): void {
+    const currentIdiom = this.localStorage.getItem('idiom');
+    const newIdiom = currentIdiom === 'en' ? 'pt' : 'en';
+
+    const setFlagImage = (elementId: string, addClass: boolean) => {
+      const flagImageElement = this._document.getElementById(elementId);
+      if (flagImageElement) {
+        if (addClass) {
+          flagImageElement.classList.add('flag-image');
+        } else {
+          flagImageElement.classList.remove('flag-image');
+        }
+      }
+    };
+
+    if (newIdiom === 'pt') {
+      setFlagImage('image-brazil', true);
+      setFlagImage('image-usa', false);
+    } else {
+      setFlagImage('image-usa', true);
+      setFlagImage('image-brazil', false);
+    }
+
+    this.localStorage.setItem('idiom', newIdiom);
+    this.translateService.use(newIdiom);
+  }
+
+  toggleTheme(): void {
+    const themeStorage = localStorage.getItem('theme');
+    const newTheme = themeStorage === 'dark' ? 'light' : 'dark';
+    const containerElement = this._document.getElementById('container');
+
+    this.lampColor = newTheme;
+    containerElement!.classList.toggle('dark-theme');
+    this.localStorage.setItem('theme', newTheme);
+
+    const toggleSrc = (src: string) => src.replace(/(dark|light)/g, newTheme);
+
+    this.qualifications.forEach((qualification) =>
+      qualification.detail.skills.forEach(
+        (skill) => (skill.src = toggleSrc(skill.src))
+      )
+    );
+
+    this.skillsSelectedList.forEach(
+      (skill: Skill) => (skill.src = toggleSrc(skill.src))
+    );
+
+    const contact = new ContactSrc();
+    contact.toggleTheme(newTheme);
+    this.contactSrc = contact;
+  }
   initializeQualification(): void {
     this.translateSubscription = this.translateService
       .get('qualification.items')
@@ -193,7 +175,7 @@ export class MainComponent implements OnInit, OnDestroy {
         qualifications.map((item) => {
           this.formatDataQualification(item);
 
-          if (this.localStorage.getItem('theme') == 'light') {
+          if (this.localStorage.getItem('theme') == 'dark') {
             item.detail.skills.map(
               (skill) => (skill.src = skill.src.replaceAll('light', 'dark'))
             );
@@ -210,69 +192,63 @@ export class MainComponent implements OnInit, OnDestroy {
       );
   }
   selectQualification(id: number): void {
-    let qualification = this.qualifications.filter(
-      (qualification) => qualification.id == id
-    )[0];
-    if (qualification != null) {
-      this.qualificationDetail = qualification.detail;
-      this.qualifications.map((qualification) => {
-        if (qualification.id == id) {
-          qualification.detail.selected = true;
-          this._document
-            .getElementById('item-experience-' + id)!
-            .classList.add('active');
-        } else {
-          qualification.detail.selected = false;
-          this._document
-            .getElementById('item-experience-' + qualification.id)!
-            .classList.remove('active');
+    const selectedQualification = this.qualifications.find(
+      (qualification) => qualification.id === id
+    );
+
+    if (selectedQualification) {
+      this.qualificationDetail = selectedQualification.detail;
+
+      this.qualifications.forEach((qualification) => {
+        const isCurrentQualification = qualification.id === id;
+        qualification.detail.selected = isCurrentQualification;
+
+        const itemExperienceElement = this._document.getElementById(
+          'item-experience-' + qualification.id
+        );
+        if (itemExperienceElement) {
+          if (isCurrentQualification) {
+            itemExperienceElement.classList.add('active');
+          } else {
+            itemExperienceElement.classList.remove('active');
+          }
         }
       });
     }
   }
 
   formatDataQualification(item: Qualification) {
-    let dateStart = new Date(item.dateStart);
-    let dateFinish = new Date(item.dateFinish);
-    let currentDate = new Date();
-    var diffDays: any;
-    var diffTime: any;
-    var totalTime: any;
+    const dateStart = new Date(item.dateStart);
+    const dateFinish = item.dateFinish ? new Date(item.dateFinish) : new Date();
 
-    if (dateFinish.toString() != 'Invalid Date') {
-      diffTime = Math.abs(dateFinish.getTime() - dateStart.getTime());
-    } else {
-      diffTime = Math.abs(currentDate.getTime() - dateStart.getTime());
-    }
-    diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const diffTime = Math.abs(dateFinish.getTime() - dateStart.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
     if (diffDays > 365) {
-      let totalYears = Math.floor(diffDays / 365);
-      let totalMonth = Math.floor((diffDays % 365) / 30);
+      const totalYears = Math.floor(diffDays / 365);
+      const totalMonths = Math.floor((diffDays % 365) / 30);
 
-      if (totalMonth != 0) {
-        totalTime = totalYears + ' yr ' + totalMonth + ' months';
-      } else {
-        totalTime = totalYears + ' yr';
-      }
+      const monthsString = totalMonths !== 0 ? ` ${totalMonths} months` : '';
+      item.totalTime = `${totalYears} yr${monthsString}`;
     } else {
-      let totalMonth = (diffDays / 30).toFixed(1);
-      totalTime = totalMonth + ' months';
+      const totalMonths = (diffDays / 30).toFixed(1);
+      item.totalTime = `${totalMonths} months`;
     }
-    item.totalTime = totalTime;
   }
 
   initializeContainersIdiom(): void {
+    const newTheme =
+      this.localStorage.getItem('theme') === 'dark' ? 'light' : 'dark';
+
     this.translateSubscription = this.translateService
       .get('qualification.items')
       .subscribe((items: Qualification[]) => {
-        let detail = items.find(
-          (item) => item.detail.id == this.qualificationDetail.id
+        const detail = items.find(
+          (item) => item.detail.id === this.qualificationDetail.id
         );
-        this.qualificationDetail =
-          detail?.detail != null || detail?.detail == 'undefined'
-            ? detail?.detail
-            : null;
-        if (this.qualificationDetail == null) {
+
+        this.qualificationDetail = detail?.detail ?? null;
+        if (this.qualificationDetail === null) {
           this.selectQualification(0);
         }
         this.qualifications = items;
@@ -280,22 +256,21 @@ export class MainComponent implements OnInit, OnDestroy {
         this.qualifications.forEach((item) => {
           this.formatDataQualification(item);
 
-          item.detail.skills.map((skill) => {
-            if (this.localStorage.getItem('theme') == 'dark')
-              skill.src = skill.src.replaceAll('dark', 'light');
-            else skill.src = skill.src.replaceAll('light', 'dark');
+          item.detail.skills.forEach((skill) => {
+            skill.src = skill.src.replaceAll(
+              newTheme,
+              newTheme === 'dark' ? 'light' : 'dark'
+            );
           });
         });
 
-        if (this.qualificationDetail != null) {
-          if (this.localStorage.getItem('theme') == 'dark')
-            this.qualificationDetail.skills.map(
-              (item: any) => (item.src = item.src.replaceAll('dark', 'light'))
+        if (this.qualificationDetail !== null) {
+          this.qualificationDetail.skills.forEach((item: any) => {
+            item.src = item.src.replaceAll(
+              newTheme,
+              newTheme === 'dark' ? 'light' : 'dark'
             );
-          else
-            this.qualificationDetail.skills.map(
-              (item: any) => (item.src = item.src.replaceAll('light', 'dark'))
-            );
+          });
         }
       });
 
@@ -304,92 +279,80 @@ export class MainComponent implements OnInit, OnDestroy {
       .subscribe((items) => {
         this.portfolios = items;
       });
-  }
 
-  slidePortfolio(direction: string) {
-    let currentPortfolio = this.portfolios.filter(
-      (portfolio) => portfolio.show
-    );
-    let IndexCurrentPortfolio = this.portfolios.findIndex(
-      (portfolioIndex) => portfolioIndex.id == currentPortfolio[0].id
-    );
-    let firstPortfolioIndex = 0;
-    this.portfolios[IndexCurrentPortfolio].show = false;
+    this.translateSubscription = this.translateService
+      .get('about-me.downloadCv.href')
+      .subscribe((item) => {
+        this.downloadCvHref = item;
+      });
 
-    if (direction == 'right') {
-      if (IndexCurrentPortfolio == this.portfolios.length - 1) {
-        this.portfolios[0].show = true;
-        return;
-      }
-      this.portfolios[IndexCurrentPortfolio + 1].show = true;
-      return;
-    }
-
-    if (IndexCurrentPortfolio == firstPortfolioIndex) {
-      this.portfolios[this.portfolios.length - 1].show = true;
-      return;
-    }
-    this.portfolios[IndexCurrentPortfolio - 1].show = true;
-  }
-
-  dotSelectedPortfolio(portfolioId: string) {
-    let currentPortfolio = this.portfolios.filter(
-      (portfolio) => portfolio.show
-    );
-    let IndexCurrentPortfolio = this.portfolios.findIndex(
-      (portfolioIndex) => portfolioIndex.id == currentPortfolio[0].id
-    );
-    let IndexSelectedPortfolio = this.portfolios.findIndex(
-      (portfolioIndex) => portfolioIndex.id == portfolioId
-    );
-
-    this.portfolios[IndexCurrentPortfolio].show = false;
-    this.portfolios[IndexSelectedPortfolio].show = true;
-  }
-
-  selectedSkill(skillSelect: any) {
     this.translateSubscription = this.translateService
       .get('skills.items')
       .subscribe((items) => {
-        let skillsItems = items;
-        this.skills = skillsItems[skillSelect.value];
-        if (this.localStorage.getItem('theme') == 'light') {
-          this.skills.map(
-            (skill) => (skill.src = skill.src.replaceAll('light', 'dark'))
-          );
-        } else {
-          this.skills.map(
-            (skill) => (skill.src = skill.src.replaceAll('dark', 'light'))
-          );
-        }
+        this.skills = items;
       });
   }
 
-  downloadCV() {
-    this.translateSubscription = this.translateService
-      .get('about-me.downloadCv.href')
-      .subscribe((item) => (this.downloadCvHref = item));
+  slidePortfolio(direction: string) {
+    const currentPortfolio = this.portfolios.find(
+      (portfolio) => portfolio.show
+    )!;
+    const indexCurrentPortfolio = this.portfolios.indexOf(currentPortfolio);
+    currentPortfolio.show = false;
+
+    if (direction === 'right') {
+      const nextIndex = (indexCurrentPortfolio + 1) % this.portfolios.length;
+      this.portfolios[nextIndex].show = true;
+    } else {
+      const prevIndex =
+        indexCurrentPortfolio === 0
+          ? this.portfolios.length - 1
+          : indexCurrentPortfolio - 1;
+      this.portfolios[prevIndex].show = true;
+    }
+  }
+
+  dotSelectedPortfolio(portfolioId: string) {
+    const currentPortfolio = this.portfolios.find(
+      (portfolio) => portfolio.show
+    )!;
+    const indexSelectedPortfolio = this.portfolios.findIndex(
+      (portfolio) => portfolio.id === portfolioId
+    );
+
+    currentPortfolio.show = false;
+    this.portfolios[indexSelectedPortfolio].show = true;
+  }
+
+  selectedSkill(skillSelect: any) {
+    this.skillsSelectedList = this.skills[skillSelect.value];
+
+    const theme = this.localStorage.getItem('theme');
+    const replaceTheme = theme === 'dark' ? 'dark' : 'light';
+
+    this.skillsSelectedList.forEach((skill: any) => {
+      skill.src = skill.src.replaceAll(theme, replaceTheme);
+    });
   }
 
   toggleNavBarMobile() {
-    let display = this.navBar.nativeElement.style.display;
-    if (display == '' || display == 'none') {
-      this.navBar.nativeElement.style.display = 'flex';
-      this.navBar.nativeElement.classList.add('nav-active-animation');
+    const navBar = this.navBar.nativeElement;
+    const isNavBarHidden =
+      navBar.style.display === '' || navBar.style.display === 'none';
+
+    if (isNavBarHidden) {
+      navBar.style.display = 'flex';
+      navBar.classList.add('nav-active-animation');
     } else {
-      this.navBar.nativeElement.classList.remove('nav-active-animation');
-      this.navBar.nativeElement.classList.toggle('nav-unactive-animation');
-      this.navBar.nativeElement.addEventListener(
-        'animationend',
-        (event: AnimationEvent) => {
-          if (event.animationName == 'fadeOut') {
-            this.navBar.nativeElement.classList.remove(
-              'nav-unactive-animation'
-            );
-            this.navBar.nativeElement.style.display = '';
-          }
+      navBar.classList.remove('nav-active-animation');
+      navBar.classList.toggle('nav-unactive-animation');
+
+      navBar.addEventListener('animationend', (event: AnimationEvent) => {
+        if (event.animationName === 'fadeOut') {
+          navBar.classList.remove('nav-unactive-animation');
+          navBar.style.display = '';
         }
-      );
+      });
     }
   }
 
@@ -399,12 +362,16 @@ export class MainComponent implements OnInit, OnDestroy {
   }
 
   sendMessageWhatsapp() {
-    let text = this.text.nativeElement.value;
-    let name = this.name.nativeElement.value;
+    const text = this.text.nativeElement.value;
+    const name = this.name.nativeElement.value;
 
-    let link = document.createElement('a');
-    link.href = `https://api.whatsapp.com/send?phone=5531991143417&text=*MENSAGEM ENVIADA PELO SITE*%20%20%20%20%20%0A%0A%20%20%20%20%0A%0A*name:*${name}%20%20%20%20%20%0A%0A*text:*${text}`;
-    link.target = '_blank';
-    link.click();
+    const encodedName = encodeURIComponent(name);
+    const encodedText = encodeURIComponent(text);
+
+    const url = `https://api.whatsapp.com/send?phone=5531991143417&text=${encodeURIComponent(
+      `*MENSAGEM ENVIADA PELO SITE*%20%20%20%20%20%0A%0A%20%20%20%20%0A%0A*name:*${encodedName}%20%20%20%20%20%0A%0A*text:*${encodedText}`
+    )}`;
+
+    window.open(url, '_blank');
   }
 }

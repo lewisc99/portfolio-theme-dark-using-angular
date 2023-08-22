@@ -92,9 +92,7 @@
           </div>
         </div>
         <div class="download-cv">
-          <a target="_blank" (click)="downloadCV()" [href]="downloadCvHref"
-            >Download CV</a
-          >
+          <a target="_blank" [href]="downloadCvHref">Download CV</a>
         </div>
       </div>
     </div>
@@ -241,7 +239,7 @@
         </select>
       </div>
       <div class="skills-items">
-        <div class="skill-item" *ngFor="let skill of skills">
+        <div class="skill-item" *ngFor="let skill of skillsSelectedList">
           <img [src]="skill.src" />
           <p>{{skill.title}}</p>
         </div>

@@ -5,7 +5,7 @@ export class ContactSrc {
   whatsapp = '../assets/images/contact/icon-whatsapp-light.svg';
 
   public toggleTheme(theme: string = 'light'): void {
-    if (theme == 'dark') {
+    if (theme == 'light') {
       this.linkedin = this.linkedin!.replace('dark', 'light');
       this.github = this.github!.replace('dark', 'light');
       this.whatsapp = this.whatsapp!.replace('dark', 'light');
