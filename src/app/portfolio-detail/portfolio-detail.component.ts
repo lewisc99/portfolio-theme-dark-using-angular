@@ -53,34 +53,58 @@ export class PortfolioDetailComponent implements OnInit, OnDestroy {
     @Inject(DOCUMENT) private _document: Document,
     private router: Router
   ) {
-    if (
-      this.localStorage.getItem('idiom') == 'pt' &&
-      this.localStorage.getItem('idiom') != null
-    )
-      this.translateService.setDefaultLang('pt');
-    else this.translateService.setDefaultLang('en');
+    const selectedIdiom = this.localStorage.getItem('idiom');
+    const defaultIdiom = selectedIdiom === 'pt' ? 'pt' : 'en';
+    this.translateService.setDefaultLang(defaultIdiom);
   }
+
   ngOnDestroy(): void {
-    this.translateServiceSubscription.unsubscribe();
-    this.activatedRouteSubscription.unsubscribe();
+    if (this.translateServiceSubscription) {
+      this.translateServiceSubscription.unsubscribe();
+    }
+
+    if (this.activatedRouteSubscription) {
+      this.activatedRouteSubscription.unsubscribe();
+    }
   }
 
   ngOnInit(): void {
     this.initializeSubscriptions();
     this.activatedRouteSubscription = this.activatedRoute.paramMap.subscribe({
       next: (param) => {
-        let id = param.get('id')!;
-        this.targetPortfolioDetail(id);
-        if (this.localStorage.getItem('theme') == 'light') {
-          this.localStorage.setItem('theme', 'dark');
-          this.toggleTheme();
-        } else {
-          this.localStorage.setItem('theme', 'light');
-          this.toggleTheme();
+        const id = param.get('id');
+        if (id) {
+          this.targetPortfolioDetail(id);
         }
+        this.toggleTheme();
       },
-      error: (error) => alert(error),
+      error: (error) => console.error(error),
     });
+  }
+
+  toggleTheme(): void {
+    const themeStorage = this.localStorage.getItem('theme');
+    const containerElement = this._document.getElementById('container');
+    const rowNav = this._document.getElementsByClassName(
+      'row-nav'
+    ) as HTMLCollectionOf<HTMLElement>;
+
+    if (themeStorage === 'dark') {
+      this.lampColor = 'dark';
+      containerElement?.classList.remove('dark-theme');
+      if (rowNav.length > 0) {
+        rowNav[0].style.boxShadow =
+          'rgb(255 255 255 / 70%) 0px 0px 0px 1000px inset';
+      }
+      this.localStorage.setItem('theme', 'light');
+    } else {
+      this.lampColor = 'light';
+      containerElement?.classList.add('dark-theme');
+      if (rowNav.length > 0) {
+        rowNav[0].style.boxShadow = 'inset 0 0 0 2000px rgb(0 0 0 / 80%)';
+      }
+      this.localStorage.setItem('theme', 'dark');
+    }
   }
 
   initializeSubscriptions() {
@@ -92,45 +116,24 @@ export class PortfolioDetailComponent implements OnInit, OnDestroy {
     this.translateServiceSubscription = this.translateService
       .get('portfolio-detail.items')
       .subscribe((items: PortfolioDetail[]) => {
-        this.detail = items.find((item) => item.id == id)!;
-        if (this.detail == null) this.router.navigate(['/..']);
+        this.detail = items.find((item) => item.id === id)!;
 
-        let subId = this.detail.subId;
-        let rowNav = this._document.getElementsByClassName(
+        if (this.detail === null) {
+          this.router.navigate(['/..']);
+          return;
+        }
+
+        const subId = this.detail.subId;
+        const rowNav = this._document.getElementsByClassName(
           'row-nav'
         ) as HTMLCollectionOf<HTMLElement>;
-        let background =
-          "url('../../assets/images/portfolio/detail/background/" +
-          subId +
-          ".svg')";
+        const background = `url('../../assets/images/portfolio/detail/background/${subId}.svg')`;
         rowNav.item(0)!.style.background = background;
 
-        if (this.detail.site.active) this.siteActive = !this.siteActive;
-        else this.siteActive = !!this.siteActive;
+        this.siteActive = this.detail.site.active;
       });
   }
 
-  toggleTheme(): void {
-    let themeStorage = localStorage.getItem('theme');
-    let rowNav = this._document.getElementsByClassName(
-      'row-nav'
-    ) as HTMLCollectionOf<HTMLElement>;
-
-    if (themeStorage == 'light') {
-      this.lampColor = 'light';
-      this._document.getElementById('container')!.classList.add('dark-theme');
-      rowNav.item(0)!.style.boxShadow = 'inset 0 0 0 2000px rgb(0 0 0 / 80%) ';
-      this.localStorage.setItem('theme', 'dark');
-    } else {
-      this.lampColor = 'dark';
-      this._document
-        .getElementById('container')!
-        .classList.remove('dark-theme');
-      rowNav.item(0)!.style.boxShadow =
-        'rgb(255 255 255 / 70%) 0px 0px 0px 1000px inset';
-      this.localStorage.setItem('theme', 'light');
-    }
-  }
   toggleNavBarMobile() {
     let display = this.navBar.nativeElement.style.display;
     if (display == '' || display == 'none') {
@@ -152,9 +155,17 @@ export class PortfolioDetailComponent implements OnInit, OnDestroy {
       );
     }
   }
-
   closeNavBarMobile() {
     this.navBar.nativeElement.style.display = 'flex';
     this.toggleNavBarMobile();
+  }
+
+  redirectToPortfolio(): void {
+    if (this.localStorage.getItem('theme') == 'light') {
+      this.localStorage.setItem('theme', 'light');
+    } else {
+      this.localStorage.setItem('theme', 'dark');
+    }
+    this.router.navigate(['/portfolio']);
   }
 }
