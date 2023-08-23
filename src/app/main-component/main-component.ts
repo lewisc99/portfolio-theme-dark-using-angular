@@ -26,7 +26,7 @@ export class MainComponent implements OnInit, OnDestroy {
   private localStorage: Storage = localStorage;
   public lampColor: string = 'light';
   public portfolios: Portfolio[] = [];
-  public skills: Skill[] = [];
+  public skills: any[] = [];
   public qualificationSkillList: Skill[] = [];
   public qualificationDetail: any = {};
   public qualifications: Qualification[] = [];
@@ -158,14 +158,22 @@ export class MainComponent implements OnInit, OnDestroy {
       )
     );
 
-    this.skillsSelectedList.forEach(
-      (skill: Skill) => (skill.src = toggleSrc(skill.src))
-    );
+    this.themeForSkills();
 
     const contact = new ContactSrc();
     contact.toggleTheme(newTheme);
     this.contactSrc = contact;
   }
+  themeForSkills() {
+    this.skills.map((skills: Skill[]) => {
+      skills.map((skill: Skill) => {
+        if (localStorage.getItem('theme') == 'dark')
+          skill.src = skill.src.replaceAll('light', 'dark');
+        else skill.src = skill.src.replaceAll('dark', 'light');
+      });
+    });
+  }
+
   initializeQualification(): void {
     this.translateSubscription = this.translateService
       .get('qualification.items')
@@ -290,6 +298,7 @@ export class MainComponent implements OnInit, OnDestroy {
       .get('skills.items')
       .subscribe((items) => {
         this.skills = items;
+        this.themeForSkills();
       });
   }
 
@@ -326,13 +335,6 @@ export class MainComponent implements OnInit, OnDestroy {
 
   selectedSkill(skillSelect: any) {
     this.skillsSelectedList = this.skills[skillSelect.value];
-
-    const theme = this.localStorage.getItem('theme');
-    const replaceTheme = theme === 'dark' ? 'dark' : 'light';
-
-    this.skillsSelectedList.forEach((skill: any) => {
-      skill.src = skill.src.replaceAll(theme, replaceTheme);
-    });
   }
 
   toggleNavBarMobile() {
@@ -362,16 +364,12 @@ export class MainComponent implements OnInit, OnDestroy {
   }
 
   sendMessageWhatsapp() {
-    const text = this.text.nativeElement.value;
-    const name = this.name.nativeElement.value;
+    let text = this.text.nativeElement.value;
+    let name = this.name.nativeElement.value;
 
-    const encodedName = encodeURIComponent(name);
-    const encodedText = encodeURIComponent(text);
-
-    const url = `https://api.whatsapp.com/send?phone=5531991143417&text=${encodeURIComponent(
-      `*MENSAGEM ENVIADA PELO SITE*%20%20%20%20%20%0A%0A%20%20%20%20%0A%0A*name:*${encodedName}%20%20%20%20%20%0A%0A*text:*${encodedText}`
-    )}`;
-
-    window.open(url, '_blank');
+    let link = document.createElement('a');
+    link.href = `https://api.whatsapp.com/send?phone=5531991143417&text=*MENSAGEM ENVIADA PELO SITE*%20%20%20%20%20%0A%0A%20%20%20%20%0A%0A*name:*${name}%20%20%20%20%20%0A%0A*text:*${text}`;
+    link.target = '_blank';
+    link.click();
   }
 }

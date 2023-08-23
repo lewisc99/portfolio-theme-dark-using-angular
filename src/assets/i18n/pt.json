@@ -27,12 +27,34 @@
         "items": [
             {
                 "id": 0,
+                "title":"Fullstack .NET Pleno Saude One",
+                "dateStart": "05/16/2023",
+                "dateFinish": "08/23/2023",
+                "src":"../assets/images/qualification/items/saudeone.jpg",
+                "detail": {
+                    "id":0,
+                    "title": "Dev .NET Fullstack Pleno Saude One",
+                    "subTitle":"Full-Time Remoto PJ Job",
+                    "selected":false,
+                    "text":"Trabalho como desenvolvedor Fullstack Backend .NET com C# e Frontend Angular fazendo manutenção em sistemas legados, criação de tabelas, manipulação de banco de dados, desenvolver serviços novos usando metodologia ágil.",
+                    "skills": [
+                        {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
+                        {"title":"Angula 2","src":"..\\assets\\images\\qualification\\items\\skills\\light\\angular-light.svg"},
+                        {"title":"Bootstrap","src":"..\\assets\\images\\qualification\\items\\skills\\light\\bootstrap-light.svg"},
+                        {"title":"Javascript","src":"..\\assets\\images\\qualification\\items\\skills\\light\\javascript-light.svg"},
+                        {"title":"Microservice","src":"..\\assets\\images\\qualification\\items\\skills\\light\\microservice-light.svg"}
+                    ]
+                }
+              
+            },
+            {
+                "id": 1,
                 "title":"Fullstack Dev Martins",
                 "dateStart": "01/06/2023",
                 "dateFinish": "05/06/2023",
                 "src":"../assets/images/qualification/items/martins.jpg",
                 "detail": {
-                    "id":0,
+                    "id":1,
                     "title": "Fullstack Martins",
                     "subTitle":"Full-Time Remoto PJ Job",
                     "selected":false,
@@ -50,13 +72,13 @@
               
             },
             {
-                "id": 1,
+                "id": 2,
                 "title":"Desenvolvedor Freelance PJ",
                 "dateStart": "02/02/2022",
                 "dateFinish": "02/06/2023",
                 "src":"../assets/images/qualification/items/freelance.svg",
                 "detail": {
-                    "id":1,
+                    "id":2,
                     "title": "Desenvolvedor Freelance PJ",
                     "subTitle":"Lewis Solution · Freelance",
                     "selected":false,
@@ -73,13 +95,13 @@
                 }
             },
             {
-                "id": 2,
+                "id": 3,
                 "title":"Atendimento | ADM Localiza Hertz",
                 "dateStart": "06/01/2019",
                 "dateFinish": "12/15/2021",
                 "src":"../assets/images/qualification/items/localiza.svg",
                 "detail": {
-                   "id": 2,
+                   "id": 3,
                     "title": "Localiza Hertz",
                     "subTitle":"Auxiliar Administrativo",
                     "selected":false,
