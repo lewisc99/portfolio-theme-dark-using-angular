@@ -41,7 +41,11 @@
       <div class="portfolio-overview-text">
         <p>{{ detail.text }}</p>
         <div class="portfolio-overview-links">
-          <a class="portfolio-link" target="_blank" [href]="detail.github.href"
+          <a
+            class="portfolio-link"
+            target="_blank"
+            [href]="detail.github.href"
+            [ngClass]="githubActive ? '' : 'disabled-link'"
             ><img
               alt="icon-github"
               src="../../assets/images/portfolio/detail/icon-github.svg"

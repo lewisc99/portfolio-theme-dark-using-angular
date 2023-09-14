@@ -39,6 +39,7 @@ export class PortfolioDetailComponent implements OnInit, OnDestroy {
     subId: '',
   };
   public siteActive: boolean = false;
+  public githubActive: boolean = true;
   private localStorage: Storage = localStorage;
   @ViewChild('nav', { static: false }) public navBar: ElementRef =
     new ElementRef({});
@@ -126,6 +127,7 @@ export class PortfolioDetailComponent implements OnInit, OnDestroy {
         rowNav.item(0)!.style.background = background;
 
         this.siteActive = this.detail.site.active;
+        this.githubActive = this.detail.github.active;
       });
   }
 
