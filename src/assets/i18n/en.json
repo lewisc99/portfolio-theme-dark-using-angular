@@ -29,14 +29,14 @@
                 "id": 0,
                 "title":"Fullstack .NET Saude One",
                 "dateStart": "05/16/2023",
-                "dateFinish": "08/23/2023",
+                "dateFinish": "09/10/2023",
                 "src":"../assets/images/qualification/items/saudeone.jpg",
                 "detail": {
                     "id":0,
                     "title": "Dev .NET Fullstack Saude One",
                     "subTitle":"Full-Time Remoto PJ Job",
                     "selected":false,
-                    "text":"I work as a Fullstack Backend .NET developer with C# and Angular Frontend doing maintenance on legacy systems, creating tables, database manipulation, developing new services using agile methodology.",
+                    "text":"I am a Full Stack Software Developer with expertise in .NET C# for backend and Angular 2 for frontend. In my current role, I've designed and developed over 30 medical forms, and I've crafted default PDF layouts for Saude One Sistemas. Additionally, I've played a pivotal role in creating backend and frontend screens for user service tickets using the Kanban methodology. My focus on clean, concise code has enabled me to maintain and enhance software while diligently fixing bugs, resulting in a more efficient and faster application.",
                     "skills": [
                         {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
                         {"title":"Angula 2","src":"..\\assets\\images\\qualification\\items\\skills\\light\\angular-light.svg"},
@@ -128,14 +128,6 @@
             },
             {
                 "id":"portfolio-2",
-                "title":"Commerce Project",
-                "subtitle":"Commerce Project",
-                "src":"../assets/images/portfolio/ecommerce.svg",
-                "href":"ecommerce-project",
-                "show":false
-            },
-            {
-                "id":"portfolio-3",
                 "title":"Chat App",
                 "subtitle":"Real Time Message App",
                 "src":"../assets/images/portfolio/chat.svg",
@@ -143,19 +135,27 @@
                 "show":false
             },
             {
+                "id":"portfolio-3",
+                "title":"Freelancer Blog Portfólio",
+                "subtitle":"Portfólio with Login System, and CRUD Article",
+                "src":"../assets/images/portfolio/blog-jacopo.svg",
+                "href":"blog-jacopo",
+                "show":false
+            },
+            {
                 "id":"portfolio-4",
-                "title":"Candidate Dashboard",
-                "subtitle":"CRUD app to interview test",
-                "src":"../assets/images/portfolio/candidate.svg",
-                "href":"candidate-dashboard",
+                "title":"Freelancer Wifi Marketing AmorSaúde",
+                "subtitle":"Wifi Marketing Landing Page using .NET ASP.NET",
+                "src":"../assets/images/portfolio/amor-saude-wifi-marketing.svg",
+                "href":"wifi-marketing-amor-saude",
                 "show":false
             },
             {
                 "id":"portfolio-5",
-                "title":"Person Microservice API",
-                "subtitle":"API using RabbitMQ and Mongo",
-                "src":"../assets/images/portfolio/person.svg",
-                "href":"person-microservice",
+                "title":"Commerce Project",
+                "subtitle":"Commerce Project",
+                "src":"../assets/images/portfolio/ecommerce.svg",
+                "href":"ecommerce-project",
                 "show":false
             },
             {
@@ -168,6 +168,23 @@
             },
             {
                 "id":"portfolio-7",
+                "title":"Candidate Dashboard",
+                "subtitle":"CRUD app to interview test",
+                "src":"../assets/images/portfolio/candidate.svg",
+                "href":"candidate-dashboard",
+                "show":false
+            },
+            {
+                "id":"portfolio-8",
+                "title":"Person Microservice API",
+                "subtitle":"API using RabbitMQ and Mongo",
+                "src":"../assets/images/portfolio/person.svg",
+                "href":"person-microservice",
+                "show":false
+            },
+          
+            {
+                "id":"portfolio-9",
                 "title":"Landing Page Laundry Website",
                 "subtitle":"Freelance Laundry Machine",
                 "src":"../assets/images/portfolio/lavamaq.svg",
@@ -175,7 +192,7 @@
                 "show":false
             },
             {
-                "id":"portfolio-8",
+                "id":"portfolio-10",
                 "title":"Microservice Discount API",
                 "subtitle":"Project to Bidea Factory Company",
                 "src":"../assets/images/portfolio/discount.svg",
@@ -491,6 +508,62 @@
                     "Docker-compose",
                     "Feign Client",
                     "REST"
+                ]
+            },
+            {
+                "id":"blog-jacopo",
+                "subId":"blog-jacopo",
+                "title":"Freelancer Blog Portfólio Freelancer",
+                "text":"Portfolio create offering authentic content creation and personal branding strategies. Features include authentication and authorization for users, a blog section for authenticated individuals to create, edit, and delete articles with pagination, and a view-only option for non-authenticated users.",
+                "youtubeSrc":"https://www.youtube.com/embed/BRcsj1Grsvg?si=X7lE30PgmDx0MaSb",
+                "github": {
+                    "href":"https://github.com/lewisc99/jacopo-portfolio-freelancer",
+                    "active":true
+                },
+                "site": {
+                    "href":"",
+                    "active":false
+                }, 
+                "technologies": [
+                    "Java 11",
+                    "Spring Boot",
+                    "Spring Cloud",
+                    "Angular 2",
+                    "Clean Code",
+                    "PostgreSQL",
+                    "Swagger",
+                    "Docker",
+                    "Fly.io",
+                    "Token JWT",
+                    "Spring Security",
+                    "Vercel",
+                    "Render"
+                ]
+            },
+            {
+                "id":"wifi-marketing-amor-saude",
+                "subId":"amor-saude-wifi-marketing",
+                "title":"Freelancer Wifi Marketing Landing Page MikroTik e ASP.NET AmorSaúde",
+                "text":"I have developed a backend project using ASP.NET 7, complemented by HTML, CSS, and JavaScript for the frontend. The project includes a landing page in the form of a dynamic web form. Data from this form is stored in a PostgreSQL database hosted on Render, while the backend logic is hosted on Fly.io. I have also implemented a MikroTik hotspot that seamlessly redirects users to the web form upon connecting to the wireless network. Upon successful form submission, users are granted access to the network, creating a seamless and efficient user experience.",
+                "youtubeSrc":"https://www.youtube.com/embed/gZhDkqoZQP8?si=j5IDSD20QyD7LFX2",
+                "github": {
+                    "href":"",
+                    "active":false
+                },
+                "site": {
+                    "href":"",
+                    "active":false
+                }, 
+                "technologies": [
+                    ".NET",
+                    "ASP.NET 7",
+                    "Javascript",
+                    "CSS",
+                    "PostgreSQL",
+                    "Swagger",
+                    "Docker",
+                    "Fly.io",
+                    "Render"
                 ]
             }
         ]
