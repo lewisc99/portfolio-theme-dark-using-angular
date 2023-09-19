@@ -10,7 +10,7 @@
     },
     "about-me": {
         "title":"Hi, I’m Luiz Most know as Lewis",
-        "info":"I’m a Backend Software Developer  I possess a strong passion for coding and solving Problems, I am always looking for exciting research opportunities in computer science and related subjects.  Do you want to take you company to the next level?",
+        "info":"Welcome, i've been a developer in general for 2 years. Broadly speaking, I am always looking for exciting research opportunities in computer science and related subjects.",
         "cv-item": {
             "years":"year of",
             "experience":"experience",
@@ -36,7 +36,7 @@
                     "title": "Dev .NET Fullstack Saude One",
                     "subTitle":"Full-Time Remoto PJ Job",
                     "selected":false,
-                    "text":"I am a Full Stack Software Developer with expertise in .NET C# for backend and Angular 2 for frontend. In my current role, I've designed and developed over 30 medical forms, and I've crafted default PDF layouts for Saude One Sistemas. Additionally, I've played a pivotal role in creating backend and frontend screens for user service tickets using the Kanban methodology. My focus on clean, concise code has enabled me to maintain and enhance software while diligently fixing bugs, resulting in a more efficient and faster application.",
+                    "text":"In my current role I work as a Full Stack software developer with .NET C# for the backend and Angular 2 for the frontend. Designed and developed more than 20 clinical medical forms, which assist in the flow of clinics to record and automate patient care. Additionally, I played a fundamental role in creating backend and frontend screens for user service tickets using the Kanban methodology.",
                     "skills": [
                         {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
                         {"title":"Angula 2","src":"..\\assets\\images\\qualification\\items\\skills\\light\\angular-light.svg"},
@@ -58,7 +58,7 @@
                     "title": "Fullstack Martins",
                     "subTitle":"Full-Time Remote PJ Job",
                     "selected":false,
-                    "text":"I worked as a Fullstack Web Developer. My goal was to understand what the customer needed and deliver it quickly and functionally. I worked doing maintenance on legacy systems, creating tables, handling databases, developing new services using agile methodology.",
+                    "text":"I worked as a Fullstack Web Developer with the aim of understanding customer needs and delivering them quickly. Contributed to the creation of a wholesale sales reporting microservice. Successfully executed migration projects from .NET 2 to the latest version, .NET 7, ensuring system modernization and performance improvement, and proficiently performed maintenance tasks on legacy systems.",
                     "skills": [
                         {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
                         {"title":"ASP NET","src":"..\\assets\\images\\qualification\\items\\skills\\light\\aspnet-light.svg"},
@@ -82,7 +82,7 @@
                     "title": "Developer Freelance PJ",
                     "subTitle":"Lewis Solution · Freelance",
                     "selected":false,
-                    "text":"Development of web pages, Portfolios, Landing Page, for small companies, using Java Spring boot with Angular 2 and C#, I provided more than 5 services during 2022. Now i'm working with backend C# (.NET) and Java (Spring Boot), and in the Frontend (Angular and JavaScript/TypeScript).",
+                    "text":"Experienced web developer with proficiency in Java Spring Boot, Angular 8+ and C#, specializing in creating dynamic web pages, portfolios and landing pages for small businesses. Proven track record of delivering more than 5 successful projects in 2022.",
                     "skills": [
                         {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
                         {"title":"Java","src":"..\\assets\\images\\qualification\\items\\skills\\light\\java-light.svg"},

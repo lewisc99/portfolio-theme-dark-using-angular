@@ -10,7 +10,7 @@
     },
     "about-me": {
         "title":"Olá, sou Luiz Mais conhecido como Lewis",
-        "info":"Olá, sou um desenvolvedor de software de back-end. Adoro codar e resolver problemas. Estou sempre procurando oportunidades interessantes de pesquisa em ciência da computação e assuntos relacionados. Você quer levar sua empresa para o próximo nível?",
+        "info":"Bem vindo, tenho experiência como desenvolvedor a 2 anos. De um modo geral estou sempre procurando oportunidades interessantes de pesquisa em ciência da computação e assuntos relacionados.",
         "cv-item": {
             "years":"Ano de",
             "experience":"expêriencia",
@@ -36,7 +36,7 @@
                     "title": "Dev .NET Fullstack Pleno Saude One",
                     "subTitle":"Full-Time Remoto PJ Job",
                     "selected":false,
-                    "text":"Sou um Desenvolvedor Full Stack de Software com experiência em .NET C# para backend e Angular 2 para frontend. No meu cargo atual, projetei e desenvolvi mais de 30 formulários médicos e criei layouts padrão de PDF para a Saude One Sistemas. Além disso, desempenhei um papel fundamental na criação de telas de backend e frontend para tickets de serviço de usuário usando a metodologia Kanban. Meu foco em código limpo e conciso me permitiu manter e aprimorar o software enquanto corrigia bugs diligentemente, resultando em uma aplicação mais eficiente e rápida.",
+                    "text":"Na minha função atual trabalho como desenvolvedor de software Full Stack com .NET C# para backend e Angular 2 para frontend. Projetei e desenvolvi mais de 20 formulários médicos clínicos, que auxiliam no fluxo das clínicas para registro e automatização do atendimento aos pacientes. Adicionalmente, desempenhei papel fundamental na criação de telas backend e frontend para tickets de atendimento ao usuário utilizando a metodologia Kanban.",
                     "skills": [
                         {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
                         {"title":"Angula 2","src":"..\\assets\\images\\qualification\\items\\skills\\light\\angular-light.svg"},
@@ -58,7 +58,7 @@
                     "title": "Fullstack Martins",
                     "subTitle":"Full-Time Remoto PJ Job",
                     "selected":false,
-                    "text":"Trabalhei como desenvolvedor Web Fullstack. Meu objetivo era entender o que o cliente precisava e entregar de forma rápida e funcional. Trabalhei  fazendo manutenção em sistemas legados, criação de tabelas, manipulação de banco de dados, desenvolver serviços novos usando metodologia ágil.",
+                    "text":"Trabalhei como Desenvolvedor Web Fullstack com o objetivo de compreender as necessidades dos clientes e entregá-las de forma rápida. Contribuí para a criação de um microsserviço de relatórios de vendas no atacado. Executei com sucesso projetos de migração do .NET 2 para a mais recente versão, .NET 7, assegurando a modernização do sistema e o aprimoramento do desempenho, é realizei com proficiência tarefas de manutenção em sistemas legados.",
                     "skills": [
                         {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
                         {"title":"ASP NET","src":"..\\assets\\images\\qualification\\items\\skills\\light\\aspnet-light.svg"},
@@ -82,7 +82,7 @@
                     "title": "Desenvolvedor Freelance PJ",
                     "subTitle":"Lewis Solution · Freelance",
                     "selected":false,
-                    "text":"Desenvolvimento de páginas Web, Portfólios, Landing Page, para pequenas empresas, utilizando Java Spring boot com Angular 2 e C#, prestei mais de 5 serviços durante o ano de 2022. Agora estou trabalhando com Backend C# (.NET) e Java (Spring Boot), e no Frontend (Angular e JavaScript/TypeScript).",
+                    "text":"Desenvolvedor web experiente com proficiência em Java Spring Boot, Angular 8+ e C#, especializado na criação de páginas web dinâmicas, portfólios e landing pages para pequenas empresas. Histórico comprovado de entrega de mais de 5 projetos de sucesso em 2022.",
                     "skills": [
                         {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
                         {"title":"Java","src":"..\\assets\\images\\qualification\\items\\skills\\light\\java-light.svg"},

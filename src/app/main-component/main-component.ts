@@ -239,7 +239,7 @@ export class MainComponent implements OnInit, OnDestroy {
       const monthsString = totalMonths !== 0 ? ` ${totalMonths} months` : '';
       item.totalTime = `${totalYears} yr${monthsString}`;
     } else {
-      const totalMonths = (diffDays / 30).toFixed(1);
+      const totalMonths = Math.ceil(Number((diffDays / 30).toFixed(1)));
       item.totalTime = `${totalMonths} months`;
     }
   }
