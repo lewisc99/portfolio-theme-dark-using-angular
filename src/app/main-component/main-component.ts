@@ -227,7 +227,8 @@ export class MainComponent implements OnInit, OnDestroy {
 
   formatDataQualification(item: Qualification) {
     const dateStart = new Date(item.dateStart);
-    const dateFinish = item.dateFinish ? new Date(item.dateFinish) : new Date();
+    const dateFinish =
+      item.dateFinish != 'Present' ? new Date(item.dateFinish) : new Date();
 
     const diffTime = Math.abs(dateFinish.getTime() - dateStart.getTime());
     const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
