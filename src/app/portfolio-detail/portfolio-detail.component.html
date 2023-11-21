@@ -1,0 +1,87 @@
+<main class="container" id="container" #container>
+  <div class="row row-nav-mobile-button">
+    <div class="column column-nav-mobile-button">
+      <div (click)="toggleNavBarMobile()">
+        <i></i>
+        <i></i>
+        <i></i>
+      </div>
+    </div>
+  </div>
+  <div class="row row-nav" id="nav" #nav>
+    <nav>
+      <ul class="ul-items" #ulitems>
+        <li class="close" (click)="closeNavBarMobile()"><div>&#10005;</div></li>
+        <li class="home">
+          <a href="#about">{{ "navBar.Home" | translate }}</a>
+        </li>
+        <li class="qualification">
+          <a href="#qualification">{{ "navBar.Qualification" | translate }}</a>
+        </li>
+        <li class="portfolio">
+          <a href="#portfolio">{{ "navBar.Portfolio" | translate }}</a>
+        </li>
+        <li class="skills">
+          <a href="#skills">{{ "navBar.Skills" | translate }}</a>
+        </li>
+        <li class="contact">
+          <a href="#contact">{{ "navBar.Contact" | translate }}</a>
+        </li>
+      </ul>
+      <div>
+        <h1>{{ detail.title }}</h1>
+      </div>
+    </nav>
+  </div>
+  <section>
+    <div class="portfolio-overview">
+      <div class="portfolio-overview-title">
+        <h1>Overview</h1>
+      </div>
+      <div class="portfolio-overview-text">
+        <p>{{ detail.text }}</p>
+        <div class="portfolio-overview-links">
+          <a
+            class="portfolio-link"
+            target="_blank"
+            [href]="detail.github.href"
+            [ngClass]="githubActive ? '' : 'disabled-link'"
+            ><img
+              alt="icon-github"
+              src="../../assets/images/portfolio/detail/icon-github.svg"
+            /><span>GitHub</span></a
+          >
+          <a
+            class="portfolio-link"
+            target="_blank"
+            [ngClass]="siteActive ? '' : 'disabled-link'"
+            [href]="detail.site.href"
+            ><img
+              alt="icon-rocket"
+              src="../../assets/images/portfolio/detail/icon-rocket.svg"
+            /><span>Site</span></a
+          >
+          <a href="#" (click)="redirectToPortfolio()">
+            {{ "portfolio-detail.back" | translate }}
+          </a>
+        </div>
+      </div>
+
+      <div class="portfolio-overview-video">
+        <iframe [src]="detail.youtubeSrc | safe" allowfullscreen> </iframe>
+      </div>
+    </div>
+    <div class="portfolio-skills">
+      <div class="portfolio-skills-items">
+        <div class="portfolio-skills-items-title">
+          <h2>{{ "portfolio-detail.technologies" | translate }}</h2>
+        </div>
+        <div class="portfolio-skills-items-content">
+          <div class="item item-top" *ngFor="let item of detail.technologies">
+            <i></i>{{ item }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
