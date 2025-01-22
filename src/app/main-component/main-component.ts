@@ -47,6 +47,7 @@ export class MainComponent implements OnInit, OnDestroy {
   public clickedNavBarActive: string = 'home';
   private translateSubscription: Subscription;
   private changeTranslationSubscription: Subscription;
+  public yearsOfExperience = 0;
 
   constructor(
     private translateService: TranslateService,
@@ -59,7 +60,9 @@ export class MainComponent implements OnInit, OnDestroy {
     this.initializeCurrentTheme();
     this.initializeTranslation();
     this.changeTranslation();
+    this.initializeYearOfExperience();
   }
+ 
 
   ngOnDestroy(): void {
     this.translateSubscription.unsubscribe();
@@ -112,6 +115,11 @@ export class MainComponent implements OnInit, OnDestroy {
     }
 
     this.contactSrc = contact;
+  }
+
+  initializeYearOfExperience() {
+    const currentYear = new Date().getFullYear();
+    this.yearsOfExperience = currentYear - 2022;
   }
 
   toggleIdiom(): void {
