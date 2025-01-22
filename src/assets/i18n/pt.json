@@ -1,571 +1,772 @@
 {
-    "hello":"ola mano",
-    "navBar": {
-        "Home":"Início",
-        "Qualification":"Qualificação",
-        "Portfolio":"Portfolio",
-        "Skills":"Habilidades",
-        "Contact":"Contato",
-        "Idiom":"Idioma"
+  "hello": "ola mano",
+  "navBar": {
+    "Home": "Início",
+    "Qualification": "Qualificação",
+    "Portfolio": "Portfolio",
+    "Skills": "Habilidades",
+    "Contact": "Contato",
+    "Idiom": "Idioma"
+  },
+  "about-me": {
+    "title": "Olá, sou Luiz Mais conhecido como Lewis",
+    "info": "Bem vindo, tenho experiência como desenvolvedor a 3 anos. De um modo geral estou sempre procurando oportunidades interessantes de pesquisa em ciência da computação e assuntos relacionados.",
+    "cv-item": {
+      "years": "Ano de",
+      "experience": "expêriencia",
+      "completed": "Projetos",
+      "projects": "completados"
     },
-    "about-me": {
-        "title":"Olá, sou Luiz Mais conhecido como Lewis",
-        "info":"Bem vindo, tenho experiência como desenvolvedor a 3 anos. De um modo geral estou sempre procurando oportunidades interessantes de pesquisa em ciência da computação e assuntos relacionados.",
-        "cv-item": {
-            "years":"Ano de",
-            "experience":"expêriencia",
-            "completed":"Projetos",
-            "projects":"completados"
-        },
-        "downloadCv": {
-            "href":"https://drive.google.com/file/d/1JXrR1D7N4mHMj1MakCIKUdF_v-jsL5ym/view?usp=share_link"
-        }
-    },
-    "qualification": {
-        "title":"Qualificação",
-        "subtitle":"Para mais detalhes clique na empresa correspondente",
-        "items": [
-            {
-                "id": 0,
-                "title":"Fullstack .NET Pleno Saude One",
-                "dateStart": "05/16/2023",
-                "dateFinish": "Present",
-                "src":"../assets/images/qualification/items/saudeone.jpg",
-                "detail": {
-                    "id":0,
-                    "title": "Dev .NET Fullstack Pleno Saude One",
-                    "subTitle":"Full-Time Remoto PJ Job",
-                    "selected":false,
-                    "text":"Na minha função atual trabalho como desenvolvedor de software Full Stack com .NET C# para backend e Angular 2 para frontend. Projetei e desenvolvi mais de 20 formulários médicos clínicos, que auxiliam no fluxo das clínicas para registro e automatização do atendimento aos pacientes. Adicionalmente, desempenhei papel fundamental na criação de telas backend e frontend para tickets de atendimento ao usuário utilizando a metodologia Kanban.",
-                    "skills": [
-                        {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
-                        {"title":"Angula 2","src":"..\\assets\\images\\qualification\\items\\skills\\light\\angular-light.svg"},
-                        {"title":"Bootstrap","src":"..\\assets\\images\\qualification\\items\\skills\\light\\bootstrap-light.svg"},
-                        {"title":"Javascript","src":"..\\assets\\images\\qualification\\items\\skills\\light\\javascript-light.svg"},
-                        {"title":"Microservice","src":"..\\assets\\images\\qualification\\items\\skills\\light\\microservice-light.svg"}
-                    ]
-                }
-              
-            },
-            {
-                "id": 1,
-                "title":"Fullstack Dev Martins",
-                "dateStart": "01/06/2023",
-                "dateFinish": "05/06/2023",
-                "src":"../assets/images/qualification/items/martins.jpg",
-                "detail": {
-                    "id":1,
-                    "title": "Fullstack Martins",
-                    "subTitle":"Full-Time Remoto PJ Job",
-                    "selected":false,
-                    "text":"Trabalhei como Desenvolvedor Web Fullstack com o objetivo de compreender as necessidades dos clientes e entregá-las de forma rápida. Contribuí para a criação de um microsserviço de relatórios de vendas no atacado. Executei com sucesso projetos de migração do .NET 2 para a mais recente versão, .NET 7, assegurando a modernização do sistema e o aprimoramento do desempenho, é realizei com proficiência tarefas de manutenção em sistemas legados.",
-                    "skills": [
-                        {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
-                        {"title":"ASP NET","src":"..\\assets\\images\\qualification\\items\\skills\\light\\aspnet-light.svg"},
-                        {"title":"Bootstrap","src":"..\\assets\\images\\qualification\\items\\skills\\light\\bootstrap-light.svg"},
-                        {"title":"GitLab","src":"..\\assets\\images\\qualification\\items\\skills\\light\\gitlab-light.svg"},
-                        {"title":"Jquery","src":"..\\assets\\images\\qualification\\items\\skills\\light\\jquery-light.svg"},
-                        {"title":"Javascript","src":"..\\assets\\images\\qualification\\items\\skills\\light\\javascript-light.svg"},
-                        {"title":"Microservice","src":"..\\assets\\images\\qualification\\items\\skills\\light\\microservice-light.svg"}
-                    ]
-                }
-              
-            },
-            {
-                "id": 2,
-                "title":"Desenvolvedor Freelance PJ",
-                "dateStart": "02/02/2022",
-                "dateFinish": "02/06/2023",
-                "src":"../assets/images/qualification/items/freelance.svg",
-                "detail": {
-                    "id":2,
-                    "title": "Desenvolvedor Freelance PJ",
-                    "subTitle":"Lewis Solution · Freelance",
-                    "selected":false,
-                    "text":"Desenvolvedor web experiente com proficiência em Java Spring Boot, Angular 8+ e C#, especializado na criação de páginas web dinâmicas, portfólios e landing pages para pequenas empresas. Histórico comprovado de entrega de mais de 5 projetos de sucesso em 2022.",
-                    "skills": [
-                        {"title":"Csharp","src":"..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"},
-                        {"title":"Java","src":"..\\assets\\images\\qualification\\items\\skills\\light\\java-light.svg"},
-                        {"title":"Spring Boot","src":"..\\assets\\images\\qualification\\items\\skills\\light\\springboot-light.svg"},
-                        {"title":"Angula 2","src":"..\\assets\\images\\qualification\\items\\skills\\light\\angular-light.svg"},
-                        {"title":"Javascript","src":"..\\assets\\images\\qualification\\items\\skills\\light\\javascript-light.svg"},
-                        {"title":"HTML","src":"..\\assets\\images\\qualification\\items\\skills\\light\\html-light.svg"},
-                        {"title":"CSS","src":"..\\assets\\images\\qualification\\items\\skills\\light\\css-light.svg"}
-                    ]
-                }
-            },
-            {
-                "id": 3,
-                "title":"Atendimento | ADM Localiza Hertz",
-                "dateStart": "06/01/2019",
-                "dateFinish": "12/15/2021",
-                "src":"../assets/images/qualification/items/localiza.svg",
-                "detail": {
-                   "id": 3,
-                    "title": "Localiza Hertz",
-                    "subTitle":"Auxiliar Administrativo",
-                    "selected":false,
-                    "text":"Trabalhei no setor de atendimento e Administrativo da Localiza para parceiros da Uber, no suporte de direcionamento de e-mails e clientes aos respectivos departamentos, a Localiza possui mais de 10 milhões de clientes, depois com experiência fui designada para o setor de suporte administrativo, e logo depois fui para o setor de emergência veicular da Localiza onde pude contribuir para um atendimento ágil e analítico.",
-                    "skills": [
-                        {"title":"Office 365","src":"..\\assets\\images\\qualification\\items\\skills\\light\\office-light.svg"},
-                        {"title":"Power BI","src":"..\\assets\\images\\qualification\\items\\skills\\light\\power-bi-light.svg"}
-                    ]
-                }
-            }
-        ]
-    },
-    "portfolio": {
-        "title": "Portfólio",
-        "information":"Informações",
-        "items": [
-            {
-                "id":"portfolio-1",
-                "title":"Academia Projeto",
-                "subtitle":"Freelance Projeto para uma Academia",
-                "src":"../assets/images/portfolio/gym.svg",
-                "href":"gym-dashboard",
-                "show":true
-            },
-            {
-                "id":"portfolio-2",
-                "title":"Aplicativo de Chat",
-                "subtitle":"Em tempo real Aplicativo de Bate-Papo",
-                "src":"../assets/images/portfolio/chat.svg",
-                "href":"chat-app",
-                "show":false
-            },
-            {
-                "id":"portfolio-3",
-                "title":"Freelancer Blog Portfólio",
-                "subtitle":"Portfólio com Sistema de Login, e inserir Artigo",
-                "src":"../assets/images/portfolio/blog-jacopo.svg",
-                "href":"blog-jacopo",
-                "show":false
-            },
-            {
-                "id":"portfolio-4",
-                "title":"Freelancer Wifi Marketing AmorSaúde",
-                "subtitle":"Wifi Marketing Landing Page com .NET ASP.NET",
-                "src":"../assets/images/portfolio/amor-saude-wifi-marketing.svg",
-                "href":"wifi-marketing-amor-saude",
-                "show":false
-            },
-            {
-                "id":"portfolio-5",
-                "title":"E-Commerce Projeto",
-                "subtitle":"Usando Java e Angular 2",
-                "src":"../assets/images/portfolio/ecommerce.svg",
-                "href":"ecommerce-project",
-                "show":false
-            },
-            {
-                "id":"portfolio-6",
-                "title":"Currículo Dashboard",
-                "subtitle":"ASPNET MVC Currículo app",
-                "src":"../assets/images/portfolio/curriculum.svg",
-                "href":"curriculum-dashboard",
-                "show":false
-            },
-            {
-                "id":"portfolio-7",
-                "title":"Candidato Dashboard",
-                "subtitle":"CRUD Aplicativo para uma entrevista",
-                "src":"../assets/images/portfolio/candidate.svg",
-                "href":"candidate-dashboard",
-                "show":false
-            },
-            {
-                "id":"portfolio-8",
-                "title":"Pessoa Microserviço API",
-                "subtitle":"API usando RabbitMQ e Mongo",
-                "src":"../assets/images/portfolio/person.svg",
-                "href":"person-microservice",
-                "show":false
-            },
-        
-            {
-                "id":"portfolio-9",
-                "title":"Landing Page Máquina de Lavar",
-                "subtitle":"Freelance Máquina de Lavar",
-                "src":"../assets/images/portfolio/lavamaq.svg",
-                "href":"laundry-landing-page",
-                "show":false
-            },
-            {
-                "id":"portfolio-10",
-                "title":"Microservice Desconto API",
-                "subtitle":"Projeto para empresa Bidea Factory",
-                "src":"../assets/images/portfolio/discount.svg",
-                "href":"discount-api-microservice",
-                "show":false
-            }
-        ]
-    },
-    "skills": {
-        "title": "Tecnologias",
-        "select-items": {
-            "select":"Habilidades",
-            "backend":"Back End",
-            "frontend":"Front End",
-            "java":"Java",
-            "csharp":"C#",
-            "others":"Outros",
-            "database":"Banco de Dados"
-        },
-        "items": [
-            [
-                {"title":"Java", "src":"../assets/images/skills/items/light/java-light.svg"},
-                {"title":"Csharp", "src":"../assets/images/skills/items/light/csharp-light.svg"},
-                {"title":"Windows", "src":"../assets/images/skills/items/light/windows-light.svg"},
-                {"title":"Linux", "src":"../assets/images/skills/items/light/linux-light.svg"}
-            ],
-            [
-                {"title":"HTML", "src":"../assets/images/skills/items/light/html-light.svg"},
-                {"title":"CSS", "src":"../assets/images/skills/items/light/css-light.svg"},
-                {"title":"Javascript", "src":"../assets/images/skills/items/light/javascript-light.svg"},
-                {"title":"Angular 2", "src":"../assets/images/skills/items/light/angular-light.svg"},
-                {"title":"TypeScript", "src":"../assets/images/skills/items/light/typescript-light.svg"},
-                {"title":"Bootstrap", "src":"../assets/images/skills/items/light/bootstrap-light.svg"},
-                {"title":"Figma", "src":"../assets/images/skills/items/light/figma-light.svg"},
-                {"title":"jQuery", "src":"../assets/images/skills/items/light/jquery-light.svg"}
-            ],
-            [
-                {"title":"Spring Framework", "src":"../assets/images/skills/items/light/spring-light.svg"},
-                {"title":"Spring Cloud", "src":"../assets/images/skills/items/light/spring-light.svg"},
-                {"title":"Kafka", "src":"../assets/images/skills/items/light/kafka-light.svg"},
-                {"title":"RabbitMQ", "src":"../assets/images/skills/items/light/rabbitmq-light.svg"},
-                {"title":"Spring Boot", "src":"../assets/images/skills/items/light/spring-boot-light.svg"},
-                {"title":"Spring MVC", "src":"../assets/images/skills/items/light/spring-light.svg"},
-                {"title":"Hibernate", "src":"../assets/images/skills/items/light/hibernate-light.svg"},
-                {"title":"JUnit", "src":"../assets/images/skills/items/light/junit-light.svg"},
-                {"title":"Mockito", "src":"../assets/images/skills/items/light/mockito-light.svg"},
-                {"title":"MockMvc", "src":"../assets/images/skills/items/light/spring-light.svg"}
-            ],
-            [
-                {"title":"ASP.NET", "src":"../assets/images/skills/items/light/aspnet-light.svg"},
-                {"title":"Entity Framework", "src":"../assets/images/skills/items/light/ef-light.svg"},
-                {"title":"Microsserviços", "src":"../assets/images/skills/items/light/microservice-light.svg"},
-                {"title":"RabbitMQ", "src":"../assets/images/skills/items/light/rabbitmq-light.svg"},
-                {"title":"Ocelot", "src":"../assets/images/skills/items/light/ocelot-light.svg"},
-                {"title":"Mass Transit", "src":"../assets/images/skills/items/light/masstransit-light.svg"},
-                {"title":"Unit Testing", "src":"../assets/images/skills/items/light/unittesting-light.svg"},
-                {"title":"Integration Test", "src":"../assets/images/skills/items/light/unittesting-light.svg"},
-                {"title":"Identity", "src":"../assets/images/skills/items/light/identity-light.svg"}
-            ],
-            [
-                {"title":"Docker Compose", "src":"../assets/images/skills/items/light/docker-light.svg"},
-                {"title":"Git", "src":"../assets/images/skills/items/light/git-light.svg"},
-                {"title":"GitHub", "src":"../assets/images/skills/items/light/github-light.svg"},
-                {"title":"CI/CD", "src":"../assets/images/skills/items/light/cicd-light.svg"},
-                {"title":"GitLab", "src":"../assets/images/skills/items/light/gitlab-light.svg"},
-                {"title":"Docker", "src":"../assets/images/skills/items/light/docker-light.svg"}
-            ],
-            [
-                {"title":"SQL Server", "src":"../assets/images/skills/items/light/sqlserver-light.svg"},
-                {"title":"MySQL", "src":"../assets/images/skills/items/light/mysql-light.svg"},
-                {"title":"SQLite", "src":"../assets/images/skills/items/light/sqllite-light.svg"},
-                {"title":"PostgreSQL", "src":"../assets/images/skills/items/light/postgresql-light.svg"},
-                {"title":"Mongo DB", "src":"../assets/images/skills/items/light/mongodb-light.svg"},
-                {"title":"Oracle", "src":"../assets/images/skills/items/light/oracle-light.svg"}
-            ]
-        ]
-    },
-    "contact": {
-        "title": "Contato",
-        "social-media": {
-            "title":"Midia Sociais",
-            "e-mail":"E-Mail",
-            "cel-phone":"Celular"
-        },
-        "form-send-message":{
-            "name":"Nome",
-            "message":"Mensagem",
-            "send":"Enviar"
-        }
-    },
-    "portfolio-detail":
-    {
-       "back":"voltar",
-       "technologies":"Tecnologias",
-       "items": [
-            {
-                "id":"gym-dashboard",
-                "subId":"gym",
-                "title":"Microsserviços - Academia 'Gym Corpus' Dashboard Gestão de clientes",
-                "text":"Este projeto como Freelancer para uma academia local onde você pode gerenciar clientes e usuários onde você pode facilmente mudar o status dos usuários em débito, bem como a categoria do plano. Minha expertise em criar uma infraestrutura segura com JWT, escalar microsserviços e aplicar TDD com testes unitários e de integração garantem que o sistema seja robusto e confiável.",
-                "youtubeSrc":"https://www.youtube.com/embed/F2DXXOortBE",
-                "github": {
-                    "href":"https://github.com/lewisc99/freelancer-springboot-microservices-gym-dashboard",
-                    "active":true
-                },
-                "site": {
-                    "href":"",
-                    "active":false
-                }, 
-                "technologies": [
-                    "Java 11",
-                    "Kafka",
-                    "Messaging",
-                    "Spring Boot",
-                    "Spring Cloud",
-                    "HTML",
-                    "CSS",
-                    "HATEOAS",
-                    "Clean Code",
-                    "Angular 2",
-                    "Bootstrap",
-                    "Unit testing",
-                    "TDD",
-                    "Integration Tests",
-                    "Swagger",
-                    "Docker",
-                    "PostgreSQL",
-                    "CI/CD",
-                    "JUnit",
-                    "Token JWT"
-                ]
-            },
-            {
-                "id":"ecommerce-project",
-                "subId":"ecommerce",
-                "title":"Projeto E-commerce Shop",
-                "text":"Com o projeto de simulação de site de Ecommerce, você pode experimentar todas as principais funcionalidades sem precisar investir em uma plataforma definitiva. Adicione produtos ao carrinho, pesquise por nome e categoria, remova itens indesejados e até mesmo adicione quantidades conforme a sua necessidade. E o melhor de tudo: finalize a compra adicionando seus dados pessoais e sinta como seria a experiência do seu cliente ao comprar em sua loja virtual. experimente agora mesmo o projeto de simulação de site de Ecommerce e se surpreenda com o resultado.",
-                "youtubeSrc":"https://www.youtube.com/embed/lNjuPMSH87c",
-                "github": {
-                    "href":"https://github.com/lewisc99/project-ecommerce-shop-java-angular",
-                    "active":true
-                },
-                "site": {
-                    "href":"",
-                    "active":false
-                }, 
-                "technologies": [
-                    "Java 11",
-                    "Spring Boot",
-                    "H2-database",
-                    "HTML",
-                    "CSS",
-                    "Hibernate",
-                    "JPA",
-                    "Angular 2",
-                    "Typescript"
-                ]
-            },
-            {
-                "id":"chat-app",
-                "subId":"chat",
-                "title":"Projeto Chat App Conversação em Tempo Real",
-                "text":"Este projeto me proporcionou um grande aprendizado sobre o funcionamento de uma API, bem como a importância do uso de códigos de status adequados para retornar informações precisas aos usuários. Além disso, pude explorar como estruturar um projeto que utiliza WebSocket para enviar e receber mensagens em tempo real entre os usuários, com cada um possuindo suas próprias credenciais, implementadas através do uso de Identidade e Token JWT para autenticação e autorização. O frontend foi desenvolvido utilizando Angular 2, seguindo padrões e técnicas avançadas para garantir a implementação de um código leve e limpo. Com esse projeto, foi possível aprimorar as habilidades técnicas em programação web.",
-                "youtubeSrc":"https://www.youtube.com/embed/PD6N1qYnqsU",
-                "github": {
-                    "href":"https://github.com/lewisc99/project-chat-message-csharp-angular2",
-                    "active":true
-                },
-                "site": {
-                    "href":"",
-                    "active":false
-                }, 
-                "technologies": [
-                    "C#",
-                    "SQL Server",
-                    "HTML",
-                    "CSS",
-                    "Angular 2",
-                    "SignalR",
-                    "NUnit",
-                    "Unit Testing",
-                    "Mocking Test",
-                    "Swagger",
-                    "Entity Framework",
-                    "Authorization Identity",
-                    "Authentication Token JWT"
-                ]
-            },
-            {
-                "id":"candidate-dashboard",
-                "subId":"candidate",
-                "title":"Painel de Cadastro de Candidatos",
-                "text":"Este projeto de cadastramento de candidatos para uma entrevista de emprego é uma oportunidade perfeita para demonstrar suas habilidades. Com a validação de cada input do usuário e a implementação de vários testes para garantir o bom funcionamento da aplicação, você terá a certeza de que está entregando um produto de qualidade. Além disso, o fato de que todos os testes foram aprovados pelo CI/CD e o deploy foi realizado com sucesso no Heroku, é uma prova concreta da excelência do seu trabalho.",
-                "youtubeSrc":"https://www.youtube.com/embed/HyDB_rIHoW4",
-                "github": {
-                    "href":"https://github.com/lewisc99/java-springboot-candidate-dashboard",
-                    "active":true
-                },
-                "site": {
-                    "href":"",
-                    "active":false
-                }, 
-                "technologies": [
-                    "Java",
-                    "Spring Boot",
-                    "Gradle",
-                    "CSS3",
-                    "HTML5",
-                    "JSP",
-                    "Docker",
-                    "NUnit",
-                    "Unit Testing",
-                    "Mocking Test",
-                    "H2 DATABASE",
-                    "CI/CD",
-                    "Heroku"
-                ]
-            },
-            {
-                "id":"person-microservice",
-                "subId":"person",
-                "title":"Microsserviços de registro de pessoas com sistema de Mensageria RabbitMQ",
-                "text":"Com a aplicação de cadastro de pessoas que utiliza RabbitMQ e MassTransit, você pode ter certeza de que seus dados serão atualizados em tempo real em outro Microsserviço de Usuário com Banco de Dados próprio. Não perca mais tempo com planilhas e documentos físicos, tenha um sistema eficiente e seguro para gerenciar seus cadastros e otimize seus processos. Aplicação de cadastro de pessoas, onde você pode cadastrar uma nova pessoa, e este cadastro e encaminhado para outro Microsserviço de Usuário com RabbitMQ e MassTransit, onde este outro usuario que também têm um Banco de Dados próprio é atualizado ou cadastrado.",
-                "youtubeSrc":"https://www.youtube.com/embed/cculJPYXSzs",
-                "github": {
-                    "href":"https://github.com/lewisc99/csharp-microservice-using-masstransit-rabbitmq-mongodb",
-                    "active":true
-                },
-                "site": {
-                    "href":"",
-                    "active":false
-                }, 
-                "technologies": [
-                    ".NET",
-                    "C#",
-                    "MongoDB",
-                    "RabbitMQ",
-                    "HATEOAS",
-                    "Clean Code",
-                    "Docker",
-                    "MassTransit",
-                    "Swagger"
-                ]
-            },
-            {
-                "id":"curriculum-dashboard",
-                "subId":"curriculum",
-                "title":"Projeto Painel de Cadastro Curricular",
-                "text":"Este projeto tem como objetivo a criação de um sistema básico de Cadastro de Currículos e Departamentos, utilizando o CRUD como base. A fim de garantir a segurança e a privacidade dos dados, será implementado um Login Básico, com funcionários já cadastrados previamente no banco de dados. Somente os usuários logados terão acesso ao sistema de cadastro de currículos, garantindo assim a segurança dos dados armazenados. O sistema permitirá o cadastro, atualização e exclusão de informações referentes a currículos e departamentos, facilitando a gestão de recursos humanos de empresas e organizações.",
-                "youtubeSrc":"https://www.youtube.com/embed/YLYO9FQFl8c",
-                "github": {
-                    "href":"https://github.com/lewisc99/cadastro-de-curriculo-aspnetMVC5",
-                    "active":true
-                },
-                "site": {
-                    "href":"",
-                    "active":false
-                }, 
-                "technologies": [
-                    ".NET",
-                    "C#",
-                    "MySQL",
-                    "HTML",
-                    "CSS",
-                    "Razor",
-                    "ORM",
-                    "Boostrap",
-                    "jQuery"
-                ]
-            },
-            {
-                "id":"laundry-landing-page",
-                "subId":"laundry",
-                "title":"Freelancer Landing Page Laundry Machine",
-                "text":"Landing Page criada para um Freelancer, usando o melhor do CSS, Site responsivo, usando menos código, Esta página pode ser ajustada a qualquer tamanho de tela, e o usuário pode diminuir e diminuir o zoom em qualquer tamanho.",
-                "youtubeSrc":"https://www.youtube.com/embed/EV_2sxUIFM4",
-                "github": {
-                    "href":"https://github.com/lewisc99/freelancer-work-static-landing-page-laundry-machine",
-                    "active":true
-                },
-                "site": {
-                    "href":"https://lewisc99.github.io/freelancer-work-static-landing-page-laundry-machine/Index",
-                    "active":true
-                }, 
-                "technologies": [
-                    "HTML",
-                    "CSS",
-                    "jQuery"
-                ]
-            },
-            {
-                "id":"discount-api-microservice",
-                "subId":"discount",
-                "title":"Microservice Springboot Reserva de casa",
-                "text":"Objetivo: Criar uma API rest que permita reservar uma casa, para a qual deve ser recebido um pedido, validar o referido pedido, se for indicado um código de desconto, validá-lo através de um api rest, e para Termine de salvar os dados da solicitação em um banco de dados PostgreSQL.",
-                "youtubeSrc":"https://www.youtube.com/embed/vRx7hXHFaZE",
-                "github": {
-                    "href":"https://github.com/lewisc99/microservice-springboot-booking-test-bidea-factory",
-                    "active":true
-                },
-                "site": {
-                    "href":"",
-                    "active":false
-                }, 
-                "technologies": [
-                    "Spring Boot",
-                    "Spring Cloud",
-                    "Microserviços",
-                    "Clean Code",
-                    "PostgreSQL",
-                    "Swagger",
-                    "Docker",
-                    "Docker-compose",
-                    "Feign Client",
-                    "REST"
-                ]
-            },
-            {
-                "id":"blog-jacopo",
-                "subId":"blog-jacopo",
-                "title":"Freelancer Blog Portfólio Freelancer",
-                "text":"Portfólio criado oferecendo criação de conteúdo autêntico e estratégias de branding pessoal. Recursos incluem autenticação e autorização para usuários, uma seção de blog para indivíduos autenticados criarem, editarem e excluírem artigos com paginação, e uma opção de visualização apenas para usuários não autenticados.",
-                "youtubeSrc":"https://www.youtube.com/embed/BRcsj1Grsvg?si=X7lE30PgmDx0MaSb",
-                "github": {
-                    "href":"https://github.com/lewisc99/jacopo-portfolio-freelancer",
-                    "active":true
-                },
-                "site": {
-                    "href":"",
-                    "active":false
-                }, 
-                "technologies": [
-                    "Java 11",
-                    "Spring Boot",
-                    "Spring Cloud",
-                    "Angular 2",
-                    "Clean Code",
-                    "PostgreSQL",
-                    "Swagger",
-                    "Docker",
-                    "Fly.io",
-                    "Token JWT",
-                    "Spring Security",
-                    "Vercel",
-                    "Render"
-                ]
-            },
-            {
-                "id":"wifi-marketing-amor-saude",
-                "subId":"amor-saude-wifi-marketing",
-                "title":"Freelancer Wifi Marketing Landing Page MikroTik e ASP.NET AmorSaúde",
-                "text":"Desenvolvi um projeto backend usando ASP.NET 7, complementado por HTML, CSS e JavaScript para o frontend. O projeto inclui uma página de destino na forma de um formulário web dinâmico. Os dados deste formulário são armazenados em um banco de dados PostgreSQL hospedado na Render, enquanto a lógica do backend está hospedada no Fly.io. Também implementei um hotspot MikroTik que redireciona os usuários para o formulário web assim que se conectam à rede sem fio. Após a submissão bem-sucedida do formulário, os usuários têm acesso à rede, criando uma experiência do usuário eficiente e contínua.",
-                "youtubeSrc":"https://www.youtube.com/embed/gZhDkqoZQP8?si=j5IDSD20QyD7LFX2",
-                "github": {
-                    "href":"",
-                    "active":false
-                },
-                "site": {
-                    "href":"",
-                    "active":false
-                }, 
-                "technologies": [
-                    ".NET",
-                    "ASP.NET 7",
-                    "Javascript",
-                    "CSS",
-                    "PostgreSQL",
-                    "Swagger",
-                    "Docker",
-                    "Fly.io",
-                    "Render"
-                ]
-            }
-        ]
+    "downloadCv": {
+      "href": "https://drive.google.com/file/d/1JXrR1D7N4mHMj1MakCIKUdF_v-jsL5ym/view?usp=share_link"
     }
+  },
+  "qualification": {
+    "title": "Qualificação",
+    "subtitle": "Para mais detalhes clique na empresa correspondente",
+    "items": [
+      {
+        "id": 0,
+        "title": "Desenvolvedor .NET Accurate Software",
+        "dateStart": "12/18/2023",
+        "dateFinish": "Present",
+        "src": "../assets/images/qualification/items/accurate.png",
+        "detail": {
+          "id": 0,
+          "title": "Fullstack .NET",
+          "subTitle": "Full-Time Remoto",
+          "selected": false,
+          "text": "Identifiquei e corrigi bugs, e implementei melhorias em aplicações legadas, incluindo aquelas construídas com WCF, WPF, e Web Forms, WinForms, Azure VM usando as melhores práticas e padrões de design.",
+          "skills": [
+            {
+              "title": "Csharp",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"
+            },
+            {
+              "title": "Angula 2",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\angular-light.svg"
+            },
+            {
+              "title": "Bootstrap",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\bootstrap-light.svg"
+            },
+            {
+              "title": "Javascript",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\javascript-light.svg"
+            },
+            {
+              "title": "Microservice",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\microservice-light.svg"
+            },
+            {
+              "title": "GitLab",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\gitlab-light.svg"
+            }
+          ]
+        }
+      },
+      {
+        "id": 1,
+        "title": "Fullstack .NET Pleno Saude One",
+        "dateStart": "05/16/2023",
+        "dateFinish": "Present",
+        "src": "../assets/images/qualification/items/saudeone.jpg",
+        "detail": {
+          "id": 0,
+          "title": "Dev .NET Fullstack Pleno Saude One",
+          "subTitle": "Full-Time Remoto PJ Job",
+          "selected": false,
+          "text": "Na minha função atual trabalho como desenvolvedor de software Full Stack com .NET C# para backend e Angular 2 para frontend. Projetei e desenvolvi mais de 20 formulários médicos clínicos, que auxiliam no fluxo das clínicas para registro e automatização do atendimento aos pacientes. Adicionalmente, desempenhei papel fundamental na criação de telas backend e frontend para tickets de atendimento ao usuário utilizando a metodologia Kanban.",
+          "skills": [
+            {
+              "title": "Csharp",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"
+            },
+            {
+              "title": "Angula 2",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\angular-light.svg"
+            },
+            {
+              "title": "Bootstrap",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\bootstrap-light.svg"
+            },
+            {
+              "title": "Javascript",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\javascript-light.svg"
+            },
+            {
+              "title": "Microservice",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\microservice-light.svg"
+            }
+          ]
+        }
+      },
+      {
+        "id": 2,
+        "title": "Fullstack Dev Martins",
+        "dateStart": "01/06/2023",
+        "dateFinish": "05/06/2023",
+        "src": "../assets/images/qualification/items/martins.jpg",
+        "detail": {
+          "id": 1,
+          "title": "Fullstack Martins",
+          "subTitle": "Full-Time Remoto PJ Job",
+          "selected": false,
+          "text": "Trabalhei como Desenvolvedor Web Fullstack com o objetivo de compreender as necessidades dos clientes e entregá-las de forma rápida. Contribuí para a criação de um microsserviço de relatórios de vendas no atacado. Executei com sucesso projetos de migração do .NET 2 para a mais recente versão, .NET 7, assegurando a modernização do sistema e o aprimoramento do desempenho, é realizei com proficiência tarefas de manutenção em sistemas legados.",
+          "skills": [
+            {
+              "title": "Csharp",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"
+            },
+            {
+              "title": "ASP NET",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\aspnet-light.svg"
+            },
+            {
+              "title": "Bootstrap",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\bootstrap-light.svg"
+            },
+            {
+              "title": "GitLab",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\gitlab-light.svg"
+            },
+            {
+              "title": "Jquery",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\jquery-light.svg"
+            },
+            {
+              "title": "Javascript",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\javascript-light.svg"
+            },
+            {
+              "title": "Microservice",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\microservice-light.svg"
+            }
+          ]
+        }
+      },
+      {
+        "id": 3,
+        "title": "Desenvolvedor Freelance PJ",
+        "dateStart": "02/02/2022",
+        "dateFinish": "02/06/2023",
+        "src": "../assets/images/qualification/items/freelance.svg",
+        "detail": {
+          "id": 2,
+          "title": "Desenvolvedor Freelance PJ",
+          "subTitle": "Lewis Solution · Freelance",
+          "selected": false,
+          "text": "Desenvolvedor web experiente com proficiência em Java Spring Boot, Angular 8+ e C#, especializado na criação de páginas web dinâmicas, portfólios e landing pages para pequenas empresas. Histórico comprovado de entrega de mais de 5 projetos de sucesso em 2022.",
+          "skills": [
+            {
+              "title": "Csharp",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\csharp-light.svg"
+            },
+            {
+              "title": "Java",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\java-light.svg"
+            },
+            {
+              "title": "Spring Boot",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\springboot-light.svg"
+            },
+            {
+              "title": "Angula 2",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\angular-light.svg"
+            },
+            {
+              "title": "Javascript",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\javascript-light.svg"
+            },
+            {
+              "title": "HTML",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\html-light.svg"
+            },
+            {
+              "title": "CSS",
+              "src": "..\\assets\\images\\qualification\\items\\skills\\light\\css-light.svg"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "Portfólio",
+    "information": "Informações",
+    "items": [
+      {
+        "id": "portfolio-1",
+        "title": "Academia Projeto",
+        "subtitle": "Freelance Projeto para uma Academia",
+        "src": "../assets/images/portfolio/gym.svg",
+        "href": "gym-dashboard",
+        "show": true
+      },
+      {
+        "id": "portfolio-2",
+        "title": "Aplicativo de Chat",
+        "subtitle": "Em tempo real Aplicativo de Bate-Papo",
+        "src": "../assets/images/portfolio/chat.svg",
+        "href": "chat-app",
+        "show": false
+      },
+      {
+        "id": "portfolio-3",
+        "title": "Freelancer Blog Portfólio",
+        "subtitle": "Portfólio com Sistema de Login, e inserir Artigo",
+        "src": "../assets/images/portfolio/blog-jacopo.svg",
+        "href": "blog-jacopo",
+        "show": false
+      },
+      {
+        "id": "portfolio-4",
+        "title": "Freelancer Wifi Marketing AmorSaúde",
+        "subtitle": "Wifi Marketing Landing Page com .NET ASP.NET",
+        "src": "../assets/images/portfolio/amor-saude-wifi-marketing.svg",
+        "href": "wifi-marketing-amor-saude",
+        "show": false
+      },
+      {
+        "id": "portfolio-5",
+        "title": "E-Commerce Projeto",
+        "subtitle": "Usando Java e Angular 2",
+        "src": "../assets/images/portfolio/ecommerce.svg",
+        "href": "ecommerce-project",
+        "show": false
+      },
+      {
+        "id": "portfolio-6",
+        "title": "Currículo Dashboard",
+        "subtitle": "ASPNET MVC Currículo app",
+        "src": "../assets/images/portfolio/curriculum.svg",
+        "href": "curriculum-dashboard",
+        "show": false
+      },
+      {
+        "id": "portfolio-7",
+        "title": "Candidato Dashboard",
+        "subtitle": "CRUD Aplicativo para uma entrevista",
+        "src": "../assets/images/portfolio/candidate.svg",
+        "href": "candidate-dashboard",
+        "show": false
+      },
+      {
+        "id": "portfolio-8",
+        "title": "Pessoa Microserviço API",
+        "subtitle": "API usando RabbitMQ e Mongo",
+        "src": "../assets/images/portfolio/person.svg",
+        "href": "person-microservice",
+        "show": false
+      },
+
+      {
+        "id": "portfolio-9",
+        "title": "Landing Page Máquina de Lavar",
+        "subtitle": "Freelance Máquina de Lavar",
+        "src": "../assets/images/portfolio/lavamaq.svg",
+        "href": "laundry-landing-page",
+        "show": false
+      },
+      {
+        "id": "portfolio-10",
+        "title": "Microservice Desconto API",
+        "subtitle": "Projeto para empresa Bidea Factory",
+        "src": "../assets/images/portfolio/discount.svg",
+        "href": "discount-api-microservice",
+        "show": false
+      }
+    ]
+  },
+  "skills": {
+    "title": "Tecnologias",
+    "select-items": {
+      "select": "Habilidades",
+      "backend": "Back End",
+      "frontend": "Front End",
+      "java": "Java",
+      "csharp": "C#",
+      "others": "Outros",
+      "database": "Banco de Dados"
+    },
+    "items": [
+      [
+        {
+          "title": "Java",
+          "src": "../assets/images/skills/items/light/java-light.svg"
+        },
+        {
+          "title": "Csharp",
+          "src": "../assets/images/skills/items/light/csharp-light.svg"
+        },
+        {
+          "title": "Windows",
+          "src": "../assets/images/skills/items/light/windows-light.svg"
+        },
+        {
+          "title": "Linux",
+          "src": "../assets/images/skills/items/light/linux-light.svg"
+        }
+      ],
+      [
+        {
+          "title": "HTML",
+          "src": "../assets/images/skills/items/light/html-light.svg"
+        },
+        {
+          "title": "CSS",
+          "src": "../assets/images/skills/items/light/css-light.svg"
+        },
+        {
+          "title": "Javascript",
+          "src": "../assets/images/skills/items/light/javascript-light.svg"
+        },
+        {
+          "title": "Angular 2",
+          "src": "../assets/images/skills/items/light/angular-light.svg"
+        },
+        {
+          "title": "TypeScript",
+          "src": "../assets/images/skills/items/light/typescript-light.svg"
+        },
+        {
+          "title": "Bootstrap",
+          "src": "../assets/images/skills/items/light/bootstrap-light.svg"
+        },
+        {
+          "title": "Figma",
+          "src": "../assets/images/skills/items/light/figma-light.svg"
+        },
+        {
+          "title": "jQuery",
+          "src": "../assets/images/skills/items/light/jquery-light.svg"
+        }
+      ],
+      [
+        {
+          "title": "Spring Framework",
+          "src": "../assets/images/skills/items/light/spring-light.svg"
+        },
+        {
+          "title": "Spring Cloud",
+          "src": "../assets/images/skills/items/light/spring-light.svg"
+        },
+        {
+          "title": "Kafka",
+          "src": "../assets/images/skills/items/light/kafka-light.svg"
+        },
+        {
+          "title": "RabbitMQ",
+          "src": "../assets/images/skills/items/light/rabbitmq-light.svg"
+        },
+        {
+          "title": "Spring Boot",
+          "src": "../assets/images/skills/items/light/spring-boot-light.svg"
+        },
+        {
+          "title": "Spring MVC",
+          "src": "../assets/images/skills/items/light/spring-light.svg"
+        },
+        {
+          "title": "Hibernate",
+          "src": "../assets/images/skills/items/light/hibernate-light.svg"
+        },
+        {
+          "title": "JUnit",
+          "src": "../assets/images/skills/items/light/junit-light.svg"
+        },
+        {
+          "title": "Mockito",
+          "src": "../assets/images/skills/items/light/mockito-light.svg"
+        },
+        {
+          "title": "MockMvc",
+          "src": "../assets/images/skills/items/light/spring-light.svg"
+        }
+      ],
+      [
+        {
+          "title": "ASP.NET",
+          "src": "../assets/images/skills/items/light/aspnet-light.svg"
+        },
+        {
+          "title": "Entity Framework",
+          "src": "../assets/images/skills/items/light/ef-light.svg"
+        },
+        {
+          "title": "Microsserviços",
+          "src": "../assets/images/skills/items/light/microservice-light.svg"
+        },
+        {
+          "title": "RabbitMQ",
+          "src": "../assets/images/skills/items/light/rabbitmq-light.svg"
+        },
+        {
+          "title": "Ocelot",
+          "src": "../assets/images/skills/items/light/ocelot-light.svg"
+        },
+        {
+          "title": "Mass Transit",
+          "src": "../assets/images/skills/items/light/masstransit-light.svg"
+        },
+        {
+          "title": "Unit Testing",
+          "src": "../assets/images/skills/items/light/unittesting-light.svg"
+        },
+        {
+          "title": "Integration Test",
+          "src": "../assets/images/skills/items/light/unittesting-light.svg"
+        },
+        {
+          "title": "Identity",
+          "src": "../assets/images/skills/items/light/identity-light.svg"
+        }
+      ],
+      [
+        {
+          "title": "Docker Compose",
+          "src": "../assets/images/skills/items/light/docker-light.svg"
+        },
+        {
+          "title": "Git",
+          "src": "../assets/images/skills/items/light/git-light.svg"
+        },
+        {
+          "title": "GitHub",
+          "src": "../assets/images/skills/items/light/github-light.svg"
+        },
+        {
+          "title": "CI/CD",
+          "src": "../assets/images/skills/items/light/cicd-light.svg"
+        },
+        {
+          "title": "GitLab",
+          "src": "../assets/images/skills/items/light/gitlab-light.svg"
+        },
+        {
+          "title": "Docker",
+          "src": "../assets/images/skills/items/light/docker-light.svg"
+        }
+      ],
+      [
+        {
+          "title": "SQL Server",
+          "src": "../assets/images/skills/items/light/sqlserver-light.svg"
+        },
+        {
+          "title": "MySQL",
+          "src": "../assets/images/skills/items/light/mysql-light.svg"
+        },
+        {
+          "title": "SQLite",
+          "src": "../assets/images/skills/items/light/sqllite-light.svg"
+        },
+        {
+          "title": "PostgreSQL",
+          "src": "../assets/images/skills/items/light/postgresql-light.svg"
+        },
+        {
+          "title": "Mongo DB",
+          "src": "../assets/images/skills/items/light/mongodb-light.svg"
+        },
+        {
+          "title": "Oracle",
+          "src": "../assets/images/skills/items/light/oracle-light.svg"
+        }
+      ]
+    ]
+  },
+  "contact": {
+    "title": "Contato",
+    "social-media": {
+      "title": "Midia Sociais",
+      "e-mail": "E-Mail",
+      "cel-phone": "Celular"
+    },
+    "form-send-message": {
+      "name": "Nome",
+      "message": "Mensagem",
+      "send": "Enviar"
+    }
+  },
+  "portfolio-detail": {
+    "back": "voltar",
+    "technologies": "Tecnologias",
+    "items": [
+      {
+        "id": "gym-dashboard",
+        "subId": "gym",
+        "title": "Microsserviços - Academia 'Gym Corpus' Dashboard Gestão de clientes",
+        "text": "Este projeto como Freelancer para uma academia local onde você pode gerenciar clientes e usuários onde você pode facilmente mudar o status dos usuários em débito, bem como a categoria do plano. Minha expertise em criar uma infraestrutura segura com JWT, escalar microsserviços e aplicar TDD com testes unitários e de integração garantem que o sistema seja robusto e confiável.",
+        "youtubeSrc": "https://www.youtube.com/embed/F2DXXOortBE",
+        "github": {
+          "href": "https://github.com/lewisc99/freelancer-springboot-microservices-gym-dashboard",
+          "active": true
+        },
+        "site": {
+          "href": "",
+          "active": false
+        },
+        "technologies": [
+          "Java 11",
+          "Kafka",
+          "Messaging",
+          "Spring Boot",
+          "Spring Cloud",
+          "HTML",
+          "CSS",
+          "HATEOAS",
+          "Clean Code",
+          "Angular 2",
+          "Bootstrap",
+          "Unit testing",
+          "TDD",
+          "Integration Tests",
+          "Swagger",
+          "Docker",
+          "PostgreSQL",
+          "CI/CD",
+          "JUnit",
+          "Token JWT"
+        ]
+      },
+      {
+        "id": "ecommerce-project",
+        "subId": "ecommerce",
+        "title": "Projeto E-commerce Shop",
+        "text": "Com o projeto de simulação de site de Ecommerce, você pode experimentar todas as principais funcionalidades sem precisar investir em uma plataforma definitiva. Adicione produtos ao carrinho, pesquise por nome e categoria, remova itens indesejados e até mesmo adicione quantidades conforme a sua necessidade. E o melhor de tudo: finalize a compra adicionando seus dados pessoais e sinta como seria a experiência do seu cliente ao comprar em sua loja virtual. experimente agora mesmo o projeto de simulação de site de Ecommerce e se surpreenda com o resultado.",
+        "youtubeSrc": "https://www.youtube.com/embed/lNjuPMSH87c",
+        "github": {
+          "href": "https://github.com/lewisc99/project-ecommerce-shop-java-angular",
+          "active": true
+        },
+        "site": {
+          "href": "",
+          "active": false
+        },
+        "technologies": [
+          "Java 11",
+          "Spring Boot",
+          "H2-database",
+          "HTML",
+          "CSS",
+          "Hibernate",
+          "JPA",
+          "Angular 2",
+          "Typescript"
+        ]
+      },
+      {
+        "id": "chat-app",
+        "subId": "chat",
+        "title": "Projeto Chat App Conversação em Tempo Real",
+        "text": "Este projeto me proporcionou um grande aprendizado sobre o funcionamento de uma API, bem como a importância do uso de códigos de status adequados para retornar informações precisas aos usuários. Além disso, pude explorar como estruturar um projeto que utiliza WebSocket para enviar e receber mensagens em tempo real entre os usuários, com cada um possuindo suas próprias credenciais, implementadas através do uso de Identidade e Token JWT para autenticação e autorização. O frontend foi desenvolvido utilizando Angular 2, seguindo padrões e técnicas avançadas para garantir a implementação de um código leve e limpo. Com esse projeto, foi possível aprimorar as habilidades técnicas em programação web.",
+        "youtubeSrc": "https://www.youtube.com/embed/PD6N1qYnqsU",
+        "github": {
+          "href": "https://github.com/lewisc99/project-chat-message-csharp-angular2",
+          "active": true
+        },
+        "site": {
+          "href": "",
+          "active": false
+        },
+        "technologies": [
+          "C#",
+          "SQL Server",
+          "HTML",
+          "CSS",
+          "Angular 2",
+          "SignalR",
+          "NUnit",
+          "Unit Testing",
+          "Mocking Test",
+          "Swagger",
+          "Entity Framework",
+          "Authorization Identity",
+          "Authentication Token JWT"
+        ]
+      },
+      {
+        "id": "candidate-dashboard",
+        "subId": "candidate",
+        "title": "Painel de Cadastro de Candidatos",
+        "text": "Este projeto de cadastramento de candidatos para uma entrevista de emprego é uma oportunidade perfeita para demonstrar suas habilidades. Com a validação de cada input do usuário e a implementação de vários testes para garantir o bom funcionamento da aplicação, você terá a certeza de que está entregando um produto de qualidade. Além disso, o fato de que todos os testes foram aprovados pelo CI/CD e o deploy foi realizado com sucesso no Heroku, é uma prova concreta da excelência do seu trabalho.",
+        "youtubeSrc": "https://www.youtube.com/embed/HyDB_rIHoW4",
+        "github": {
+          "href": "https://github.com/lewisc99/java-springboot-candidate-dashboard",
+          "active": true
+        },
+        "site": {
+          "href": "",
+          "active": false
+        },
+        "technologies": [
+          "Java",
+          "Spring Boot",
+          "Gradle",
+          "CSS3",
+          "HTML5",
+          "JSP",
+          "Docker",
+          "NUnit",
+          "Unit Testing",
+          "Mocking Test",
+          "H2 DATABASE",
+          "CI/CD",
+          "Heroku"
+        ]
+      },
+      {
+        "id": "person-microservice",
+        "subId": "person",
+        "title": "Microsserviços de registro de pessoas com sistema de Mensageria RabbitMQ",
+        "text": "Com a aplicação de cadastro de pessoas que utiliza RabbitMQ e MassTransit, você pode ter certeza de que seus dados serão atualizados em tempo real em outro Microsserviço de Usuário com Banco de Dados próprio. Não perca mais tempo com planilhas e documentos físicos, tenha um sistema eficiente e seguro para gerenciar seus cadastros e otimize seus processos. Aplicação de cadastro de pessoas, onde você pode cadastrar uma nova pessoa, e este cadastro e encaminhado para outro Microsserviço de Usuário com RabbitMQ e MassTransit, onde este outro usuario que também têm um Banco de Dados próprio é atualizado ou cadastrado.",
+        "youtubeSrc": "https://www.youtube.com/embed/cculJPYXSzs",
+        "github": {
+          "href": "https://github.com/lewisc99/csharp-microservice-using-masstransit-rabbitmq-mongodb",
+          "active": true
+        },
+        "site": {
+          "href": "",
+          "active": false
+        },
+        "technologies": [
+          ".NET",
+          "C#",
+          "MongoDB",
+          "RabbitMQ",
+          "HATEOAS",
+          "Clean Code",
+          "Docker",
+          "MassTransit",
+          "Swagger"
+        ]
+      },
+      {
+        "id": "curriculum-dashboard",
+        "subId": "curriculum",
+        "title": "Projeto Painel de Cadastro Curricular",
+        "text": "Este projeto tem como objetivo a criação de um sistema básico de Cadastro de Currículos e Departamentos, utilizando o CRUD como base. A fim de garantir a segurança e a privacidade dos dados, será implementado um Login Básico, com funcionários já cadastrados previamente no banco de dados. Somente os usuários logados terão acesso ao sistema de cadastro de currículos, garantindo assim a segurança dos dados armazenados. O sistema permitirá o cadastro, atualização e exclusão de informações referentes a currículos e departamentos, facilitando a gestão de recursos humanos de empresas e organizações.",
+        "youtubeSrc": "https://www.youtube.com/embed/YLYO9FQFl8c",
+        "github": {
+          "href": "https://github.com/lewisc99/cadastro-de-curriculo-aspnetMVC5",
+          "active": true
+        },
+        "site": {
+          "href": "",
+          "active": false
+        },
+        "technologies": [
+          ".NET",
+          "C#",
+          "MySQL",
+          "HTML",
+          "CSS",
+          "Razor",
+          "ORM",
+          "Boostrap",
+          "jQuery"
+        ]
+      },
+      {
+        "id": "laundry-landing-page",
+        "subId": "laundry",
+        "title": "Freelancer Landing Page Laundry Machine",
+        "text": "Landing Page criada para um Freelancer, usando o melhor do CSS, Site responsivo, usando menos código, Esta página pode ser ajustada a qualquer tamanho de tela, e o usuário pode diminuir e diminuir o zoom em qualquer tamanho.",
+        "youtubeSrc": "https://www.youtube.com/embed/EV_2sxUIFM4",
+        "github": {
+          "href": "https://github.com/lewisc99/freelancer-work-static-landing-page-laundry-machine",
+          "active": true
+        },
+        "site": {
+          "href": "https://lewisc99.github.io/freelancer-work-static-landing-page-laundry-machine/Index",
+          "active": true
+        },
+        "technologies": ["HTML", "CSS", "jQuery"]
+      },
+      {
+        "id": "discount-api-microservice",
+        "subId": "discount",
+        "title": "Microservice Springboot Reserva de casa",
+        "text": "Objetivo: Criar uma API rest que permita reservar uma casa, para a qual deve ser recebido um pedido, validar o referido pedido, se for indicado um código de desconto, validá-lo através de um api rest, e para Termine de salvar os dados da solicitação em um banco de dados PostgreSQL.",
+        "youtubeSrc": "https://www.youtube.com/embed/vRx7hXHFaZE",
+        "github": {
+          "href": "https://github.com/lewisc99/microservice-springboot-booking-test-bidea-factory",
+          "active": true
+        },
+        "site": {
+          "href": "",
+          "active": false
+        },
+        "technologies": [
+          "Spring Boot",
+          "Spring Cloud",
+          "Microserviços",
+          "Clean Code",
+          "PostgreSQL",
+          "Swagger",
+          "Docker",
+          "Docker-compose",
+          "Feign Client",
+          "REST"
+        ]
+      },
+      {
+        "id": "blog-jacopo",
+        "subId": "blog-jacopo",
+        "title": "Freelancer Blog Portfólio Freelancer",
+        "text": "Portfólio criado oferecendo criação de conteúdo autêntico e estratégias de branding pessoal. Recursos incluem autenticação e autorização para usuários, uma seção de blog para indivíduos autenticados criarem, editarem e excluírem artigos com paginação, e uma opção de visualização apenas para usuários não autenticados.",
+        "youtubeSrc": "https://www.youtube.com/embed/BRcsj1Grsvg?si=X7lE30PgmDx0MaSb",
+        "github": {
+          "href": "https://github.com/lewisc99/jacopo-portfolio-freelancer",
+          "active": true
+        },
+        "site": {
+          "href": "",
+          "active": false
+        },
+        "technologies": [
+          "Java 11",
+          "Spring Boot",
+          "Spring Cloud",
+          "Angular 2",
+          "Clean Code",
+          "PostgreSQL",
+          "Swagger",
+          "Docker",
+          "Fly.io",
+          "Token JWT",
+          "Spring Security",
+          "Vercel",
+          "Render"
+        ]
+      },
+      {
+        "id": "wifi-marketing-amor-saude",
+        "subId": "amor-saude-wifi-marketing",
+        "title": "Freelancer Wifi Marketing Landing Page MikroTik e ASP.NET AmorSaúde",
+        "text": "Desenvolvi um projeto backend usando ASP.NET 7, complementado por HTML, CSS e JavaScript para o frontend. O projeto inclui uma página de destino na forma de um formulário web dinâmico. Os dados deste formulário são armazenados em um banco de dados PostgreSQL hospedado na Render, enquanto a lógica do backend está hospedada no Fly.io. Também implementei um hotspot MikroTik que redireciona os usuários para o formulário web assim que se conectam à rede sem fio. Após a submissão bem-sucedida do formulário, os usuários têm acesso à rede, criando uma experiência do usuário eficiente e contínua.",
+        "youtubeSrc": "https://www.youtube.com/embed/gZhDkqoZQP8?si=j5IDSD20QyD7LFX2",
+        "github": {
+          "href": "",
+          "active": false
+        },
+        "site": {
+          "href": "",
+          "active": false
+        },
+        "technologies": [
+          ".NET",
+          "ASP.NET 7",
+          "Javascript",
+          "CSS",
+          "PostgreSQL",
+          "Swagger",
+          "Docker",
+          "Fly.io",
+          "Render"
+        ]
+      }
+    ]
+  }
 }
